@@ -1,9 +1,17 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
+import { SEO } from "@/components/SEO";
 import privateImage from "@/assets/private-event.jpg";
 
 const PrivateEvents = () => {
   return (
-    <ServicePageLayout
+    <>
+      <SEO 
+        title="Private Event Planning Jordan | Celebrations & Gatherings | Maranasi"
+        description="Luxury private event planning in Jordan. Milestone birthdays, anniversaries, intimate gatherings. Bespoke celebrations with meticulous attention to detail."
+        keywords="private event planner Jordan, birthday party Amman, anniversary celebration, VIP event planning MENA"
+        canonicalPath="/private-events"
+      />
+      <ServicePageLayout
       title="Private Events"
       subtitle="Personal Celebrations"
       heroImage={privateImage}
@@ -65,8 +73,9 @@ const PrivateEvents = () => {
           description: "On the day, our discreet team ensures everything flows beautifully while you celebrate.",
         },
       ]}
-      ctaText="Plan Your Celebration"
-    />
+        ctaText="Plan Your Celebration"
+      />
+    </>
   );
 };
 

@@ -1,9 +1,17 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
+import { SEO } from "@/components/SEO";
 import weddingImage from "@/assets/wedding-event.jpg";
 
 const Weddings = () => {
   return (
-    <ServicePageLayout
+    <>
+      <SEO 
+        title="Luxury Wedding Planner Jordan | Petra & Dead Sea | Maranasi"
+        description="Bespoke destination weddings in Jordan's iconic locations. Petra, Wadi Rum, Dead Sea ceremonies. Cultural nights & luxury celebrations."
+        keywords="luxury wedding planner Jordan, destination wedding Petra, Dead Sea wedding, Wadi Rum ceremony, wedding planner Amman"
+        canonicalPath="/weddings"
+      />
+      <ServicePageLayout
       title="Luxury Weddings"
       subtitle="Timeless Celebrations"
       heroImage={weddingImage}
@@ -67,8 +75,9 @@ const Weddings = () => {
           description: "On your wedding day, our team handles everything while you celebrate surrounded by love.",
         },
       ]}
-      ctaText="Plan Your Dream Wedding"
-    />
+        ctaText="Plan Your Dream Wedding"
+      />
+    </>
   );
 };
 

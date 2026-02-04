@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import destinationImage from "@/assets/destination-event.jpg";
 import heroImage from "@/assets/hero-event.jpg";
@@ -38,6 +39,12 @@ const destinations = [
 const Destinations = () => {
   return (
     <Layout>
+      <SEO 
+        title="Event Destinations Jordan UAE Saudi | Maranasi"
+        description="Extraordinary events in remarkable places. Petra, Dead Sea, Dubai, Riyadh, AlUla venue expertise. Destination event planning across MENA."
+        keywords="destination events Jordan, Petra venue, Dead Sea events, Dubai event planner, Riyadh events, AlUla destination"
+        canonicalPath="/destinations"
+      />
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end">
         <div className="absolute inset-0">
