@@ -7,9 +7,12 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-6">
           {/* Left - Statement */}
           <AnimatedSection className="lg:col-span-7 lg:pr-12">
+            <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase mb-6">
+              Serious Business & Stunning Events
+            </p>
             <h2 className="font-serif text-[1.75rem] md:text-3xl lg:text-4xl font-medium leading-[1.25] tracking-[-0.01em]">
-              We create events that transcend the ordinary—
-              <span className="italic text-muted-foreground">where every detail tells your story.</span>
+              Crafting unforgettable experiences with precision, creativity, and a deep understanding of
+              <span className="italic text-muted-foreground"> what makes moments truly extraordinary.</span>
             </h2>
           </AnimatedSection>
 
@@ -17,9 +20,10 @@ export function AboutSection() {
           <AnimatedSection delay={150} className="lg:col-span-5 lg:pt-2">
             <div className="space-y-6">
               <p className="text-[15px] text-muted-foreground leading-[1.7]">
-                For fifteen years, Maranasi has partnered with visionaries 
-                across the MENA region to craft experiences that resonate. 
-                Based in Amman, operating globally.
+                MaraNasi Events Management is Jordan's premier event planning and 
+                production company. From world-class conferences to intimate luxury 
+                weddings, we bring together film directors, architectural visionaries, 
+                and master craftsmen to create experiences that transcend expectations.
               </p>
               
               {/* Refined stats */}
@@ -33,8 +37,8 @@ export function AboutSection() {
                   <span className="text-[11px] tracking-[0.12em] text-muted-foreground/70 uppercase mt-1 block">Events</span>
                 </div>
                 <div>
-                  <span className="block font-serif text-2xl text-foreground tracking-[-0.02em]">12</span>
-                  <span className="text-[11px] tracking-[0.12em] text-muted-foreground/70 uppercase mt-1 block">Countries</span>
+                  <span className="block font-serif text-2xl text-foreground tracking-[-0.02em]">MENA</span>
+                  <span className="text-[11px] tracking-[0.12em] text-muted-foreground/70 uppercase mt-1 block">Region</span>
                 </div>
               </div>
             </div>

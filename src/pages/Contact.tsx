@@ -166,7 +166,7 @@ const Contact = () => {
                         <p className="text-muted-foreground font-light">
                           Amman, Jordan
                           <br />
-                          Abdoun, 5th Circle
+                          Al-Shmeisani District
                         </p>
                       </div>
                     </div>
@@ -193,10 +193,10 @@ const Contact = () => {
                       <div>
                         <p className="font-medium mb-1">Phone</p>
                         <a 
-                          href="tel:+962791234567" 
+                          href="tel:+96265000000" 
                           className="text-muted-foreground font-light hover:text-primary transition-colors"
                         >
-                          +962 79 123 4567
+                          +962 6 500 0000
                         </a>
                       </div>
                     </div>

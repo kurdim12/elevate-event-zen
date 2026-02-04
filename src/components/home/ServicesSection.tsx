@@ -8,26 +8,26 @@ import privateImage from "@/assets/private-event.jpg";
 
 const services = [
   {
-    title: "Corporate",
-    subtitle: "Conferences, galas, executive gatherings",
+    title: "Corporate Events",
+    subtitle: "Conferences, Summits, Gala Dinners & Award Ceremonies",
     image: corporateImage,
     href: "/corporate-events",
   },
   {
-    title: "Weddings",
-    subtitle: "Bespoke celebrations, destination ceremonies",
+    title: "Luxury Weddings",
+    subtitle: "Bespoke celebrations, Cultural nights & Destination ceremonies",
     image: weddingImage,
     href: "/weddings",
   },
   {
-    title: "Brand",
-    subtitle: "Launches, activations, immersive experiences",
+    title: "Brand Activations",
+    subtitle: "Product Launches, Exhibitions & Immersive brand experiences",
     image: brandImage,
     href: "/brand-activations",
   },
   {
-    title: "Private",
-    subtitle: "Intimate gatherings, milestone moments",
+    title: "Private Events",
+    subtitle: "Milestone celebrations, Intimate gatherings & VIP experiences",
     image: privateImage,
     href: "/private-events",
   },

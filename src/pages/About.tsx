@@ -29,21 +29,22 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in Amman, Jordan, Maranasi has grown from a passionate vision 
-                  into one of the region's most respected event planning and production 
-                  companies. Our journey began with a simple belief: every event should 
-                  be an unforgettable experience.
+                  MaraNasi Events Management was founded in Amman, Jordan with a singular 
+                  vision: to transform events into extraordinary experiences. What began 
+                  as a passion for creating memorable moments has evolved into the MENA 
+                  region's most trusted name in luxury event production.
                 </p>
                 <p>
-                  Over the years, we've had the privilege of working with leading 
-                  corporations, distinguished families, and international brands, 
-                  creating moments that resonate long after the last guest departs.
+                  Our signature approach brings together film directors who understand 
+                  visual narrative, architectural visionaries who design spaces that 
+                  inspire, and master craftsmen who execute with precision. This 
+                  collaborative methodology ensures every event tells a cohesive story.
                 </p>
                 <p>
-                  Today, our team of creative directors, producers, and specialists 
-                  brings together decades of combined experience in luxury event 
-                  production, working across Jordan, the UAE, Saudi Arabia, and 
-                  destinations worldwide.
+                  From world-class conferences at Jordan's finest venues to intimate 
+                  destination weddings in Petra and Wadi Rum, we've partnered with 
+                  prestigious clients including Jumeirah Group, Hilton Hotels, 
+                  Ritz-Carlton, Kempinski, and The Palm Hotel Collection.
                 </p>
               </div>
             </AnimatedSection>
@@ -63,9 +64,9 @@ export default function About() {
                   </p>
                 </div>
                 <div>
-                  <span className="font-serif text-5xl md:text-6xl text-primary">4</span>
+                  <span className="font-serif text-5xl md:text-6xl text-primary">MENA</span>
                   <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mt-2">
-                    Countries Served
+                    Regional Coverage
                   </p>
                 </div>
               </div>
