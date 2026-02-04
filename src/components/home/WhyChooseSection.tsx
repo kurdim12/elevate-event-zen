@@ -1,59 +1,48 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { Award, Users, Sparkles, Shield } from "lucide-react";
-
-const reasons = [
-  {
-    icon: Award,
-    title: "15+ Years of Excellence",
-    description: "A proven track record of delivering exceptional events across the region.",
-  },
-  {
-    icon: Users,
-    title: "Dedicated Teams",
-    description: "Expert professionals who understand the nuances of luxury event production.",
-  },
-  {
-    icon: Sparkles,
-    title: "Meticulous Detail",
-    description: "Every element considered, every moment perfected, every expectation exceeded.",
-  },
-  {
-    icon: Shield,
-    title: "Full-Service Execution",
-    description: "From concept to completion, we handle every aspect with precision.",
-  },
-];
 
 export function WhyChooseSection() {
   return (
-    <section className="section-padding bg-foreground">
-      <div className="container-wide">
-        {/* Section Header */}
-        <AnimatedSection className="text-center mb-16">
-          <p className="label-uppercase mb-4 text-gold-light">Why Maranasi</p>
-          <h2 className="heading-xl text-background mb-6">
-            The Difference Is in
-            <br />
-            <span className="italic">The Details</span>
-          </h2>
-        </AnimatedSection>
+    <section className="py-32 md:py-40 lg:py-52 bg-background">
+      <div className="container-narrow">
+        <AnimatedSection>
+          <div className="text-center">
+            <p className="text-xs tracking-[0.3em] text-muted-foreground/60 uppercase mb-12">
+              Our approach
+            </p>
+            
+            {/* Single powerful statement */}
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed text-foreground mb-16">
+              Meticulous planning. Creative excellence. 
+              <br className="hidden md:block" />
+              <span className="italic text-muted-foreground">Flawless execution.</span>
+            </h2>
 
-        {/* Reasons Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {reasons.map((reason, index) => (
-            <AnimatedSection key={reason.title} delay={index * 100}>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-background/10 mb-6">
-                  <reason.icon className="w-7 h-7 text-gold-light" />
-                </div>
-                <h3 className="font-serif text-xl text-background mb-3">{reason.title}</h3>
-                <p className="text-background/60 font-light leading-relaxed">
-                  {reason.description}
+            {/* Three pillars - quiet, confident */}
+            <div className="grid md:grid-cols-3 gap-12 md:gap-8 text-left md:text-center pt-8 border-t border-border/30">
+              <div className="pt-8">
+                <span className="block text-4xl md:text-5xl font-serif text-foreground/20 mb-4">01</span>
+                <h3 className="font-serif text-lg text-foreground mb-3">Vision</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We begin by understanding your story, your audience, and your aspirations.
                 </p>
               </div>
-            </AnimatedSection>
-          ))}
-        </div>
+              <div className="pt-8">
+                <span className="block text-4xl md:text-5xl font-serif text-foreground/20 mb-4">02</span>
+                <h3 className="font-serif text-lg text-foreground mb-3">Craft</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Every detail is considered—from concept through design to the smallest finishing touch.
+                </p>
+              </div>
+              <div className="pt-8">
+                <span className="block text-4xl md:text-5xl font-serif text-foreground/20 mb-4">03</span>
+                <h3 className="font-serif text-lg text-foreground mb-3">Delivery</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  On the day, everything unfolds seamlessly—so you can be fully present.
+                </p>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

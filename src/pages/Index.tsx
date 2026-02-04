@@ -1,8 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
 import { ServiceSelector } from "@/components/home/ServiceSelector";
+import { ServicesSection } from "@/components/home/ServicesSection";
 import { VisualStorySection } from "@/components/home/VisualStorySection";
 import { DestinationsSection } from "@/components/home/DestinationsSection";
 import { WhyChooseSection } from "@/components/home/WhyChooseSection";
