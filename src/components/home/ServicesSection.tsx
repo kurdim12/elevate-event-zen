@@ -35,48 +35,48 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-32 md:py-40 lg:py-52 bg-background">
+    <section className="py-28 md:py-36 lg:py-44 bg-background">
       <div className="container-wide">
         {/* Minimal section intro */}
-        <AnimatedSection className="mb-20 md:mb-28">
-          <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
+        <AnimatedSection className="mb-16 md:mb-20">
+          <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase">
             What we do
           </p>
         </AnimatedSection>
 
-        {/* Services - Elegant list layout */}
+        {/* Services list */}
         <div className="space-y-0">
           {services.map((service, index) => (
-            <AnimatedSection key={service.title} delay={index * 100}>
+            <AnimatedSection key={service.title} delay={index * 80}>
               <Link
                 to={service.href}
-                className="group block border-t border-border/50 py-10 md:py-14 transition-colors duration-500 hover:bg-secondary/20"
+                className="group block border-t border-border/40 py-8 md:py-10 transition-colors duration-700 hover:bg-secondary/15"
               >
-                <div className="grid grid-cols-12 items-center gap-6">
+                <div className="grid grid-cols-12 items-center gap-4 md:gap-6">
                   {/* Number */}
-                  <div className="col-span-1 hidden md:block">
-                    <span className="text-xs text-muted-foreground/50">
+                  <div className="col-span-2 md:col-span-1">
+                    <span className="text-[11px] text-muted-foreground/40">
                       0{index + 1}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <div className="col-span-12 md:col-span-4">
-                    <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium transition-colors duration-500 group-hover:text-primary">
+                  <div className="col-span-10 md:col-span-4">
+                    <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium tracking-[-0.01em] transition-colors duration-500 group-hover:text-primary">
                       {service.title}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <div className="col-span-12 md:col-span-4">
-                    <p className="text-muted-foreground text-sm md:text-base">
+                  <div className="col-span-10 col-start-3 md:col-span-4 md:col-start-auto -mt-2 md:mt-0">
+                    <p className="text-[14px] text-muted-foreground/70">
                       {service.subtitle}
                     </p>
                   </div>
 
-                  {/* Image preview - appears on hover */}
+                  {/* Image preview */}
                   <div className="col-span-3 hidden lg:flex justify-end">
-                    <div className="w-32 h-20 overflow-hidden opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                    <div className="w-28 h-16 overflow-hidden opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-600">
                       <img
                         src={service.image}
                         alt={service.title}
@@ -89,18 +89,17 @@ export function ServicesSection() {
             </AnimatedSection>
           ))}
           
-          {/* Bottom border */}
-          <div className="border-t border-border/50" />
+          <div className="border-t border-border/40" />
         </div>
 
         {/* View all link */}
-        <AnimatedSection delay={400} className="mt-16 md:mt-20">
+        <AnimatedSection delay={350} className="mt-12 md:mt-14">
           <Link 
             to="/services" 
-            className="inline-flex items-center text-sm tracking-[0.2em] text-muted-foreground uppercase hover:text-foreground transition-colors duration-500 group"
+            className="inline-flex items-center text-[13px] tracking-[0.18em] text-muted-foreground/60 uppercase hover:text-foreground transition-colors duration-500 group"
           >
-            <span className="mr-4">View all services</span>
-            <span className="w-8 h-px bg-muted-foreground/30 group-hover:w-16 group-hover:bg-foreground transition-all duration-500" />
+            <span className="mr-3">View all services</span>
+            <span className="w-6 h-px bg-muted-foreground/25 group-hover:w-12 group-hover:bg-foreground transition-all duration-600" />
           </Link>
         </AnimatedSection>
       </div>
