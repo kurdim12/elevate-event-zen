@@ -7,18 +7,18 @@ export function BeliefSection() {
         <AnimatedSection>
           <div className="text-center">
             <p className="text-[11px] tracking-[0.22em] text-muted-foreground/40 uppercase mb-10">
-              What we believe
+              Our Philosophy
             </p>
             
             <blockquote className="font-serif text-xl md:text-2xl lg:text-3xl font-normal leading-[1.4] text-foreground tracking-[-0.01em]">
-              An event is not a checklist.
+              We don't just plan events—
               <br />
               <span className="italic text-muted-foreground">
-                It is a story waiting to be told—
+                we craft stories that unfold in real time,
               </span>
               <br />
               <span className="italic text-muted-foreground">
-                and the people in it, unforgettable.
+                where every detail serves the narrative.
               </span>
             </blockquote>
 
