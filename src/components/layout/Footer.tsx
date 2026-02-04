@@ -6,34 +6,34 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background">
       {/* Main Footer */}
-      <div className="container-wide py-20 md:py-28">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-8">
-          {/* Brand - Takes more space */}
+      <div className="container-wide py-16 md:py-20">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-6">
+          {/* Brand */}
           <div className="lg:col-span-5">
-            <Link to="/" className="inline-block mb-8">
-              <span className="font-serif text-3xl md:text-4xl font-medium text-background">
+            <Link to="/" className="inline-block mb-6">
+              <span className="font-serif text-2xl md:text-3xl font-medium text-background tracking-[-0.02em]">
                 Maranasi
               </span>
             </Link>
-            <p className="text-background/50 leading-relaxed max-w-sm mb-8">
+            <p className="text-[14px] text-background/40 leading-[1.7] max-w-xs mb-6">
               Crafting extraordinary events across Jordan, the UAE, Saudi Arabia, 
               and beyond. Where vision meets flawless execution.
             </p>
             <a 
               href="mailto:hello@maranasi.com" 
-              className="inline-flex items-center text-sm tracking-[0.15em] text-background/40 uppercase hover:text-background transition-colors duration-500 group"
+              className="inline-flex items-center text-[13px] tracking-[0.12em] text-background/35 uppercase hover:text-background/70 transition-colors duration-500 group"
             >
-              <span className="mr-4">hello@maranasi.com</span>
-              <span className="w-6 h-px bg-background/20 group-hover:w-12 group-hover:bg-background transition-all duration-500" />
+              <span className="mr-3">hello@maranasi.com</span>
+              <span className="w-5 h-px bg-background/15 group-hover:w-10 group-hover:bg-background/50 transition-all duration-600" />
             </a>
           </div>
 
-          {/* Navigation - Minimal */}
+          {/* Navigation */}
           <div className="lg:col-span-3 lg:col-start-7">
-            <p className="text-xs tracking-[0.2em] text-background/30 uppercase mb-6">
+            <p className="text-[11px] tracking-[0.18em] text-background/25 uppercase mb-5">
               Services
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {[
                 { name: "Corporate", href: "/corporate-events" },
                 { name: "Weddings", href: "/weddings" },
@@ -43,7 +43,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-background/50 hover:text-background transition-colors duration-300"
+                    className="text-[14px] text-background/40 hover:text-background/75 transition-colors duration-400"
                   >
                     {link.name}
                   </Link>
@@ -54,10 +54,10 @@ export function Footer() {
 
           {/* Secondary Nav */}
           <div className="lg:col-span-2">
-            <p className="text-xs tracking-[0.2em] text-background/30 uppercase mb-6">
+            <p className="text-[11px] tracking-[0.18em] text-background/25 uppercase mb-5">
               Company
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {[
                 { name: "Work", href: "/work" },
                 { name: "About", href: "/about" },
@@ -67,7 +67,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-background/50 hover:text-background transition-colors duration-300"
+                    className="text-[14px] text-background/40 hover:text-background/75 transition-colors duration-400"
                   >
                     {link.name}
                   </Link>
@@ -78,31 +78,31 @@ export function Footer() {
 
           {/* Location */}
           <div className="lg:col-span-2">
-            <p className="text-xs tracking-[0.2em] text-background/30 uppercase mb-6">
+            <p className="text-[11px] tracking-[0.18em] text-background/25 uppercase mb-5">
               Based in
             </p>
-            <p className="text-background/50">
+            <p className="text-[14px] text-background/45">
               Amman, Jordan
             </p>
-            <p className="text-background/30 text-sm mt-2">
+            <p className="text-[12px] text-background/25 mt-1">
               Operating globally
             </p>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar - Ultra minimal */}
-      <div className="border-t border-background/10">
-        <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/30 text-xs tracking-wide">
+      {/* Bottom Bar */}
+      <div className="border-t border-background/8">
+        <div className="container-wide py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="text-background/25 text-[11px] tracking-wide">
             © {currentYear} Maranasi
           </p>
-          <div className="flex gap-8">
+          <div className="flex gap-6">
             <a 
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-background/30 hover:text-background/60 transition-colors text-xs tracking-wide"
+              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
             >
               Instagram
             </a>
@@ -110,7 +110,7 @@ export function Footer() {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-background/30 hover:text-background/60 transition-colors text-xs tracking-wide"
+              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
             >
               LinkedIn
             </a>

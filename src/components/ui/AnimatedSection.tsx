@@ -25,7 +25,7 @@ export function AnimatedSection({
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
     );
 
     if (ref.current) {
@@ -47,10 +47,15 @@ export function AnimatedSection({
       className={cn(className)}
       style={{
         opacity: isVisible ? undefined : 0,
-        animationDelay: isVisible ? `${delay}ms` : undefined,
       }}
     >
-      <div className={isVisible ? animationClass : ""} style={{ animationDelay: `${delay}ms` }}>
+      <div 
+        className={isVisible ? animationClass : ""} 
+        style={{ 
+          animationDelay: `${delay}ms`,
+          animationFillMode: 'forwards'
+        }}
+      >
         {children}
       </div>
     </div>

@@ -25,67 +25,67 @@ export function VisualStorySection() {
     <section className="bg-background">
       {/* Full-width editorial image */}
       <AnimatedSection>
-        <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+        <div className="relative h-[55vh] md:h-[65vh] overflow-hidden">
           <img
             src={stories[0].image}
             alt={stories[0].title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/35 via-transparent to-transparent" />
         </div>
       </AnimatedSection>
 
-      {/* Caption - Editorial style with context */}
-      <div className="container-wide py-12 md:py-16">
+      {/* Caption */}
+      <div className="container-wide py-10 md:py-12">
         <AnimatedSection>
-          <div className="grid grid-cols-12 gap-8 items-end">
+          <div className="grid grid-cols-12 gap-6 items-end">
             <div className="col-span-12 md:col-span-2">
-              <p className="text-xs tracking-[0.2em] text-muted-foreground/40 uppercase">
+              <p className="text-[11px] tracking-[0.18em] text-muted-foreground/40 uppercase">
                 {stories[0].category} · {stories[0].year}
               </p>
             </div>
             <div className="col-span-12 md:col-span-6">
-              <h3 className="font-serif text-xl md:text-2xl text-foreground mb-2">
+              <h3 className="font-serif text-lg md:text-xl text-foreground mb-1.5 tracking-[-0.01em]">
                 {stories[0].title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-[14px] text-muted-foreground/70 leading-relaxed">
                 {stories[0].caption}
               </p>
             </div>
             <div className="col-span-12 md:col-span-4 flex md:justify-end">
               <Link 
                 to="/work" 
-                className="inline-flex items-center text-sm tracking-[0.15em] text-muted-foreground/60 uppercase hover:text-foreground transition-colors duration-500 group"
+                className="inline-flex items-center text-[13px] tracking-[0.15em] text-muted-foreground/50 uppercase hover:text-foreground transition-colors duration-500 group"
               >
-                <span className="mr-4">View all work</span>
-                <span className="w-6 h-px bg-muted-foreground/30 group-hover:w-12 group-hover:bg-foreground transition-all duration-500" />
+                <span className="mr-3">View all work</span>
+                <span className="w-5 h-px bg-muted-foreground/25 group-hover:w-10 group-hover:bg-foreground transition-all duration-600" />
               </Link>
             </div>
           </div>
         </AnimatedSection>
       </div>
 
-      {/* Second story - smaller, offset */}
-      <div className="container-wide pb-20 md:pb-28">
+      {/* Second story - offset */}
+      <div className="container-wide pb-16 md:pb-20">
         <AnimatedSection delay={100}>
-          <div className="grid grid-cols-12 gap-8">
+          <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-7 md:col-start-5">
-              <div className="relative aspect-[16/10] overflow-hidden mb-6">
+              <div className="relative aspect-[16/10] overflow-hidden mb-5">
                 <img
                   src={stories[1].image}
                   alt={stories[1].title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start gap-4">
                 <div>
-                  <p className="text-xs tracking-[0.2em] text-muted-foreground/40 uppercase mb-2">
+                  <p className="text-[11px] tracking-[0.18em] text-muted-foreground/40 uppercase mb-1.5">
                     {stories[1].category} · {stories[1].year}
                   </p>
-                  <h3 className="font-serif text-lg text-foreground">
+                  <h3 className="font-serif text-base md:text-lg text-foreground tracking-[-0.01em]">
                     {stories[1].title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-[13px] text-muted-foreground/60 mt-1">
                     {stories[1].caption}
                   </p>
                 </div>

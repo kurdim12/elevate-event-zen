@@ -50,10 +50,10 @@ function InlineDropdown({ options, selected, onSelect, placeholder }: InlineDrop
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "inline-flex items-center gap-2 border-b transition-all duration-500 pb-1",
+          "inline-flex items-center gap-1.5 border-b transition-all duration-700 pb-0.5",
           selected 
-            ? "border-foreground/30 text-foreground" 
-            : "border-foreground/20 text-foreground/50 hover:border-foreground/40 hover:text-foreground/70"
+            ? "border-foreground/25 text-foreground" 
+            : "border-foreground/15 text-foreground/45 hover:border-foreground/30 hover:text-foreground/65"
         )}
       >
         <span className="italic">
@@ -61,7 +61,7 @@ function InlineDropdown({ options, selected, onSelect, placeholder }: InlineDrop
         </span>
         <ChevronDown 
           className={cn(
-            "w-4 h-4 transition-transform duration-500 flex-shrink-0 opacity-50",
+            "w-3.5 h-3.5 transition-transform duration-500 flex-shrink-0 opacity-40",
             isOpen && "rotate-180"
           )} 
         />
@@ -69,13 +69,13 @@ function InlineDropdown({ options, selected, onSelect, placeholder }: InlineDrop
 
       <div
         className={cn(
-          "absolute left-0 top-full mt-4 z-50 transition-all duration-500",
+          "absolute left-0 top-full mt-3 z-50 transition-all duration-500",
           isOpen
             ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible -translate-y-2"
+            : "opacity-0 invisible -translate-y-1.5"
         )}
       >
-        <div className="bg-background border border-border shadow-elevated py-2 min-w-[200px]">
+        <div className="bg-background border border-border shadow-elevated py-1.5 min-w-[180px]">
           {options.map((option) => (
             <button
               key={option.value}
@@ -84,10 +84,10 @@ function InlineDropdown({ options, selected, onSelect, placeholder }: InlineDrop
                 setIsOpen(false);
               }}
               className={cn(
-                "block w-full text-left px-5 py-3 text-base transition-colors duration-300",
+                "block w-full text-left px-4 py-2.5 text-[15px] transition-colors duration-300",
                 selected?.value === option.value
-                  ? "text-foreground bg-secondary/50"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/30"
+                  ? "text-foreground bg-secondary/40"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/25"
               )}
             >
               <span className="italic">{option.label}</span>
@@ -115,11 +115,11 @@ export function ServiceSelector() {
   const canExplore = selectedEvent || selectedDestination;
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-ivory-dark">
+    <section className="py-20 md:py-24 lg:py-28 bg-ivory-dark">
       <div className="container-narrow">
         <AnimatedSection>
           <div className="text-center">
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed md:leading-relaxed lg:leading-relaxed text-foreground">
+            <h2 className="font-serif text-xl md:text-2xl lg:text-[1.75rem] font-normal leading-[1.5] text-foreground">
               We specialize in crafting{" "}
               <InlineDropdown
                 options={eventTypes}
@@ -138,15 +138,15 @@ export function ServiceSelector() {
 
             <div 
               className={cn(
-                "mt-16 transition-all duration-700",
+                "mt-12 transition-all duration-700",
                 canExplore 
                   ? "opacity-100 translate-y-0" 
-                  : "opacity-0 translate-y-4 pointer-events-none"
+                  : "opacity-0 translate-y-3 pointer-events-none"
               )}
             >
               <button
                 onClick={handleExplore}
-                className="text-sm tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
+                className="text-[13px] tracking-[0.18em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
               >
                 Explore →
               </button>
