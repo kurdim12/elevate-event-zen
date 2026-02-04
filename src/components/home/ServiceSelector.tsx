@@ -21,7 +21,7 @@ const destinations: Option[] = [
   { label: "Jordan", value: "jordan", href: "/destinations?region=jordan" },
   { label: "the UAE", value: "uae", href: "/destinations?region=uae" },
   { label: "Saudi Arabia", value: "saudi", href: "/destinations?region=saudi" },
-  { label: "anywhere in the world", value: "international", href: "/destinations?region=international" },
+  { label: "anywhere", value: "international", href: "/destinations?region=international" },
 ];
 
 interface InlineDropdownProps {
@@ -50,18 +50,18 @@ function InlineDropdown({ options, selected, onSelect, placeholder }: InlineDrop
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "inline-flex items-center gap-1 border-b-2 transition-all duration-300 pb-1",
+          "inline-flex items-center gap-2 border-b transition-all duration-500 pb-1",
           selected 
-            ? "border-primary text-primary" 
-            : "border-foreground/30 text-foreground/60 hover:border-foreground/50 hover:text-foreground/80"
+            ? "border-foreground/30 text-foreground" 
+            : "border-foreground/20 text-foreground/50 hover:border-foreground/40 hover:text-foreground/70"
         )}
       >
-        <span className="font-serif italic">
+        <span className="italic">
           {selected ? selected.label : placeholder}
         </span>
         <ChevronDown 
           className={cn(
-            "w-4 h-4 transition-transform duration-300 flex-shrink-0",
+            "w-4 h-4 transition-transform duration-500 flex-shrink-0 opacity-50",
             isOpen && "rotate-180"
           )} 
         />
@@ -69,13 +69,13 @@ function InlineDropdown({ options, selected, onSelect, placeholder }: InlineDrop
 
       <div
         className={cn(
-          "absolute left-0 top-full mt-3 z-50 transition-all duration-300",
+          "absolute left-0 top-full mt-4 z-50 transition-all duration-500",
           isOpen
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-2"
         )}
       >
-        <div className="bg-background border border-border/50 shadow-lg rounded-sm py-2 min-w-[220px]">
+        <div className="bg-background border border-border shadow-elevated py-2 min-w-[200px]">
           {options.map((option) => (
             <button
               key={option.value}
@@ -84,13 +84,13 @@ function InlineDropdown({ options, selected, onSelect, placeholder }: InlineDrop
                 setIsOpen(false);
               }}
               className={cn(
-                "block w-full text-left px-5 py-3 text-base transition-colors duration-200",
+                "block w-full text-left px-5 py-3 text-base transition-colors duration-300",
                 selected?.value === option.value
-                  ? "bg-secondary/50 text-primary"
-                  : "text-foreground/80 hover:bg-secondary/30 hover:text-foreground"
+                  ? "text-foreground bg-secondary/50"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/30"
               )}
             >
-              <span className="font-serif italic">{option.label}</span>
+              <span className="italic">{option.label}</span>
             </button>
           ))}
         </div>
@@ -115,36 +115,30 @@ export function ServiceSelector() {
   const canExplore = selectedEvent || selectedDestination;
 
   return (
-    <section className="py-20 md:py-28 bg-secondary/20">
-      <div className="container-wide">
+    <section className="py-24 md:py-32 lg:py-40 bg-ivory-dark">
+      <div className="container-narrow">
         <AnimatedSection>
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mb-8">
-              Find Your Experience
-            </p>
-            
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed md:leading-relaxed lg:leading-relaxed">
+          <div className="text-center">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed md:leading-relaxed lg:leading-relaxed text-foreground">
               We specialize in crafting{" "}
               <InlineDropdown
                 options={eventTypes}
                 selected={selectedEvent}
                 onSelect={setSelectedEvent}
-                placeholder="select event type"
+                placeholder="exceptional experiences"
               />{" "}
-              <span className="block md:inline mt-2 md:mt-0">
-                in{" "}
-                <InlineDropdown
-                  options={destinations}
-                  selected={selectedDestination}
-                  onSelect={setSelectedDestination}
-                  placeholder="select destination"
-                />
-              </span>
+              in{" "}
+              <InlineDropdown
+                options={destinations}
+                selected={selectedDestination}
+                onSelect={setSelectedDestination}
+                placeholder="remarkable places"
+              />
             </h2>
 
             <div 
               className={cn(
-                "mt-12 transition-all duration-500",
+                "mt-16 transition-all duration-700",
                 canExplore 
                   ? "opacity-100 translate-y-0" 
                   : "opacity-0 translate-y-4 pointer-events-none"
@@ -152,22 +146,11 @@ export function ServiceSelector() {
             >
               <button
                 onClick={handleExplore}
-                className="btn-primary"
+                className="text-sm tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
               >
-                Explore {selectedEvent ? selectedEvent.label.replace(/^a /, "") : "Services"}
+                Explore →
               </button>
             </div>
-
-            <p className="mt-8 text-sm text-muted-foreground">
-              Or browse our{" "}
-              <a href="/services" className="underline underline-offset-4 hover:text-foreground transition-colors">
-                complete services
-              </a>{" "}
-              and{" "}
-              <a href="/work" className="underline underline-offset-4 hover:text-foreground transition-colors">
-                portfolio
-              </a>
-            </p>
           </div>
         </AnimatedSection>
       </div>

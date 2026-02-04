@@ -1,95 +1,108 @@
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { ArrowRight } from "lucide-react";
 
 import corporateImage from "@/assets/corporate-event.jpg";
 import weddingImage from "@/assets/wedding-event.jpg";
 import brandImage from "@/assets/brand-activation.jpg";
 import privateImage from "@/assets/private-event.jpg";
-import destinationImage from "@/assets/destination-event.jpg";
 
 const services = [
   {
-    title: "Corporate Events",
-    description: "Conferences, galas, and executive gatherings that elevate your brand.",
+    title: "Corporate",
+    subtitle: "Conferences, galas, executive gatherings",
     image: corporateImage,
     href: "/corporate-events",
   },
   {
-    title: "Luxury Weddings",
-    description: "Bespoke wedding experiences crafted with exquisite attention to detail.",
+    title: "Weddings",
+    subtitle: "Bespoke celebrations, destination ceremonies",
     image: weddingImage,
     href: "/weddings",
   },
   {
-    title: "Brand Activations",
-    description: "Immersive brand experiences that captivate and convert.",
+    title: "Brand",
+    subtitle: "Launches, activations, immersive experiences",
     image: brandImage,
     href: "/brand-activations",
   },
   {
-    title: "Private Events",
-    description: "Intimate celebrations designed around your personal vision.",
+    title: "Private",
+    subtitle: "Intimate gatherings, milestone moments",
     image: privateImage,
     href: "/private-events",
-  },
-  {
-    title: "Destination Experiences",
-    description: "Extraordinary events in remarkable locations across the region.",
-    image: destinationImage,
-    href: "/destinations",
   },
 ];
 
 export function ServicesSection() {
   return (
-    <section className="section-padding bg-ivory-dark">
+    <section className="py-32 md:py-40 lg:py-52 bg-background">
       <div className="container-wide">
-        {/* Section Header */}
-        <AnimatedSection className="text-center mb-16">
-          <p className="label-uppercase mb-4">Our Services</p>
-          <h2 className="heading-xl mb-6">
-            Comprehensive Event
-            <br />
-            <span className="italic">Solutions</span>
-          </h2>
-          <p className="body-lg max-w-2xl mx-auto">
-            From concept to execution, we deliver seamless experiences 
-            tailored to your unique requirements.
+        {/* Minimal section intro */}
+        <AnimatedSection className="mb-20 md:mb-28">
+          <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
+            What we do
           </p>
         </AnimatedSection>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Services - Elegant list layout */}
+        <div className="space-y-0">
           {services.map((service, index) => (
             <AnimatedSection key={service.title} delay={index * 100}>
               <Link
                 to={service.href}
-                className="group block relative overflow-hidden aspect-[4/5] bg-card"
+                className="group block border-t border-border/50 py-10 md:py-14 transition-colors duration-500 hover:bg-secondary/20"
               >
-                {/* Image */}
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-                
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="heading-sm text-background mb-2">{service.title}</h3>
-                  <p className="text-background/70 font-light mb-4">{service.description}</p>
-                  <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-background/80 group-hover:text-background transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </span>
+                <div className="grid grid-cols-12 items-center gap-6">
+                  {/* Number */}
+                  <div className="col-span-1 hidden md:block">
+                    <span className="text-xs text-muted-foreground/50">
+                      0{index + 1}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <div className="col-span-12 md:col-span-4">
+                    <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium transition-colors duration-500 group-hover:text-primary">
+                      {service.title}
+                    </h3>
+                  </div>
+
+                  {/* Description */}
+                  <div className="col-span-12 md:col-span-4">
+                    <p className="text-muted-foreground text-sm md:text-base">
+                      {service.subtitle}
+                    </p>
+                  </div>
+
+                  {/* Image preview - appears on hover */}
+                  <div className="col-span-3 hidden lg:flex justify-end">
+                    <div className="w-32 h-20 overflow-hidden opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
                 </div>
               </Link>
             </AnimatedSection>
           ))}
+          
+          {/* Bottom border */}
+          <div className="border-t border-border/50" />
         </div>
+
+        {/* View all link */}
+        <AnimatedSection delay={400} className="mt-16 md:mt-20">
+          <Link 
+            to="/services" 
+            className="inline-flex items-center text-sm tracking-[0.2em] text-muted-foreground uppercase hover:text-foreground transition-colors duration-500 group"
+          >
+            <span className="mr-4">View all services</span>
+            <span className="w-8 h-px bg-muted-foreground/30 group-hover:w-16 group-hover:bg-foreground transition-all duration-500" />
+          </Link>
+        </AnimatedSection>
       </div>
     </section>
   );

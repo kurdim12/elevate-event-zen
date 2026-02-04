@@ -2,55 +2,40 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export function AboutSection() {
   return (
-    <section id="about" className="section-padding bg-background">
+    <section className="py-32 md:py-40 lg:py-52 bg-background">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Left Column - Content */}
-          <AnimatedSection>
-            <p className="label-uppercase mb-4">About Maranasi</p>
-            <h2 className="heading-xl mb-8">
-              Where Vision Meets
-              <br />
-              <span className="italic">Flawless Execution</span>
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-8">
+          {/* Left - Statement */}
+          <AnimatedSection className="lg:col-span-7 lg:pr-16">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.2] mb-0">
+              We create events that transcend the ordinary—
+              <span className="italic text-muted-foreground">where every detail tells your story.</span>
             </h2>
-            <div className="divider-gold mb-8" />
-            <div className="space-y-6">
-              <p className="body-md text-muted-foreground">
-                For over fifteen years, Maranasi has been the trusted partner for 
-                discerning clients seeking exceptional event experiences. Based in 
-                Amman, Jordan, we operate across the entire MENA region and beyond.
-              </p>
-              <p className="body-md text-muted-foreground">
-                Our approach combines meticulous planning with creative innovation, 
-                ensuring every event—from intimate gatherings to large-scale 
-                productions—reflects our commitment to excellence and our clients' 
-                unique vision.
-              </p>
-              <p className="body-md text-muted-foreground">
-                We don't just plan events. We craft experiences that resonate, 
-                inspire, and endure in memory.
-              </p>
-            </div>
           </AnimatedSection>
 
-          {/* Right Column - Stats */}
-          <AnimatedSection delay={200}>
-            <div className="grid grid-cols-2 gap-8">
-              <div className="card-luxury text-center">
-                <span className="block font-serif text-5xl md:text-6xl text-primary mb-2">15+</span>
-                <span className="text-sm uppercase tracking-widest text-muted-foreground">Years of Excellence</span>
-              </div>
-              <div className="card-luxury text-center">
-                <span className="block font-serif text-5xl md:text-6xl text-primary mb-2">500+</span>
-                <span className="text-sm uppercase tracking-widest text-muted-foreground">Events Delivered</span>
-              </div>
-              <div className="card-luxury text-center">
-                <span className="block font-serif text-5xl md:text-6xl text-primary mb-2">12</span>
-                <span className="text-sm uppercase tracking-widest text-muted-foreground">Countries Served</span>
-              </div>
-              <div className="card-luxury text-center">
-                <span className="block font-serif text-5xl md:text-6xl text-primary mb-2">100%</span>
-                <span className="text-sm uppercase tracking-widest text-muted-foreground">Client Satisfaction</span>
+          {/* Right - Details */}
+          <AnimatedSection delay={200} className="lg:col-span-5 lg:pt-4">
+            <div className="space-y-8">
+              <p className="text-muted-foreground leading-relaxed">
+                For fifteen years, Maranasi has partnered with visionaries 
+                across the MENA region to craft experiences that resonate. 
+                Based in Amman, operating globally.
+              </p>
+              
+              {/* Refined stats - horizontal, quiet */}
+              <div className="flex gap-12 pt-4">
+                <div>
+                  <span className="block font-serif text-3xl text-foreground">15+</span>
+                  <span className="text-xs tracking-[0.15em] text-muted-foreground uppercase mt-1 block">Years</span>
+                </div>
+                <div>
+                  <span className="block font-serif text-3xl text-foreground">500+</span>
+                  <span className="text-xs tracking-[0.15em] text-muted-foreground uppercase mt-1 block">Events</span>
+                </div>
+                <div>
+                  <span className="block font-serif text-3xl text-foreground">12</span>
+                  <span className="text-xs tracking-[0.15em] text-muted-foreground uppercase mt-1 block">Countries</span>
+                </div>
               </div>
             </div>
           </AnimatedSection>

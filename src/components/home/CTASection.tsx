@@ -3,27 +3,18 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export function CTASection() {
   return (
-    <section className="section-padding bg-background">
+    <section className="py-32 md:py-40 lg:py-52 bg-ivory-dark">
       <div className="container-narrow text-center">
         <AnimatedSection>
-          <p className="label-uppercase mb-4">Start Your Journey</p>
-          <h2 className="heading-xl mb-8">
-            Let's Create Something
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.15] mb-10">
+            Let's create something
             <br />
-            <span className="italic">Extraordinary</span>
+            <span className="italic text-muted-foreground">extraordinary</span>
           </h2>
-          <p className="body-lg mb-10 max-w-xl mx-auto">
-            Whether you're planning an intimate gathering or a grand celebration, 
-            we're ready to bring your vision to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary">
-              Request a Proposal
-            </Link>
-            <a href="tel:+962791234567" className="btn-outline">
-              Call Us Directly
-            </a>
-          </div>
+          
+          <Link to="/contact" className="btn-primary">
+            Start a Conversation
+          </Link>
         </AnimatedSection>
       </div>
     </section>
