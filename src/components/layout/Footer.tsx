@@ -1,77 +1,49 @@
 import { Link } from "react-router-dom";
 
-const footerLinks = {
-  services: [
-    { name: "Corporate Events", href: "/corporate-events" },
-    { name: "Luxury Weddings", href: "/weddings" },
-    { name: "Brand Activations", href: "/brand-activations" },
-    { name: "Private Events", href: "/private-events" },
-    { name: "Destinations", href: "/destinations" },
-  ],
-  company: [
-    { name: "About Us", href: "/#about" },
-    { name: "Our Work", href: "/#work" },
-    { name: "Contact", href: "/contact" },
-  ],
-  destinations: [
-    { name: "Jordan", href: "/destinations#jordan" },
-    { name: "UAE", href: "/destinations#uae" },
-    { name: "Saudi Arabia", href: "/destinations#saudi" },
-    { name: "International", href: "/destinations#international" },
-  ],
-};
-
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-foreground text-background">
-      <div className="container-wide section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Brand Column */}
-          <div className="lg:col-span-1">
-            <Link to="/" className="inline-block mb-6">
-              <span className="font-serif text-3xl font-medium">Maranasi</span>
+      {/* Main Footer */}
+      <div className="container-wide py-20 md:py-28">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-8">
+          {/* Brand - Takes more space */}
+          <div className="lg:col-span-5">
+            <Link to="/" className="inline-block mb-8">
+              <span className="font-serif text-3xl md:text-4xl font-medium text-background">
+                Maranasi
+              </span>
             </Link>
-            <p className="text-background/70 font-light leading-relaxed mb-6">
-              Luxury event planning and production across Jordan and the MENA region. 
-              Crafting unforgettable experiences since 2008.
+            <p className="text-background/50 leading-relaxed max-w-sm mb-8">
+              Crafting extraordinary events across Jordan, the UAE, Saudi Arabia, 
+              and beyond. Where vision meets flawless execution.
             </p>
-            <div className="flex gap-4">
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-background/60 hover:text-background transition-colors"
-                aria-label="Instagram"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-background/60 hover:text-background transition-colors"
-                aria-label="LinkedIn"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </a>
-            </div>
+            <a 
+              href="mailto:hello@maranasi.com" 
+              className="inline-flex items-center text-sm tracking-[0.15em] text-background/40 uppercase hover:text-background transition-colors duration-500 group"
+            >
+              <span className="mr-4">hello@maranasi.com</span>
+              <span className="w-6 h-px bg-background/20 group-hover:w-12 group-hover:bg-background transition-all duration-500" />
+            </a>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-medium uppercase tracking-[0.15em] mb-6 text-background/50">
+          {/* Navigation - Minimal */}
+          <div className="lg:col-span-3 lg:col-start-7">
+            <p className="text-xs tracking-[0.2em] text-background/30 uppercase mb-6">
               Services
-            </h4>
+            </p>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {[
+                { name: "Corporate", href: "/corporate-events" },
+                { name: "Weddings", href: "/weddings" },
+                { name: "Brand Activations", href: "/brand-activations" },
+                { name: "Private Events", href: "/private-events" },
+              ].map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-background/70 hover:text-background transition-colors font-light"
+                    className="text-background/50 hover:text-background transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -80,17 +52,22 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Destinations */}
-          <div>
-            <h4 className="text-sm font-medium uppercase tracking-[0.15em] mb-6 text-background/50">
-              Destinations
-            </h4>
+          {/* Secondary Nav */}
+          <div className="lg:col-span-2">
+            <p className="text-xs tracking-[0.2em] text-background/30 uppercase mb-6">
+              Company
+            </p>
             <ul className="space-y-3">
-              {footerLinks.destinations.map((link) => (
+              {[
+                { name: "Work", href: "/work" },
+                { name: "About", href: "/about" },
+                { name: "Destinations", href: "/destinations" },
+                { name: "Contact", href: "/contact" },
+              ].map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-background/70 hover:text-background transition-colors font-light"
+                    className="text-background/50 hover:text-background transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -99,39 +76,44 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="text-sm font-medium uppercase tracking-[0.15em] mb-6 text-background/50">
-              Contact
-            </h4>
-            <ul className="space-y-3 text-background/70 font-light">
-              <li>Amman, Jordan</li>
-              <li>
-                <a href="mailto:info@maranasi.com" className="hover:text-background transition-colors">
-                  info@maranasi.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+962791234567" className="hover:text-background transition-colors">
-                  +962 79 123 4567
-                </a>
-              </li>
-            </ul>
+          {/* Location */}
+          <div className="lg:col-span-2">
+            <p className="text-xs tracking-[0.2em] text-background/30 uppercase mb-6">
+              Based in
+            </p>
+            <p className="text-background/50">
+              Amman, Jordan
+            </p>
+            <p className="text-background/30 text-sm mt-2">
+              Operating globally
+            </p>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/50 text-sm font-light">
-            © {new Date().getFullYear()} Maranasi Events. All rights reserved.
+      {/* Bottom Bar - Ultra minimal */}
+      <div className="border-t border-background/10">
+        <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-background/30 text-xs tracking-wide">
+            © {currentYear} Maranasi
           </p>
-          <div className="flex gap-6 text-sm text-background/50 font-light">
-            <Link to="/privacy" className="hover:text-background transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="hover:text-background transition-colors">
-              Terms of Service
-            </Link>
+          <div className="flex gap-8">
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-background/30 hover:text-background/60 transition-colors text-xs tracking-wide"
+            >
+              Instagram
+            </a>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-background/30 hover:text-background/60 transition-colors text-xs tracking-wide"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
