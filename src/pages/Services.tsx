@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ArrowRight } from "lucide-react";
 
@@ -45,6 +46,12 @@ const services = [
 const Services = () => {
   return (
     <Layout>
+      <SEO 
+        title="Event Services Jordan | Corporate, Weddings & Brand Activations | Maranasi"
+        description="Full-service luxury event planning in Jordan & MENA. Corporate events, weddings, brand activations, private celebrations. From concept to flawless execution."
+        keywords="event services Jordan, event planner Amman, luxury event management MENA, full-service event company"
+        canonicalPath="/services"
+      />
       {/* Hero */}
       <section className="pt-32 pb-16 bg-background">
         <div className="container-wide">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -31,6 +32,12 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Contact Maranasi | Event Enquiries Jordan"
+        description="Start planning your luxury event. Contact our Amman team for corporate, wedding, and brand activation enquiries across Jordan and MENA."
+        keywords="contact Maranasi, event planner contact Jordan, wedding planner Amman contact"
+        canonicalPath="/contact"
+      />
       {/* Hero */}
       <section className="pt-32 pb-16 bg-background">
         <div className="container-wide">

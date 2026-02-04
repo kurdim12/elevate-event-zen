@@ -1,10 +1,17 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <Layout>
+      <SEO 
+        title="About Maranasi | Premier Event Company Jordan"
+        description="Meet the team behind Jordan's leading luxury event company. 15+ years of excellence, 500+ events produced. Partners with Jumeirah, Hilton, Ritz-Carlton."
+        keywords="about Maranasi, event company Jordan, luxury event team Amman, MENA event management"
+        canonicalPath="/about"
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="container-wide">

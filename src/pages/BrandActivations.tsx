@@ -1,9 +1,17 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
+import { SEO } from "@/components/SEO";
 import brandImage from "@/assets/brand-activation.jpg";
 
 const BrandActivations = () => {
   return (
-    <ServicePageLayout
+    <>
+      <SEO 
+        title="Brand Activation Agency Middle East | Product Launches | Maranasi"
+        description="Strategic brand activations & product launches across MENA. Immersive experiences that create lasting impressions in Jordan, UAE, and Saudi Arabia."
+        keywords="brand activation Middle East, product launch agency MENA, experiential marketing Jordan, pop-up events Dubai"
+        canonicalPath="/brand-activations"
+      />
+      <ServicePageLayout
       title="Brand Activations"
       subtitle="Immersive Experiences"
       heroImage={brandImage}
@@ -66,8 +74,9 @@ const BrandActivations = () => {
           description: "We execute flawlessly and provide comprehensive analytics on engagement and impact.",
         },
       ]}
-      ctaText="Launch Your Activation"
-    />
+        ctaText="Launch Your Activation"
+      />
+    </>
   );
 };
 

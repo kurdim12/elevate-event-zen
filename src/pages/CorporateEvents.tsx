@@ -1,9 +1,17 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
+import { SEO } from "@/components/SEO";
 import corporateImage from "@/assets/corporate-event.jpg";
 
 const CorporateEvents = () => {
   return (
-    <ServicePageLayout
+    <>
+      <SEO 
+        title="Corporate Event Planning Jordan | Conferences & Galas | Maranasi"
+        description="Expert corporate event management in Jordan & MENA. Conferences, summits, gala dinners, award ceremonies. Full production & AV services."
+        keywords="corporate event planner Jordan, conference organizer Amman, gala dinner MENA, award ceremony production, business event management"
+        canonicalPath="/corporate-events"
+      />
+      <ServicePageLayout
       title="Corporate Events"
       subtitle="Business Excellence"
       heroImage={corporateImage}
@@ -66,8 +74,9 @@ const CorporateEvents = () => {
           description: "Our on-site team manages every element, allowing you to be fully present with your guests.",
         },
       ]}
-      ctaText="Plan Your Corporate Event"
-    />
+        ctaText="Plan Your Corporate Event"
+      />
+    </>
   );
 };
 

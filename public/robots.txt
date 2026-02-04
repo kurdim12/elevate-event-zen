@@ -1,3 +1,6 @@
+# Maranasi Events - Robots.txt
+# https://maranasi.com
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +13,11 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://maranasi.com/sitemap.xml
