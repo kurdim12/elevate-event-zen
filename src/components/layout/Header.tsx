@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import maransiLogo from "@/assets/maranasi-logo.webp";
 
 interface SubNavItem {
   name: string;
@@ -133,9 +134,11 @@ export function Header() {
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="relative z-10">
-          <span className="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground">
-            Maranasi
-          </span>
+          <img 
+            src={maransiLogo} 
+            alt="Maranasi - Serious Business Stunning Events" 
+            className="h-10 md:h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
