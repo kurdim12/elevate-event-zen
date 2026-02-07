@@ -22,6 +22,8 @@ interface SubServicePageLayoutProps {
   videoTitle?: string;
   galleryImages?: GalleryImage[];
   galleryTitle?: string;
+  heroImage?: string;
+  heroImageAlt?: string;
 }
 
 export function SubServicePageLayout({
@@ -38,6 +40,8 @@ export function SubServicePageLayout({
   videoTitle,
   galleryImages,
   galleryTitle,
+  heroImage,
+  heroImageAlt,
 }: SubServicePageLayoutProps) {
   return (
     <Layout>
@@ -81,10 +85,25 @@ export function SubServicePageLayout({
       {/* Content */}
       <section className="section-padding bg-background">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-12 gap-16">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Main Content */}
             <div className="lg:col-span-7">
-              <AnimatedSection>
+              {/* Hero Image */}
+              {heroImage && (
+                <AnimatedSection>
+                  <div className="relative overflow-hidden mb-10">
+                    <div className="aspect-[16/10]">
+                      <img
+                        src={heroImage}
+                        alt={heroImageAlt || h1}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </AnimatedSection>
+              )}
+              
+              <AnimatedSection delay={heroImage ? 100 : 0}>
                 <div className="space-y-6">
                   {content.map((paragraph, index) => (
                     <p key={index} className="body-md text-muted-foreground leading-relaxed">
