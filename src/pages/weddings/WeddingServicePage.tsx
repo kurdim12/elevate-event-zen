@@ -23,8 +23,8 @@ const WeddingServicePage = () => {
       parentLink={{ label: "Destination Luxury Weddings", href: "/destination-luxury-weddings" }}
       videoId={service.videoId}
       videoTitle={service.videoTitle}
+      galleryImages={service.galleryImages}
+      galleryTitle={service.galleryTitle}
     />
   );
 };
-
-export default WeddingServicePage;

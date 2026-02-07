@@ -118,6 +118,11 @@ export function SubServicePageLayout({
         </div>
       </section>
 
+      {/* Gallery Section - if available */}
+      {galleryImages && galleryImages.length > 0 && (
+        <EditorialGallery images={galleryImages} title={galleryTitle} />
+      )}
+
       {/* Video Section - if available */}
       {videoId && (
         <CinematicVideoSection
