@@ -10,6 +10,8 @@ export interface ServiceData {
   ctaText: string;
   videoId?: string;
   videoTitle?: string;
+  hasGallery?: boolean;
+  galleryTitle?: string;
 }
 
 export const corporateServices: ServiceData[] = [
@@ -275,7 +277,9 @@ export const weddingServices: ServiceData[] = [
     ],
     ctaText: "Explore Destination Wedding Options",
     videoId: "1-bWe1RN6Ys",
-    videoTitle: "A Destination Wedding Experience"
+    videoTitle: "A Destination Wedding Experience",
+    hasGallery: true,
+    galleryTitle: "Crafted Moments"
   },
   {
     slug: "destination-marriage-proposals",

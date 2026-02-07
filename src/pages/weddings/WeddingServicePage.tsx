@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import { SubServicePageLayout } from "@/components/services/SubServicePageLayout";
 import { weddingServices } from "@/data/services";
+import { destinationLuxuryWeddingsGallery } from "@/data/wedding-gallery";
 
 const WeddingServicePage = () => {
   const { serviceSlug } = useParams<{ serviceSlug: string }>();
@@ -10,6 +11,11 @@ const WeddingServicePage = () => {
   if (!service) {
     return <Navigate to="/destination-luxury-weddings" replace />;
   }
+
+  // Get gallery images based on service slug
+  const galleryImages = service.hasGallery && serviceSlug === "destination-luxury-weddings-service" 
+    ? destinationLuxuryWeddingsGallery 
+    : undefined;
 
   return (
     <SubServicePageLayout
@@ -23,6 +29,8 @@ const WeddingServicePage = () => {
       parentLink={{ label: "Destination Luxury Weddings", href: "/destination-luxury-weddings" }}
       videoId={service.videoId}
       videoTitle={service.videoTitle}
+      galleryImages={galleryImages}
+      galleryTitle={service.galleryTitle}
     />
   );
 };
