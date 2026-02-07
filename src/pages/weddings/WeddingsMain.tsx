@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 import weddingImage from "@/assets/wedding-event.jpg";
 
 const weddingServices = [
-  { name: "Luxury Wedding Design and Planning", href: "/destination-luxury-weddings/luxury-wedding-design-and-planning", description: "Beauty with operational control" },
-  { name: "Destination Luxury Weddings", href: "/destination-luxury-weddings/destination-luxury-weddings-service", description: "Iconic locations, premium logistics" },
-  { name: "Destination Marriage Proposals", href: "/destination-luxury-weddings/destination-marriage-proposals", description: "Private, intentional, cinematic moments" },
+  { name: "Luxury Wedding Design and Planning", href: "/destination-luxury-weddings/luxury-wedding-design-and-planning" },
+  { name: "Destination Luxury Weddings", href: "/destination-luxury-weddings/destination-luxury-weddings-service" },
+  { name: "Destination Marriage Proposals", href: "/destination-luxury-weddings/destination-marriage-proposals" },
 ];
 
 const WeddingsMain = () => {
@@ -78,7 +78,7 @@ const WeddingsMain = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Production readiness for lighting and sound
+                    Production readiness coordination for lighting and sound
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -86,7 +86,7 @@ const WeddingsMain = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Show flow control for key moments
+                    Show flow control for entrances, key moments, and entertainment
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -112,16 +112,9 @@ const WeddingsMain = () => {
                   to={service.href}
                   className="block p-8 bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500 group h-full"
                 >
-                  <h3 className="font-serif text-xl font-medium mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="font-serif text-xl font-medium group-hover:text-primary transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-muted-foreground mb-6">
-                    {service.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
-                    Explore service
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
                 </Link>
               </AnimatedSection>
             ))}

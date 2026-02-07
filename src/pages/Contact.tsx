@@ -95,11 +95,8 @@ export default function Contact() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-ivory-dark">
         <div className="container-wide">
           <AnimatedSection>
-            <p className="label-uppercase text-muted-foreground mb-6">Get in Touch</p>
             <h1 className="heading-display max-w-4xl">
-              Request a
-              <br />
-              <span className="italic">Proposal</span>
+              Request a Proposal
             </h1>
           </AnimatedSection>
         </div>
@@ -113,9 +110,7 @@ export default function Contact() {
             <div className="lg:col-span-8">
               <AnimatedSection>
                 <p className="body-lg mb-10">
-                  Share the essentials and we will respond with a clear next step. 
-                  If you already have a destination in mind, we will shortlist venue options. 
-                  If you do not, we will recommend destinations based on your goals, dates, and guest count.
+                  Share the essentials and we will respond with a clear next step.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-8">

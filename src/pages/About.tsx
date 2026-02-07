@@ -16,11 +16,8 @@ export default function About() {
       <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-ivory-dark">
         <div className="container-wide">
           <AnimatedSection>
-            <p className="label-uppercase text-muted-foreground mb-6">About Us</p>
             <h1 className="heading-display max-w-4xl">
-              About
-              <br />
-              <span className="italic">MaraNasi</span>
+              About MaraNasi
             </h1>
           </AnimatedSection>
         </div>
@@ -34,18 +31,9 @@ export default function About() {
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="body-lg text-foreground">
                   MaraNasi is built for clients who expect premium results without 
-                  operational noise.
-                </p>
-                <p>
-                  We manage corporate events and destination luxury weddings with 
-                  disciplined planning, supplier control, and a strong production 
-                  backbone. We operate across Jordan, Egypt, the UAE, and Thailand, 
-                  delivering experiences in iconic venues and rare locations while 
-                  maintaining timing control and guest experience standards.
-                </p>
-                <p>
-                  Our work is guided by one principle. Design must be supported by 
-                  operations. When both align, the event feels effortless.
+                  operational noise. We manage corporate events and destination luxury 
+                  weddings with disciplined planning, supplier control, and a strong 
+                  production backbone.
                 </p>
               </div>
             </AnimatedSection>
@@ -124,14 +112,6 @@ export default function About() {
       <section className="section-padding bg-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-xl text-background mb-6">
-              Ready to Work
-              <br />
-              <span className="italic">Together?</span>
-            </h2>
-            <p className="body-lg text-background/70 mb-10">
-              Tell us about your event and we'll respond with a clear next step.
-            </p>
             <Link to="/contact" className="btn-gold">
               Book a Call
             </Link>
