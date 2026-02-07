@@ -48,7 +48,6 @@ export default function Blog() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-ivory-dark">
         <div className="container-wide">
           <AnimatedSection>
-            <p className="label-uppercase text-muted-foreground mb-6">Insights</p>
             <h1 className="heading-display max-w-4xl">Blog</h1>
           </AnimatedSection>
         </div>
@@ -98,14 +97,6 @@ export default function Blog() {
       <section className="section-padding bg-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-xl text-background mb-6">
-              Ready to Plan
-              <br />
-              <span className="italic">Your Event?</span>
-            </h2>
-            <p className="body-lg text-background/70 mb-10">
-              Don't wait for the blog—let's discuss your specific requirements.
-            </p>
             <Link to="/contact" className="btn-gold">
               Request a Proposal
             </Link>

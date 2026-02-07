@@ -32,11 +32,8 @@ const WeddingsMain = () => {
         </div>
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
-            <p className="label-uppercase text-background/70 mb-4">Luxury Celebrations</p>
             <h1 className="heading-display text-background max-w-4xl">
-              Destination Luxury
-              <br />
-              <span className="italic">Weddings</span>
+              Destination Luxury Weddings
             </h1>
           </AnimatedSection>
         </div>
@@ -126,14 +123,6 @@ const WeddingsMain = () => {
       <section className="section-padding bg-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-xl text-background mb-6">
-              Ready to Begin Your
-              <br />
-              <span className="italic">Wedding Journey?</span>
-            </h2>
-            <p className="body-lg text-background/70 mb-10">
-              Share your vision and we'll help bring it to life.
-            </p>
             <Link to="/contact" className="btn-gold">
               Request a Wedding Consultation
             </Link>
