@@ -283,7 +283,17 @@ export const weddingServices: ServiceData[] = [
     ],
     ctaText: "Explore Destination Wedding Options",
     videoId: "1-bWe1RN6Ys",
-    videoTitle: "A Destination Wedding Experience"
+    videoTitle: "A Destination Wedding Experience",
+    galleryTitle: "Crafted Moments",
+    galleryImages: [
+      { src: "/src/assets/weddings/destination-wedding-1.jpg", alt: "Outdoor wedding reception with red floral arrangements at historic venue", caption: "Amman Citadel — Jordan" },
+      { src: "/src/assets/weddings/destination-wedding-2.jpg", alt: "Romantic wedding signage with floral decor" },
+      { src: "/src/assets/weddings/destination-wedding-4.jpg", alt: "Golden hour table setting with roses and candles" },
+      { src: "/src/assets/weddings/destination-wedding-3.jpg", alt: "Elegant place setting with personalized menu" },
+      { src: "/src/assets/weddings/destination-wedding-5.png", alt: "Bride and groom walking through flower aisle at night" },
+      { src: "/src/assets/weddings/destination-wedding-6.png", alt: "Ancient columns with floral installations at night" },
+      { src: "/src/assets/weddings/destination-wedding-7.png", alt: "Intimate table setting with golden accents and thank you card" }
+    ]
   },
   {
     slug: "destination-marriage-proposals",

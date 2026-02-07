@@ -4,7 +4,9 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { CinematicVideoSection } from "@/components/ui/CinematicVideoSection";
+import { EditorialGallery } from "@/components/services/EditorialGallery";
 import { CheckCircle } from "lucide-react";
+import type { GalleryImage } from "@/data/services";
 
 interface SubServicePageLayoutProps {
   metaTitle: string;
@@ -18,6 +20,8 @@ interface SubServicePageLayoutProps {
   parentLink: { label: string; href: string };
   videoId?: string;
   videoTitle?: string;
+  galleryImages?: GalleryImage[];
+  galleryTitle?: string;
 }
 
 export function SubServicePageLayout({
