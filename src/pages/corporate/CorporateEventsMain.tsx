@@ -41,12 +41,15 @@ const CorporateEventsMain = () => {
         </div>
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
-            <p className="label-uppercase text-background/70 mb-4">Corporate Excellence</p>
             <h1 className="heading-display text-background max-w-4xl">
-              Corporate Events
-              <br />
-              <span className="italic">Management</span>
+              Corporate Events Management
             </h1>
+            <p className="body-lg text-background/80 mt-6 max-w-2xl">
+              MaraNasi delivers corporate events with destination level ambition and 
+              operational control. We plan, produce, and run high value experiences 
+              across Jordan, Egypt, the UAE, and Thailand, including conferences, 
+              exhibitions, retreats, gala dinners, and brand activations.
+            </p>
           </AnimatedSection>
         </div>
       </section>
@@ -132,14 +135,6 @@ const CorporateEventsMain = () => {
       <section className="section-padding bg-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-xl text-background mb-6">
-              Ready to Plan Your
-              <br />
-              <span className="italic">Corporate Event?</span>
-            </h2>
-            <p className="body-lg text-background/70 mb-10">
-              Tell us about your objectives and we'll respond with a clear next step.
-            </p>
             <Link to="/contact" className="btn-gold">
               Request a Corporate Proposal
             </Link>

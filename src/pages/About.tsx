@@ -33,7 +33,13 @@ export default function About() {
                   MaraNasi is built for clients who expect premium results without 
                   operational noise. We manage corporate events and destination luxury 
                   weddings with disciplined planning, supplier control, and a strong 
-                  production backbone.
+                  production backbone. We operate across Jordan, Egypt, the UAE, and Thailand, 
+                  delivering experiences in iconic venues and rare locations while 
+                  maintaining timing control and guest experience standards.
+                </p>
+                <p>
+                  Our work is guided by one principle. Design must be supported by 
+                  operations. When both align, the event feels effortless.
                 </p>
               </div>
             </AnimatedSection>

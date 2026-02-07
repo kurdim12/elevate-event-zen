@@ -44,10 +44,15 @@ const DestinationsMain = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="body-lg">
+            <p className="body-lg mb-4">
               MaraNasi operates across destinations selected for impact, accessibility, 
               and production feasibility. We deliver corporate events, destination 
-              weddings, and proposals across Jordan, Egypt, the UAE, and Thailand.
+              weddings, and proposals across Jordan, Egypt, the UAE, and Thailand. 
+              Each destination includes signature locations and venue options suitable 
+              for high value events.
+            </p>
+            <p className="body-md text-muted-foreground">
+              This page exists to help clients choose the right place before choosing the format.
             </p>
           </AnimatedSection>
         </div>
@@ -77,15 +82,6 @@ const DestinationsMain = () => {
       <section className="section-padding bg-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-xl text-background mb-6">
-              Not Sure Where
-              <br />
-              <span className="italic">to Begin?</span>
-            </h2>
-            <p className="body-lg text-background/70 mb-10">
-              Tell us your goals, dates, and guest count. We'll recommend 
-              the right destination for your event.
-            </p>
             <Link to="/contact" className="btn-gold">
               Request a Destination Shortlist
             </Link>
