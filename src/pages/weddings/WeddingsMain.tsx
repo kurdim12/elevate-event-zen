@@ -96,6 +96,35 @@ const WeddingsMain = () => {
         </div>
       </section>
 
+      {/* Video Showcase */}
+      <section className="py-16 md:py-20 bg-secondary/30">
+        <div className="container-wide">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <span className="text-[11px] tracking-[0.2em] text-muted-foreground/60 uppercase mb-3 block">
+                See Our Work
+              </span>
+              <h2 className="font-serif text-2xl md:text-3xl font-medium">
+                Wedding Experience
+              </h2>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={100}>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative aspect-video overflow-hidden bg-muted shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/VISSs12n7-w?rel=0"
+                  title="MaraNasi Wedding Experience"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Services */}
       <section className="section-padding bg-ivory-dark">
         <div className="container-wide">
