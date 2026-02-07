@@ -28,3 +28,5 @@ const WeddingServicePage = () => {
     />
   );
 };
+
+export default WeddingServicePage;
