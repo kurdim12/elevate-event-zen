@@ -35,10 +35,10 @@ export function Footer() {
             </p>
             <ul className="space-y-2.5">
               {[
-                { name: "Corporate", href: "/corporate-events" },
-                { name: "Weddings", href: "/weddings" },
-                { name: "Brand Activations", href: "/brand-activations" },
-                { name: "Private Events", href: "/private-events" },
+                { name: "Corporate Events", href: "/corporate-events" },
+                { name: "Weddings", href: "/destination-luxury-weddings" },
+                { name: "Blog", href: "/blog" },
+                { name: "FAQs", href: "/faqs" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link

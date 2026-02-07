@@ -7,113 +7,86 @@ export default function About() {
   return (
     <Layout>
       <SEO 
-        title="About Maranasi | Premier Event Company Jordan"
-        description="Meet the team behind Jordan's leading luxury event company. 15+ years of excellence, 500+ events produced. Partners with Jumeirah, Hilton, Ritz-Carlton."
-        keywords="about Maranasi, event company Jordan, luxury event team Amman, MENA event management"
+        title="About MaraNasi | Luxury Events Management"
+        description="MaraNasi is a luxury events management agency delivering corporate events and destination weddings across Jordan, Egypt, UAE, and Thailand with operational control and premium execution."
         canonicalPath="/about"
       />
+
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-ivory-dark">
         <div className="container-wide">
           <AnimatedSection>
-            <span className="text-sm tracking-[0.2em] text-muted-foreground uppercase mb-6 block">
-              About Us
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight max-w-4xl">
-              Crafting Extraordinary Moments Since 2008
+            <p className="label-uppercase text-muted-foreground mb-6">About Us</p>
+            <h1 className="heading-display max-w-4xl">
+              About
+              <br />
+              <span className="italic">MaraNasi</span>
             </h1>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Story */}
-      <section className="py-20 md:py-28 bg-secondary/30">
+      {/* Main Content */}
+      <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
             <AnimatedSection>
-              <h2 className="font-serif text-3xl md:text-4xl font-medium mb-8">
-                Our Story
-              </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
-                  MaraNasi Events Management was founded in Amman, Jordan with a singular 
-                  vision: to transform events into extraordinary experiences. What began 
-                  as a passion for creating memorable moments has evolved into the MENA 
-                  region's most trusted name in luxury event production.
+                <p className="body-lg text-foreground">
+                  MaraNasi is built for clients who expect premium results without 
+                  operational noise.
                 </p>
                 <p>
-                  Our signature approach brings together film directors who understand 
-                  visual narrative, architectural visionaries who design spaces that 
-                  inspire, and master craftsmen who execute with precision. This 
-                  collaborative methodology ensures every event tells a cohesive story.
+                  We manage corporate events and destination luxury weddings with 
+                  disciplined planning, supplier control, and a strong production 
+                  backbone. We operate across Jordan, Egypt, the UAE, and Thailand, 
+                  delivering experiences in iconic venues and rare locations while 
+                  maintaining timing control and guest experience standards.
                 </p>
                 <p>
-                  From world-class conferences at Jordan's finest venues to intimate 
-                  destination weddings in Petra and Wadi Rum, we've partnered with 
-                  prestigious clients including Jumeirah Group, Hilton Hotels, 
-                  Ritz-Carlton, Kempinski, and The Palm Hotel Collection.
+                  Our work is guided by one principle. Design must be supported by 
+                  operations. When both align, the event feels effortless.
                 </p>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2}>
-              <div className="space-y-12">
-                <div>
-                  <span className="font-serif text-5xl md:text-6xl text-primary">500+</span>
-                  <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mt-2">
-                    Events Produced
-                  </p>
-                </div>
-                <div>
-                  <span className="font-serif text-5xl md:text-6xl text-primary">15+</span>
-                  <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mt-2">
-                    Years of Excellence
-                  </p>
-                </div>
-                <div>
-                  <span className="font-serif text-5xl md:text-6xl text-primary">MENA</span>
-                  <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mt-2">
-                    Regional Coverage
-                  </p>
-                </div>
+            <AnimatedSection delay={100}>
+              <div className="card-luxury">
+                <h2 className="heading-sm mb-8">What we stand for</h2>
+                <ul className="space-y-4">
+                  {[
+                    "Operational control",
+                    "Premium execution standards",
+                    "Destination capability",
+                    "Discretion and VIP handling",
+                    "Production readiness and show flow discipline"
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 md:py-28">
+      {/* Stats */}
+      <section className="section-padding-sm bg-ivory-dark">
         <div className="container-wide">
-          <AnimatedSection>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium mb-16 text-center">
-              Our Approach
-            </h2>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
-              {
-                title: "Meticulous Planning",
-                description: "Every detail is considered, from the grand vision to the smallest finishing touch. We believe excellence lives in the details."
-              },
-              {
-                title: "Creative Excellence",
-                description: "Our creative team pushes boundaries while respecting timeless elegance. We craft experiences that feel both fresh and enduring."
-              },
-              {
-                title: "Flawless Execution",
-                description: "On the day of your event, our experienced production team ensures everything unfolds seamlessly, so you can be fully present."
-              }
-            ].map((value, index) => (
-              <AnimatedSection key={value.title} delay={index * 0.1}>
+              { value: "4", label: "Countries" },
+              { value: "500+", label: "Events Delivered" },
+              { value: "15+", label: "Years of Experience" },
+              { value: "100%", label: "Client Focus" }
+            ].map((stat, index) => (
+              <AnimatedSection key={stat.label} delay={index * 100}>
                 <div className="text-center">
-                  <h3 className="font-serif text-xl md:text-2xl font-medium mb-4">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
+                  <span className="font-serif text-4xl md:text-5xl text-primary">{stat.value}</span>
+                  <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -121,19 +94,46 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-foreground text-background">
-        <div className="container-wide text-center">
+      {/* Destinations */}
+      <section className="section-padding bg-background">
+        <div className="container-wide">
           <AnimatedSection>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6">
-              Let's Create Something Extraordinary
+            <h2 className="heading-lg mb-12 text-center">Where We Operate</h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { name: "Jordan", href: "/destinations/jordan" },
+              { name: "Egypt", href: "/destinations/egypt" },
+              { name: "United Arab Emirates", href: "/destinations/uae" },
+              { name: "Thailand", href: "/destinations/thailand" }
+            ].map((destination, index) => (
+              <AnimatedSection key={destination.name} delay={index * 50}>
+                <Link 
+                  to={destination.href}
+                  className="block p-6 bg-ivory-dark text-center hover:bg-secondary transition-colors duration-300"
+                >
+                  <span className="font-serif text-lg">{destination.name}</span>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-foreground">
+        <div className="container-narrow text-center">
+          <AnimatedSection>
+            <h2 className="heading-xl text-background mb-6">
+              Ready to Work
+              <br />
+              <span className="italic">Together?</span>
             </h2>
-            <p className="text-background/70 max-w-2xl mx-auto mb-10">
-              Whether you're planning a corporate conference, a luxury wedding, or a 
-              brand activation, we're here to bring your vision to life.
+            <p className="body-lg text-background/70 mb-10">
+              Tell us about your event and we'll respond with a clear next step.
             </p>
-            <Link to="/contact" className="btn-primary bg-background text-foreground hover:bg-background/90">
-              Start a Conversation
+            <Link to="/contact" className="btn-gold">
+              Book a Call
             </Link>
           </AnimatedSection>
         </div>
