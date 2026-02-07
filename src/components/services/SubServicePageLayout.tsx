@@ -36,6 +36,8 @@ export function SubServicePageLayout({
   parentLink,
   videoId,
   videoTitle,
+  galleryImages,
+  galleryTitle,
 }: SubServicePageLayoutProps) {
   return (
     <Layout>
