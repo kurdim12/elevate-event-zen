@@ -1,47 +1,73 @@
 import { useRef } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import corporateImage from "@/assets/corporate-event.jpg";
-import weddingImage from "@/assets/wedding-event.jpg";
-import destinationImage from "@/assets/destination-event.jpg";
-import heroImage from "@/assets/hero-event.jpg";
-import brandImage from "@/assets/brand-activation.jpg";
+
+// Real MaraNasi portfolio images
+import conferenceImage from "@/assets/events/conference-summit.jpg";
+import galaImage from "@/assets/events/gala-awards.png";
+import productLaunchImage from "@/assets/events/product-launch.jpg";
+import miceImage from "@/assets/events/mice-event.jpg";
+import brandActivationImage from "@/assets/events/brand-activation.jpg";
+import luxuryWeddingImage from "@/assets/events/luxury-wedding.png";
+import hennaNightImage from "@/assets/events/henna-night.jpg";
+import eventProductionImage from "@/assets/events/event-production.jpg";
 
 const events = [
   {
     id: 1,
-    title: "Royal Gala Dinner",
-    category: "Corporate",
-    location: "Amman, Jordan",
-    image: corporateImage,
+    title: "Youth Medical Conference",
+    category: "Conference",
+    location: "Fairmont Amman",
+    image: conferenceImage,
   },
   {
     id: 2,
-    title: "Petra Destination Wedding",
-    category: "Wedding",
-    location: "Petra, Jordan",
-    image: weddingImage,
+    title: "Corporate Gala Dinner",
+    category: "Gala & Awards",
+    location: "Amman, Jordan",
+    image: galaImage,
   },
   {
     id: 3,
-    title: "Annual Conference",
-    category: "Corporate",
-    location: "Dubai, UAE",
-    image: heroImage,
+    title: "Luxury Car Launch",
+    category: "Product Launch",
+    location: "Amman, Jordan",
+    image: productLaunchImage,
   },
   {
     id: 4,
-    title: "Brand Launch Experience",
-    category: "Activation",
-    location: "Cairo, Egypt",
-    image: brandImage,
+    title: "Destination Luxury Wedding",
+    category: "Wedding",
+    location: "Petra, Jordan",
+    image: luxuryWeddingImage,
   },
   {
     id: 5,
-    title: "Wadi Rum Retreat",
-    category: "Corporate",
+    title: "Brand Activation Event",
+    category: "Activation",
     location: "Wadi Rum, Jordan",
-    image: destinationImage,
+    image: brandActivationImage,
+  },
+  {
+    id: 6,
+    title: "MICE Corporate Retreat",
+    category: "MICE",
+    location: "Aqaba, Jordan",
+    image: miceImage,
+  },
+  {
+    id: 7,
+    title: "Henna & Cultural Night",
+    category: "Wedding",
+    location: "Amman, Jordan",
+    image: hennaNightImage,
+  },
+  {
+    id: 8,
+    title: "Stage Production Show",
+    category: "Production",
+    location: "Dubai, UAE",
+    image: eventProductionImage,
   },
 ];
 

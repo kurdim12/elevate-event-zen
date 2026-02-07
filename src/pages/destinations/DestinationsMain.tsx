@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ArrowRight } from "lucide-react";
-import destinationImage from "@/assets/destination-event.jpg";
+import destinationImage from "@/assets/hero-destination.png";
 
 const destinationsList = [
   { name: "Jordan", href: "/destinations/jordan" },
