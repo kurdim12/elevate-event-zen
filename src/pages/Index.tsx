@@ -5,7 +5,7 @@ import { AboutSection } from "@/components/home/AboutSection";
 import { ServiceSelector } from "@/components/home/ServiceSelector";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { SignatureMomentSection } from "@/components/home/SignatureMomentSection";
-import { VideoShowcaseSection } from "@/components/home/VideoShowcaseSection";
+import { FeaturedFilmsSection } from "@/components/home/FeaturedFilmsSection";
 import { BeliefSection } from "@/components/home/BeliefSection";
 import { DestinationsSection } from "@/components/home/DestinationsSection";
 import { LatestEventsSection } from "@/components/home/LatestEventsSection";
@@ -27,7 +27,7 @@ const Index = () => {
       <ServiceSelector />
       <ServicesSection />
       <SignatureMomentSection />
-      <VideoShowcaseSection />
+      <FeaturedFilmsSection />
       <BeliefSection />
       <DestinationsSection />
       <LatestEventsSection />
