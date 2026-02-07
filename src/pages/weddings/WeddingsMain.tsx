@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ArrowRight } from "lucide-react";
-import weddingImage from "@/assets/wedding-event.jpg";
+import weddingImage from "@/assets/hero-wedding.png";
 
 const weddingServices = [
   { name: "Luxury Wedding Design and Planning", href: "/destination-luxury-weddings/luxury-wedding-design-and-planning" },

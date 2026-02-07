@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ArrowRight } from "lucide-react";
-import corporateImage from "@/assets/corporate-event.jpg";
+import corporateImage from "@/assets/hero-corporate.jpg";
 
 const corporateServices = [
   { name: "MICE Event Management", href: "/corporate-events/mice-event-management" },
