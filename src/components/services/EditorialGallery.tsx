@@ -14,119 +14,168 @@ interface EditorialGalleryProps {
 export function EditorialGallery({ images, title = "Moments That Define Us" }: EditorialGalleryProps) {
   if (!images || images.length === 0) return null;
 
-  // Create an editorial asymmetric layout
   return (
-    <section className="section-padding bg-ivory-dark overflow-hidden">
+    <section className="py-24 md:py-32 bg-foreground overflow-hidden">
       <div className="container-wide">
+        {/* Section Header */}
         <AnimatedSection>
-          <h2 className="heading-lg mb-16">{title}</h2>
+          <div className="mb-16 md:mb-24">
+            <span className="text-[10px] tracking-[0.3em] text-background/40 uppercase block mb-4">
+              Portfolio
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-background tracking-[-0.02em]">
+              {title}
+            </h2>
+          </div>
         </AnimatedSection>
 
-        {/* Editorial Grid - Asymmetric Layout */}
-        <div className="grid grid-cols-12 gap-4 md:gap-6">
-          {/* Large hero image - spans 8 columns */}
-          {images[0] && (
-            <AnimatedSection className="col-span-12 md:col-span-8">
-              <div className="relative aspect-[4/3] overflow-hidden group">
-                <img
-                  src={images[0].src}
-                  alt={images[0].alt}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                {images[0].caption && (
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="text-[11px] tracking-[0.15em] text-background/80 uppercase">
-                      {images[0].caption}
-                    </p>
+        {/* Editorial Masonry Grid */}
+        <div className="space-y-4 md:space-y-6">
+          
+          {/* Row 1: Hero + Vertical */}
+          <div className="grid grid-cols-12 gap-4 md:gap-6">
+            {/* Large hero image */}
+            {images[0] && (
+              <AnimatedSection className="col-span-12 lg:col-span-7">
+                <div className="relative overflow-hidden group cursor-pointer">
+                  <div className="aspect-[4/3]">
+                    <img
+                      src={images[0].src}
+                      alt={images[0].alt}
+                      className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                    />
                   </div>
-                )}
-              </div>
-            </AnimatedSection>
-          )}
+                  {/* Elegant overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/0 to-foreground/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  {/* Caption */}
+                  {images[0].caption && (
+                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                      <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-out">
+                        <span className="text-[11px] tracking-[0.2em] text-background/90 uppercase font-light">
+                          {images[0].caption}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                  {/* Corner accent */}
+                  <div className="absolute top-6 right-6 w-8 h-8 border-t border-r border-background/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+              </AnimatedSection>
+            )}
 
-          {/* Tall vertical image - spans 4 columns, 2 rows */}
-          {images[1] && (
-            <AnimatedSection className="col-span-12 md:col-span-4 md:row-span-2" delay={100}>
-              <div className="relative aspect-[3/4] md:h-full overflow-hidden group">
-                <img
-                  src={images[1].src}
-                  alt={images[1].alt}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </AnimatedSection>
-          )}
+            {/* Tall vertical image */}
+            {images[1] && (
+              <AnimatedSection className="col-span-12 lg:col-span-5" delay={100}>
+                <div className="relative overflow-hidden group cursor-pointer h-full">
+                  <div className="aspect-[3/4] lg:aspect-auto lg:h-full">
+                    <img
+                      src={images[1].src}
+                      alt={images[1].alt}
+                      className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-foreground/0 to-foreground/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute top-6 left-6 w-8 h-8 border-t border-l border-background/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+              </AnimatedSection>
+            )}
+          </div>
 
-          {/* Two smaller images side by side */}
-          {images[2] && (
-            <AnimatedSection className="col-span-6 md:col-span-4" delay={150}>
-              <div className="relative aspect-square overflow-hidden group">
-                <img
-                  src={images[2].src}
-                  alt={images[2].alt}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </AnimatedSection>
-          )}
+          {/* Row 2: Three equal images */}
+          <div className="grid grid-cols-12 gap-4 md:gap-6">
+            {images[2] && (
+              <AnimatedSection className="col-span-6 lg:col-span-4" delay={150}>
+                <div className="relative overflow-hidden group cursor-pointer">
+                  <div className="aspect-[1/1]">
+                    <img
+                      src={images[2].src}
+                      alt={images[2].alt}
+                      className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+              </AnimatedSection>
+            )}
 
-          {images[3] && (
-            <AnimatedSection className="col-span-6 md:col-span-4" delay={200}>
-              <div className="relative aspect-square overflow-hidden group">
-                <img
-                  src={images[3].src}
-                  alt={images[3].alt}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </AnimatedSection>
-          )}
+            {images[3] && (
+              <AnimatedSection className="col-span-6 lg:col-span-4" delay={200}>
+                <div className="relative overflow-hidden group cursor-pointer">
+                  <div className="aspect-[1/1]">
+                    <img
+                      src={images[3].src}
+                      alt={images[3].alt}
+                      className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+              </AnimatedSection>
+            )}
 
-          {/* Full width cinematic strip */}
-          {images[4] && (
-            <AnimatedSection className="col-span-12" delay={250}>
-              <div className="relative aspect-[21/9] overflow-hidden group">
-                <img
-                  src={images[4].src}
-                  alt={images[4].alt}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </AnimatedSection>
-          )}
+            {images[4] && (
+              <AnimatedSection className="col-span-12 lg:col-span-4" delay={250}>
+                <div className="relative overflow-hidden group cursor-pointer">
+                  <div className="aspect-[16/9] lg:aspect-[1/1]">
+                    <img
+                      src={images[4].src}
+                      alt={images[4].alt}
+                      className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+              </AnimatedSection>
+            )}
+          </div>
 
-          {/* Two final images in magazine layout */}
-          {images[5] && (
-            <AnimatedSection className="col-span-12 md:col-span-5" delay={300}>
-              <div className="relative aspect-[16/10] overflow-hidden group">
-                <img
-                  src={images[5].src}
-                  alt={images[5].alt}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </AnimatedSection>
-          )}
+          {/* Row 3: Cinematic wide + Portrait */}
+          <div className="grid grid-cols-12 gap-4 md:gap-6">
+            {images[5] && (
+              <AnimatedSection className="col-span-12 lg:col-span-5" delay={300}>
+                <div className="relative overflow-hidden group cursor-pointer">
+                  <div className="aspect-[4/5]">
+                    <img
+                      src={images[5].src}
+                      alt={images[5].alt}
+                      className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-foreground/40 via-foreground/0 to-foreground/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute bottom-6 right-6 w-8 h-8 border-b border-r border-background/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+              </AnimatedSection>
+            )}
 
-          {images[6] && (
-            <AnimatedSection className="col-span-12 md:col-span-7" delay={350}>
-              <div className="relative aspect-[16/10] overflow-hidden group">
-                <img
-                  src={images[6].src}
-                  alt={images[6].alt}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </AnimatedSection>
-          )}
+            {images[6] && (
+              <AnimatedSection className="col-span-12 lg:col-span-7" delay={350}>
+                <div className="relative overflow-hidden group cursor-pointer h-full">
+                  <div className="aspect-[16/10] lg:aspect-auto lg:h-full">
+                    <img
+                      src={images[6].src}
+                      alt={images[6].alt}
+                      className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-foreground/0 to-foreground/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  {/* Decorative line */}
+                  <div className="absolute bottom-8 left-8 right-8 h-px bg-background/0 group-hover:bg-background/30 transition-colors duration-1000" />
+                </div>
+              </AnimatedSection>
+            )}
+          </div>
         </div>
+
+        {/* Bottom accent */}
+        <AnimatedSection delay={400}>
+          <div className="mt-16 md:mt-24 flex items-center justify-center gap-4">
+            <span className="w-12 h-px bg-background/20" />
+            <span className="text-[10px] tracking-[0.3em] text-background/30 uppercase">
+              Every Detail Matters
+            </span>
+            <span className="w-12 h-px bg-background/20" />
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
