@@ -8,7 +8,7 @@ import { SignatureMomentSection } from "@/components/home/SignatureMomentSection
 import { VisualStorySection } from "@/components/home/VisualStorySection";
 import { BeliefSection } from "@/components/home/BeliefSection";
 import { DestinationsSection } from "@/components/home/DestinationsSection";
-import { WhyChooseSection } from "@/components/home/WhyChooseSection";
+import { LatestEventsSection } from "@/components/home/LatestEventsSection";
 import { CTASection } from "@/components/home/CTASection";
 import { RhythmBreak } from "@/components/home/RhythmBreak";
 
@@ -30,7 +30,7 @@ const Index = () => {
       <VisualStorySection />
       <BeliefSection />
       <DestinationsSection />
-      <WhyChooseSection />
+      <LatestEventsSection />
       <CTASection />
     </Layout>
   );
