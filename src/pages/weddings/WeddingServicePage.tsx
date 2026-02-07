@@ -21,6 +21,8 @@ const WeddingServicePage = () => {
       features={service.features}
       ctaText={service.ctaText}
       parentLink={{ label: "Destination Luxury Weddings", href: "/destination-luxury-weddings" }}
+      videoId={service.videoId}
+      videoTitle={service.videoTitle}
     />
   );
 };

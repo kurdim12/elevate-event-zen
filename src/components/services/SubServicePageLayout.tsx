@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { CinematicVideoSection } from "@/components/ui/CinematicVideoSection";
 import { CheckCircle } from "lucide-react";
 
 interface SubServicePageLayoutProps {
@@ -15,6 +16,8 @@ interface SubServicePageLayoutProps {
   features: string[];
   ctaText: string;
   parentLink: { label: string; href: string };
+  videoId?: string;
+  videoTitle?: string;
 }
 
 export function SubServicePageLayout({
@@ -27,6 +30,8 @@ export function SubServicePageLayout({
   features,
   ctaText,
   parentLink,
+  videoId,
+  videoTitle,
 }: SubServicePageLayoutProps) {
   return (
     <Layout>
@@ -106,6 +111,15 @@ export function SubServicePageLayout({
           </div>
         </div>
       </section>
+
+      {/* Video Section - if available */}
+      {videoId && (
+        <CinematicVideoSection
+          videoId={videoId}
+          title={videoTitle || "Experience Our Work"}
+          subtitle="Watch the Film"
+        />
+      )}
 
       {/* CTA Section */}
       <section className="section-padding-sm bg-foreground">
