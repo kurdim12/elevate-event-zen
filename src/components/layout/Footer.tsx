@@ -99,7 +99,7 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             <a 
-              href="https://instagram.com" 
+              href="https://instagram.com/maranasi_events" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
@@ -107,7 +107,15 @@ export function Footer() {
               Instagram
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.youtube.com/@MaraNasiForEvents" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
+            >
+              YouTube
+            </a>
+            <a 
+              href="https://linkedin.com/company/maranasi" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
