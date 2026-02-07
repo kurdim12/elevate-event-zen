@@ -3,71 +3,79 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Real MaraNasi portfolio images
-import conferenceImage from "@/assets/events/conference-summit.jpg";
-import galaImage from "@/assets/events/gala-awards.png";
-import productLaunchImage from "@/assets/events/product-launch.jpg";
-import miceImage from "@/assets/events/mice-event.jpg";
-import brandActivationImage from "@/assets/events/brand-activation.jpg";
+import tedxAmmanImage from "@/assets/events/tedx-amman.jpg";
+import luxuryCarImage from "@/assets/events/luxury-car-event.jpg";
+import ingotBoothImage from "@/assets/events/ingot-booth.jpg";
+import exhibitionBoothImage from "@/assets/events/exhibition-booth.png";
+import aviationFighterImage from "@/assets/events/aviation-fighter.jpg";
+import aviationDroneImage from "@/assets/events/aviation-drone.jpg";
 import luxuryWeddingImage from "@/assets/events/luxury-wedding.png";
+import galaImage from "@/assets/events/gala-awards.png";
 import hennaNightImage from "@/assets/events/henna-night.jpg";
-import eventProductionImage from "@/assets/events/event-production.jpg";
 
 const events = [
   {
     id: 1,
-    title: "Youth Medical Conference",
+    title: "TEDx Amman Conference",
     category: "Conference",
-    location: "Fairmont Amman",
-    image: conferenceImage,
+    location: "Amman, Jordan",
+    image: tedxAmmanImage,
   },
   {
     id: 2,
-    title: "Corporate Gala Dinner",
-    category: "Gala & Awards",
-    location: "Amman, Jordan",
-    image: galaImage,
+    title: "Luxury Car Exhibition",
+    category: "Brand Activation",
+    location: "Roman Amphitheater",
+    image: luxuryCarImage,
   },
   {
     id: 3,
-    title: "Luxury Car Launch",
-    category: "Product Launch",
+    title: "INGOT Brand Experience",
+    category: "Activation",
     location: "Amman, Jordan",
-    image: productLaunchImage,
+    image: ingotBoothImage,
   },
   {
     id: 4,
+    title: "Exhibition Booth Design",
+    category: "Exhibition",
+    location: "Trade Show",
+    image: exhibitionBoothImage,
+  },
+  {
+    id: 5,
+    title: "Aviation Event",
+    category: "Special Event",
+    location: "Jordan",
+    image: aviationFighterImage,
+  },
+  {
+    id: 6,
+    title: "Drone Showcase",
+    category: "Aviation",
+    location: "Jordan",
+    image: aviationDroneImage,
+  },
+  {
+    id: 7,
     title: "Destination Luxury Wedding",
     category: "Wedding",
     location: "Petra, Jordan",
     image: luxuryWeddingImage,
   },
   {
-    id: 5,
-    title: "Brand Activation Event",
-    category: "Activation",
-    location: "Wadi Rum, Jordan",
-    image: brandActivationImage,
+    id: 8,
+    title: "Corporate Gala Dinner",
+    category: "Gala & Awards",
+    location: "Amman, Jordan",
+    image: galaImage,
   },
   {
-    id: 6,
-    title: "MICE Corporate Retreat",
-    category: "MICE",
-    location: "Aqaba, Jordan",
-    image: miceImage,
-  },
-  {
-    id: 7,
+    id: 9,
     title: "Henna & Cultural Night",
     category: "Wedding",
     location: "Amman, Jordan",
     image: hennaNightImage,
-  },
-  {
-    id: 8,
-    title: "Stage Production Show",
-    category: "Production",
-    location: "Dubai, UAE",
-    image: eventProductionImage,
   },
 ];
 
