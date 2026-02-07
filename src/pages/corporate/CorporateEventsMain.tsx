@@ -6,18 +6,18 @@ import { ArrowRight } from "lucide-react";
 import corporateImage from "@/assets/corporate-event.jpg";
 
 const corporateServices = [
-  { name: "MICE Event Management", href: "/corporate-events/mice-event-management", description: "Meetings, incentives, conferences, and exhibitions" },
-  { name: "Destination Corporate Events", href: "/corporate-events/destination-corporate-events", description: "Iconic locations with operational discipline" },
-  { name: "Destination Corporate Retreats", href: "/corporate-events/destination-corporate-retreats", description: "Productivity meets premium experience" },
-  { name: "Exhibition Booth Design and Production", href: "/corporate-events/exhibition-booth-design-production", description: "Brand presence that performs" },
-  { name: "360 Campaign Management and Brand Activations", href: "/corporate-events/360-campaign-management-activations", description: "Real world brand touchpoints" },
-  { name: "Exhibition Management", href: "/corporate-events/exhibition-management", description: "Controlled systems, not vendor collections" },
-  { name: "Entertainment Programming and Production", href: "/corporate-events/entertainment-programming-production", description: "Impact without chaos" },
-  { name: "Conference Management", href: "/corporate-events/conference-management", description: "Credibility with timing discipline" },
-  { name: "VIP Greet and Meet Facilitation", href: "/corporate-events/vip-greet-and-meet-facilitation", description: "Privacy first, timing sharp" },
-  { name: "Lighting and Sound Production", href: "/corporate-events/lighting-and-sound-production", description: "Technical readiness, premium quality" },
-  { name: "Gala Dinner and Banquet Production", href: "/corporate-events/gala-dinner-banquet-production", description: "Elegance with operational discipline" },
-  { name: "Show Calling and Stage Management", href: "/corporate-events/show-calling-stage-management", description: "Timing discipline for high stakes moments" },
+  { name: "MICE Event Management", href: "/corporate-events/mice-event-management" },
+  { name: "Destination Corporate Events", href: "/corporate-events/destination-corporate-events" },
+  { name: "Destination Corporate Retreats", href: "/corporate-events/destination-corporate-retreats" },
+  { name: "Exhibition Booth Design and Production", href: "/corporate-events/exhibition-booth-design-production" },
+  { name: "360 Campaign Management and Brand Activations", href: "/corporate-events/360-campaign-management-activations" },
+  { name: "Exhibition Management", href: "/corporate-events/exhibition-management" },
+  { name: "Entertainment Programming and Production", href: "/corporate-events/entertainment-programming-production" },
+  { name: "Conference Management", href: "/corporate-events/conference-management" },
+  { name: "VIP Greet and Meet Facilitation", href: "/corporate-events/vip-greet-and-meet-facilitation" },
+  { name: "Lighting and Sound Production", href: "/corporate-events/lighting-and-sound-production" },
+  { name: "Gala Dinner and Banquet Production", href: "/corporate-events/gala-dinner-banquet-production" },
+  { name: "Show Calling and Stage Management", href: "/corporate-events/show-calling-stage-management" },
 ];
 
 const CorporateEventsMain = () => {
@@ -51,18 +51,13 @@ const CorporateEventsMain = () => {
         </div>
       </section>
 
-      {/* Intro */}
+      {/* Our Approach */}
       <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16">
             <AnimatedSection>
               <div className="space-y-6">
-                <p className="body-lg">
-                  MaraNasi delivers corporate events with destination level ambition and 
-                  operational control. We plan, produce, and run high value experiences 
-                  across Jordan, Egypt, the UAE, and Thailand, including conferences, 
-                  exhibitions, retreats, gala dinners, and brand activations.
-                </p>
+                <h2 className="heading-lg mb-4">Our Approach</h2>
                 <p className="body-md text-muted-foreground">
                   Our approach is simple. We treat every corporate project as a managed 
                   system. Planning, suppliers, production, guest flow, and stage timing 
@@ -73,7 +68,7 @@ const CorporateEventsMain = () => {
             </AnimatedSection>
             <AnimatedSection delay={100}>
               <div className="space-y-4">
-                <h2 className="heading-sm mb-6">What we deliver</h2>
+                <h2 className="heading-sm mb-6">What We Deliver</h2>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -89,15 +84,15 @@ const CorporateEventsMain = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Production readiness for lighting and sound
+                    Production readiness coordination for lighting and sound
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    VIP greet and meet facilitation
+                    VIP greet and meet facilitation when required
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Show calling and stage management
+                    Show calling and stage management for timing control
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -123,16 +118,9 @@ const CorporateEventsMain = () => {
                   to={service.href}
                   className="block p-6 bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500 group"
                 >
-                  <h3 className="font-serif text-lg font-medium mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="font-serif text-lg font-medium group-hover:text-primary transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {service.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
-                    Learn more
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
                 </Link>
               </AnimatedSection>
             ))}

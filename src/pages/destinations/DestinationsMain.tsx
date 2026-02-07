@@ -6,10 +6,10 @@ import { ArrowRight } from "lucide-react";
 import destinationImage from "@/assets/destination-event.jpg";
 
 const destinationsList = [
-  { name: "Jordan", href: "/destinations/jordan", description: "Historic backdrops, premium hospitality, rare experiences" },
-  { name: "Egypt", href: "/destinations/egypt", description: "Scale and iconic visuals for high profile events" },
-  { name: "United Arab Emirates", href: "/destinations/uae", description: "World class venues and hospitality infrastructure" },
-  { name: "Thailand", href: "/destinations/thailand", description: "Luxury city venues and iconic island experiences" },
+  { name: "Jordan", href: "/destinations/jordan" },
+  { name: "Egypt", href: "/destinations/egypt" },
+  { name: "United Arab Emirates", href: "/destinations/uae" },
+  { name: "Thailand", href: "/destinations/thailand" },
 ];
 
 const DestinationsMain = () => {
@@ -33,7 +33,6 @@ const DestinationsMain = () => {
         </div>
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
-            <p className="label-uppercase text-background/70 mb-4">Where Dreams Unfold</p>
             <h1 className="heading-display text-background max-w-4xl">
               Destinations
             </h1>
@@ -48,9 +47,7 @@ const DestinationsMain = () => {
             <p className="body-lg">
               MaraNasi operates across destinations selected for impact, accessibility, 
               and production feasibility. We deliver corporate events, destination 
-              weddings, and proposals across Jordan, Egypt, the UAE, and Thailand. 
-              Each destination includes signature locations and venue options suitable 
-              for high value events.
+              weddings, and proposals across Jordan, Egypt, the UAE, and Thailand.
             </p>
           </AnimatedSection>
         </div>
@@ -66,16 +63,9 @@ const DestinationsMain = () => {
                   to={destination.href}
                   className="block p-10 bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500 group"
                 >
-                  <h2 className="font-serif text-2xl font-medium mb-3 group-hover:text-primary transition-colors">
+                  <h2 className="font-serif text-2xl font-medium group-hover:text-primary transition-colors">
                     {destination.name}
                   </h2>
-                  <p className="text-muted-foreground mb-6">
-                    {destination.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
-                    Explore {destination.name}
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
                 </Link>
               </AnimatedSection>
             ))}
