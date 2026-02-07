@@ -1,11 +1,11 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/home/HeroSection";
+import { VideoHeroSection } from "@/components/home/VideoHeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServiceSelector } from "@/components/home/ServiceSelector";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { SignatureMomentSection } from "@/components/home/SignatureMomentSection";
-import { FeaturedFilmsSection } from "@/components/home/FeaturedFilmsSection";
 import { BeliefSection } from "@/components/home/BeliefSection";
 import { DestinationsSection } from "@/components/home/DestinationsSection";
 import { LatestEventsSection } from "@/components/home/LatestEventsSection";
@@ -22,12 +22,12 @@ const Index = () => {
         canonicalPath="/"
       />
       <HeroSection />
+      <VideoHeroSection videoId="-8eRhlfX-XU" />
       <AboutSection />
       <RhythmBreak />
       <ServiceSelector />
       <ServicesSection />
       <SignatureMomentSection />
-      <FeaturedFilmsSection />
       <BeliefSection />
       <DestinationsSection />
       <LatestEventsSection />
