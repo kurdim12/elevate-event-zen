@@ -18,53 +18,40 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   {
-    name: "Services",
+    name: "Corporate Events",
+    href: "/corporate-events",
     children: [
-      { 
-        name: "Corporate Events", 
-        href: "/corporate-events",
-        description: "Conferences, galas, and executive experiences"
-      },
-      { 
-        name: "Weddings", 
-        href: "/weddings",
-        description: "Luxury celebrations and destination weddings"
-      },
-      { 
-        name: "Brand Activations", 
-        href: "/brand-activations",
-        description: "Product launches and immersive brand experiences"
-      },
-      { 
-        name: "Private Events", 
-        href: "/private-events",
-        description: "Intimate gatherings and milestone celebrations"
-      },
+      { name: "MICE Event Management", href: "/corporate-events/mice-event-management" },
+      { name: "Destination Corporate Events", href: "/corporate-events/destination-corporate-events" },
+      { name: "Destination Corporate Retreats", href: "/corporate-events/destination-corporate-retreats" },
+      { name: "Exhibition Booth Design", href: "/corporate-events/exhibition-booth-design-production" },
+      { name: "360 Campaign & Activations", href: "/corporate-events/360-campaign-management-activations" },
+      { name: "Exhibition Management", href: "/corporate-events/exhibition-management" },
+      { name: "Entertainment Programming", href: "/corporate-events/entertainment-programming-production" },
+      { name: "Conference Management", href: "/corporate-events/conference-management" },
+      { name: "VIP Facilitation", href: "/corporate-events/vip-greet-and-meet-facilitation" },
+      { name: "Lighting & Sound", href: "/corporate-events/lighting-and-sound-production" },
+      { name: "Gala Dinner Production", href: "/corporate-events/gala-dinner-banquet-production" },
+      { name: "Show Calling & Stage", href: "/corporate-events/show-calling-stage-management" },
+    ],
+  },
+  {
+    name: "Weddings",
+    href: "/destination-luxury-weddings",
+    children: [
+      { name: "Luxury Wedding Planning", href: "/destination-luxury-weddings/luxury-wedding-design-and-planning", description: "Full design and planning services" },
+      { name: "Destination Weddings", href: "/destination-luxury-weddings/destination-luxury-weddings-service", description: "Iconic locations, premium logistics" },
+      { name: "Marriage Proposals", href: "/destination-luxury-weddings/destination-marriage-proposals", description: "Private, cinematic moments" },
     ],
   },
   {
     name: "Destinations",
+    href: "/destinations",
     children: [
-      { 
-        name: "Jordan", 
-        href: "/destinations?region=jordan",
-        description: "Petra, Dead Sea, and Amman"
-      },
-      { 
-        name: "UAE", 
-        href: "/destinations?region=uae",
-        description: "Dubai and Abu Dhabi"
-      },
-      { 
-        name: "Saudi Arabia", 
-        href: "/destinations?region=saudi",
-        description: "Riyadh, Jeddah, and AlUla"
-      },
-      { 
-        name: "International", 
-        href: "/destinations?region=international",
-        description: "Worldwide destination events"
-      },
+      { name: "Jordan", href: "/destinations/jordan", description: "Amman, Petra, Wadi Rum, Aqaba" },
+      { name: "Egypt", href: "/destinations/egypt", description: "Pyramids of Giza, North Coast" },
+      { name: "United Arab Emirates", href: "/destinations/uae", description: "Dubai, Abu Dhabi, Sharjah" },
+      { name: "Thailand", href: "/destinations/thailand", description: "Bangkok, Pattaya, Phi Phi" },
     ],
   },
   { name: "Work", href: "/work" },
@@ -114,7 +101,7 @@ export function Header() {
     if (href.includes("?")) {
       return location.pathname === href.split("?")[0];
     }
-    return location.pathname === href;
+    return location.pathname === href || location.pathname.startsWith(href + "/");
   };
 
   const hasActiveChild = (children?: SubNavItem[]) => {
@@ -151,7 +138,7 @@ export function Header() {
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   className={cn(
                     "flex items-center gap-1.5 px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300",
-                    activeDropdown === item.name || hasActiveChild(item.children)
+                    activeDropdown === item.name || hasActiveChild(item.children) || isActiveRoute(item.href)
                       ? "text-primary"
                       : "text-foreground/80 hover:text-foreground"
                   )}
@@ -189,13 +176,24 @@ export function Header() {
                       : "opacity-0 invisible -translate-y-2"
                   )}
                 >
-                  <div className="bg-background border border-border/50 shadow-lg rounded-sm min-w-[280px] py-3">
+                  <div className="bg-background border border-border/50 shadow-lg rounded-sm min-w-[280px] py-3 max-h-[70vh] overflow-y-auto">
+                    {/* Main link for category */}
+                    {item.href && (
+                      <Link
+                        to={item.href}
+                        className="block px-5 py-3 border-b border-border/30 mb-2 hover:bg-secondary/30 transition-colors"
+                      >
+                        <span className="text-sm font-medium text-primary">
+                          View All {item.name}
+                        </span>
+                      </Link>
+                    )}
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
                         to={child.href}
                         className={cn(
-                          "block px-5 py-3 transition-colors duration-200 group",
+                          "block px-5 py-2.5 transition-colors duration-200 group",
                           isActiveRoute(child.href)
                             ? "bg-secondary/50"
                             : "hover:bg-secondary/30"
@@ -273,7 +271,7 @@ export function Header() {
                       <span
                         className={cn(
                           "font-serif text-xl font-medium",
-                          hasActiveChild(item.children) && "text-primary"
+                          (hasActiveChild(item.children) || isActiveRoute(item.href)) && "text-primary"
                         )}
                       >
                         {item.name}
@@ -289,28 +287,31 @@ export function Header() {
                       className={cn(
                         "overflow-hidden transition-all duration-300",
                         mobileExpandedItems.includes(item.name)
-                          ? "max-h-96 opacity-100 pb-4"
+                          ? "max-h-[500px] opacity-100 pb-4"
                           : "max-h-0 opacity-0"
                       )}
                     >
                       <div className="pl-4 space-y-1">
+                        {item.href && (
+                          <Link
+                            to={item.href}
+                            className="block py-2 text-primary font-medium border-b border-border/20 mb-2"
+                          >
+                            View All
+                          </Link>
+                        )}
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             to={child.href}
                             className={cn(
-                              "block py-3 transition-colors duration-200",
+                              "block py-2 transition-colors duration-200",
                               isActiveRoute(child.href)
                                 ? "text-primary"
                                 : "text-muted-foreground hover:text-foreground"
                             )}
                           >
                             <span className="text-base">{child.name}</span>
-                            {child.description && (
-                              <span className="block text-sm text-muted-foreground/70 mt-0.5">
-                                {child.description}
-                              </span>
-                            )}
                           </Link>
                         ))}
                       </div>
