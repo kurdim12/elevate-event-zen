@@ -1,10 +1,4 @@
 // Corporate Services Data
-export interface GalleryImage {
-  src: string;
-  alt: string;
-  caption?: string;
-}
-
 export interface ServiceData {
   slug: string;
   metaTitle: string;
@@ -16,7 +10,7 @@ export interface ServiceData {
   ctaText: string;
   videoId?: string;
   videoTitle?: string;
-  galleryImages?: GalleryImage[];
+  hasGallery?: boolean;
   galleryTitle?: string;
 }
 
