@@ -6,7 +6,7 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { CinematicVideoSection } from "@/components/ui/CinematicVideoSection";
 import { EditorialGallery } from "@/components/services/EditorialGallery";
 import { CheckCircle } from "lucide-react";
-import type { GalleryImage } from "@/data/services";
+import type { GalleryImage } from "@/data/wedding-gallery";
 
 interface SubServicePageLayoutProps {
   metaTitle: string;
