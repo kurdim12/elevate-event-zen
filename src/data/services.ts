@@ -8,6 +8,8 @@ export interface ServiceData {
   content: string[];
   features: string[];
   ctaText: string;
+  videoId?: string;
+  videoTitle?: string;
 }
 
 export const corporateServices: ServiceData[] = [
@@ -271,7 +273,9 @@ export const weddingServices: ServiceData[] = [
       "Ceremony and reception flow planning",
       "On ground execution and escalation control"
     ],
-    ctaText: "Explore Destination Wedding Options"
+    ctaText: "Explore Destination Wedding Options",
+    videoId: "1-bWe1RN6Ys",
+    videoTitle: "A Destination Wedding Experience"
   },
   {
     slug: "destination-marriage-proposals",
