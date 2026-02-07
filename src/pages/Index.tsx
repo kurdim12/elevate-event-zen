@@ -1,7 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/home/HeroSection";
-import { VideoHeroSection } from "@/components/home/VideoHeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServiceSelector } from "@/components/home/ServiceSelector";
 import { ServicesSection } from "@/components/home/ServicesSection";
@@ -22,7 +21,6 @@ const Index = () => {
         canonicalPath="/"
       />
       <HeroSection />
-      <VideoHeroSection videoId="-8eRhlfX-XU" />
       <AboutSection />
       <RhythmBreak />
       <ServiceSelector />
