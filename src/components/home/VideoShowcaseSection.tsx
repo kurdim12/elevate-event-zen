@@ -84,7 +84,7 @@ export function VideoShowcaseSection() {
                 onClick={() => openVideo(featuredVideo)}
                 className="group relative w-full aspect-video overflow-hidden bg-muted cursor-pointer text-left"
               >
-                <img
+                <img loading="lazy"
                   src={featuredVideo.thumbnail}
                   alt={featuredVideo.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -118,7 +118,7 @@ export function VideoShowcaseSection() {
                     onClick={() => openVideo(video)}
                     className="group relative w-full aspect-[16/9] overflow-hidden bg-muted cursor-pointer text-left"
                   >
-                    <img
+                    <img loading="lazy"
                       src={video.thumbnail}
                       alt={video.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

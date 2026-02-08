@@ -45,7 +45,7 @@ export function AboutSection() {
           <AnimatedSection delay={150} className="lg:col-span-6">
             <div className="relative group overflow-hidden">
               <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
-                <img
+                <img loading="lazy"
                   src="/images/corporate/mice-1.jpg"
                   alt="MaraNasi luxury event production at the Amman Citadel"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"

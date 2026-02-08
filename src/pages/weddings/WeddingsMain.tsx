@@ -111,6 +111,7 @@ const WeddingsMain = () => {
                 <div key={i} className="overflow-hidden">
                   <div className="aspect-[4/3]">
                     <img
+                      loading="lazy"
                       src={img.src}
                       alt={img.alt}
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"

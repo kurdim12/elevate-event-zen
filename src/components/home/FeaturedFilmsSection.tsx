@@ -75,7 +75,7 @@ export function FeaturedFilmsSection() {
               >
                 {/* Thumbnail with cinematic aspect ratio */}
                 <div className="relative aspect-[21/9] overflow-hidden">
-                  <img
+                  <img loading="lazy"
                     src={`https://img.youtube.com/vi/${featuredVideos[0].id}/maxresdefault.jpg`}
                     alt={featuredVideos[0].title}
                     className="w-full h-full object-cover transition-all duration-[1.5s] ease-out group-hover:scale-[1.03]"
@@ -130,7 +130,7 @@ export function FeaturedFilmsSection() {
                 >
                   {/* Thumbnail */}
                   <div className="relative aspect-video overflow-hidden">
-                    <img
+                    <img loading="lazy"
                       src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                       alt={video.title}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"

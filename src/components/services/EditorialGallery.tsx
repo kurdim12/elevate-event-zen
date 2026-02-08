@@ -39,7 +39,7 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               <AnimatedSection className="col-span-12 lg:col-span-7">
                 <div className="relative overflow-hidden group cursor-pointer">
                   <div className="aspect-[4/3]">
-                    <img
+                    <img loading="lazy"
                       src={images[0].src}
                       alt={images[0].alt}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
@@ -68,7 +68,7 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               <AnimatedSection className="col-span-12 lg:col-span-5" delay={100}>
                 <div className="relative overflow-hidden group cursor-pointer h-full">
                   <div className="aspect-[3/4] lg:aspect-auto lg:h-full">
-                    <img
+                    <img loading="lazy"
                       src={images[1].src}
                       alt={images[1].alt}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
@@ -87,7 +87,7 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               <AnimatedSection className="col-span-6 lg:col-span-4" delay={150}>
                 <div className="relative overflow-hidden group cursor-pointer">
                   <div className="aspect-[1/1]">
-                    <img
+                    <img loading="lazy"
                       src={images[2].src}
                       alt={images[2].alt}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
@@ -102,7 +102,7 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               <AnimatedSection className="col-span-6 lg:col-span-4" delay={200}>
                 <div className="relative overflow-hidden group cursor-pointer">
                   <div className="aspect-[1/1]">
-                    <img
+                    <img loading="lazy"
                       src={images[3].src}
                       alt={images[3].alt}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
@@ -117,7 +117,7 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               <AnimatedSection className="col-span-12 lg:col-span-4" delay={250}>
                 <div className="relative overflow-hidden group cursor-pointer">
                   <div className="aspect-[16/9] lg:aspect-[1/1]">
-                    <img
+                    <img loading="lazy"
                       src={images[4].src}
                       alt={images[4].alt}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
@@ -135,7 +135,7 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               <AnimatedSection className="col-span-12 lg:col-span-5" delay={300}>
                 <div className="relative overflow-hidden group cursor-pointer">
                   <div className="aspect-[4/5]">
-                    <img
+                    <img loading="lazy"
                       src={images[5].src}
                       alt={images[5].alt}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
@@ -151,7 +151,7 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               <AnimatedSection className="col-span-12 lg:col-span-7" delay={350}>
                 <div className="relative overflow-hidden group cursor-pointer h-full">
                   <div className="aspect-[16/10] lg:aspect-auto lg:h-full">
-                    <img
+                    <img loading="lazy"
                       src={images[6].src}
                       alt={images[6].alt}
                       className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"

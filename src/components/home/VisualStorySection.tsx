@@ -26,7 +26,7 @@ export function VisualStorySection() {
       {/* Full-width editorial image */}
       <AnimatedSection>
         <div className="relative h-[55vh] md:h-[65vh] overflow-hidden">
-          <img
+          <img loading="lazy"
             src={stories[0].image}
             alt={stories[0].title}
             className="w-full h-full object-cover"
@@ -71,7 +71,7 @@ export function VisualStorySection() {
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-7 md:col-start-5">
               <div className="relative aspect-[16/10] overflow-hidden mb-5">
-                <img
+                <img loading="lazy"
                   src={stories[1].image}
                   alt={stories[1].title}
                   className="w-full h-full object-cover"

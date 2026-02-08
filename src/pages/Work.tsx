@@ -78,7 +78,7 @@ export default function Work() {
               <AnimatedSection key={project.title} delay={index * 0.1}>
                 <div className="group cursor-pointer">
                   <div className="aspect-[4/3] overflow-hidden mb-6">
-                    <img
+                    <img loading="lazy"
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

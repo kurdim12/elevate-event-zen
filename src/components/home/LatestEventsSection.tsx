@@ -151,7 +151,7 @@ export function LatestEventsSection() {
           <AnimatedSection key={event.id} delay={index * 100}>
             <div className="flex-shrink-0 w-[320px] md:w-[380px] snap-start group cursor-pointer">
               <div className="aspect-[4/5] overflow-hidden mb-5 relative">
-                <img
+                <img loading="lazy"
                   src={event.image}
                   alt={event.title}
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"

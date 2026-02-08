@@ -88,6 +88,7 @@ const DestinationsMain = () => {
                 >
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
+                      loading="lazy"
                       src={destination.image}
                       alt={destination.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

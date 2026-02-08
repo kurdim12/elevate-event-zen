@@ -1,5 +1,5 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import heroImage from "@/assets/hero-citadel.png";
+const heroImage = "/images/hero-citadel.jpg";
 
 export function SignatureMomentSection() {
   return (

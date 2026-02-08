@@ -77,7 +77,7 @@ export function ServicesSection() {
                   {/* Image preview */}
                   <div className="col-span-3 hidden lg:flex justify-end">
                     <div className="w-28 h-16 overflow-hidden opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-600">
-                      <img
+                      <img loading="lazy"
                         src={service.image}
                         alt={service.title}
                         className="w-full h-full object-cover"
