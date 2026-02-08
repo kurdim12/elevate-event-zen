@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/hero-citadel.png";
+import heroImage from "@/assets/henna-night-stage.jpg";
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,7 +21,7 @@ export function HeroSection() {
         >
           <img
             src={heroImage}
-            alt="Luxury gala at Amman Citadel"
+            alt="MaraNasi luxury event at Amman Citadel"
             className="w-full h-full object-cover"
           />
         </div>

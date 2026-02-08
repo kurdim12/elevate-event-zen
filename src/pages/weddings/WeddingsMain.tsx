@@ -4,7 +4,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { CinematicVideoSection } from "@/components/ui/CinematicVideoSection";
 import { ArrowRight } from "lucide-react";
-import weddingImage from "@/assets/hero-wedding.png";
+import weddingImage from "@/assets/wedding-event.jpg";
 
 const weddingServices = [
   { name: "Luxury Wedding Design and Planning", href: "/destination-luxury-weddings/luxury-wedding-design-and-planning" },

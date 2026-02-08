@@ -1,6 +1,6 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
-import destinationImage from "@/assets/destination-event.jpg";
+
 
 const destinations = [
   { name: "Jordan", description: "Petra, Dead Sea, Amman" },
@@ -57,8 +57,8 @@ export function DestinationsSection() {
             <AnimatedSection delay={150}>
               <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[520px] overflow-hidden">
                 <img
-                  src={destinationImage}
-                  alt="Desert luxury destination"
+                  src="/images/weddings/kempinski-dead-sea-1.jpg"
+                  alt="Luxury wedding setup at sunset by the Dead Sea, Jordan"
                   className="w-full h-full object-cover"
                 />
               </div>

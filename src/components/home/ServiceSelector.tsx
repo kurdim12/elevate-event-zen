@@ -12,9 +12,9 @@ interface Option {
 
 const eventTypes: Option[] = [
   { label: "a corporate event", value: "corporate", href: "/corporate-events" },
-  { label: "a luxury wedding", value: "wedding", href: "/weddings" },
-  { label: "a brand activation", value: "activation", href: "/brand-activations" },
-  { label: "a private celebration", value: "private", href: "/private-events" },
+  { label: "a luxury wedding", value: "wedding", href: "/destination-luxury-weddings" },
+  { label: "a brand activation", value: "activation", href: "/corporate-events" },
+  { label: "a destination event", value: "destination", href: "/destinations" },
 ];
 
 const destinations: Option[] = [

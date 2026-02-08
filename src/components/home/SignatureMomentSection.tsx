@@ -1,5 +1,5 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import hennaNightImage from "@/assets/henna-night-stage.jpg";
+import heroImage from "@/assets/hero-citadel.png";
 
 export function SignatureMomentSection() {
   return (
@@ -7,8 +7,8 @@ export function SignatureMomentSection() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src={hennaNightImage}
-          alt="Luxury henna night stage with candlelit ambiance"
+          src={heroImage}
+          alt="MaraNasi event at Amman Citadel"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/35" />

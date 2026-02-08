@@ -1,5 +1,5 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import teamPhoto from "@/assets/team-photo.jpg";
+import teamPhoto from "@/assets/henna-night-stage.jpg";
 
 export function AboutSection() {
   return (
@@ -48,7 +48,7 @@ export function AboutSection() {
               <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
                 <img
                   src={teamPhoto}
-                  alt="The Maranasi Team"
+                  alt="MaraNasi luxury event production at the Amman Citadel"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
               </div>
@@ -57,7 +57,7 @@ export function AboutSection() {
               {/* Caption */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-foreground/60 to-transparent">
                 <p className="text-[11px] tracking-[0.18em] text-background/80 uppercase">
-                  The Maranasi Team
+                  Our Signature Work
                 </p>
               </div>
             </div>

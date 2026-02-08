@@ -4,12 +4,12 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import corporateImage from "@/assets/corporate-event.jpg";
 import weddingImage from "@/assets/wedding-event.jpg";
 import brandImage from "@/assets/brand-activation.jpg";
-import privateImage from "@/assets/private-event.jpg";
+import privateImage from "@/assets/destination-event.jpg";
 
 const services = [
   {
     title: "Corporate Events",
-    subtitle: "Conferences, Summits, Gala Dinners & Award Ceremonies",
+    subtitle: "Conferences, MICE, Gala Dinners & Campaign Management",
     image: corporateImage,
     href: "/corporate-events",
   },
@@ -17,19 +17,19 @@ const services = [
     title: "Luxury Weddings",
     subtitle: "Bespoke celebrations, Cultural nights & Destination ceremonies",
     image: weddingImage,
-    href: "/weddings",
+    href: "/destination-luxury-weddings",
   },
   {
     title: "Brand Activations",
-    subtitle: "Product Launches, Exhibitions & Immersive brand experiences",
+    subtitle: "360 Campaigns, Exhibitions & Immersive brand experiences",
     image: brandImage,
-    href: "/brand-activations",
+    href: "/corporate-events",
   },
   {
-    title: "Private Events",
-    subtitle: "Milestone celebrations, Intimate gatherings & VIP experiences",
+    title: "Destination Events",
+    subtitle: "Iconic locations, Retreats & VIP destination experiences",
     image: privateImage,
-    href: "/private-events",
+    href: "/destinations",
   },
 ];
 
@@ -88,17 +88,17 @@ export function ServicesSection() {
               </Link>
             </AnimatedSection>
           ))}
-          
+
           <div className="border-t border-border/40" />
         </div>
 
         {/* View all link */}
         <AnimatedSection delay={350} className="mt-12 md:mt-14">
-          <Link 
-            to="/services" 
+          <Link
+            to="/work"
             className="inline-flex items-center text-[13px] tracking-[0.18em] text-muted-foreground/60 uppercase hover:text-foreground transition-colors duration-500 group"
           >
-            <span className="mr-3">View all services</span>
+            <span className="mr-3">View our portfolio</span>
             <span className="w-6 h-px bg-muted-foreground/25 group-hover:w-12 group-hover:bg-foreground transition-all duration-600" />
           </Link>
         </AnimatedSection>
