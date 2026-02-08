@@ -46,8 +46,8 @@ export function AboutSection() {
             <div className="relative group overflow-hidden">
               <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
                 <img loading="lazy"
-                  src="/images/corporate/mice-1.jpg"
-                  alt="MaraNasi luxury event production at the Amman Citadel"
+                  src="/images/landing/lp-ceremony-setup.jpg"
+                  alt="MaraNasi luxury wedding ceremony setup at the Amman Citadel"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
               </div>

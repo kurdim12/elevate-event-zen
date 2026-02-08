@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-const heroImage = "/images/hero-henna-night.jpg";
+const heroImage = "/images/landing/lp-hero.jpg";
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);

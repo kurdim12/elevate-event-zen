@@ -59,8 +59,8 @@ export function DestinationsSection() {
                 <div className="relative overflow-hidden">
                   <div className="aspect-[3/4]">
                     <img loading="lazy"
-                      src="/images/weddings/kempinski-dead-sea-1.jpg"
-                      alt="Luxury wedding setup at sunset by the Dead Sea, Jordan"
+                      src="/images/landing/lp-citadel-flowers.jpg"
+                      alt="Amman Citadel at night with floral installations, Jordan"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -68,8 +68,8 @@ export function DestinationsSection() {
                 <div className="relative overflow-hidden mt-8">
                   <div className="aspect-[3/4]">
                     <img loading="lazy"
-                      src="/images/corporate/mice-3.jpg"
-                      alt="Corporate gala dinner at Amman Citadel, Jordan"
+                      src="/images/landing/lp-citadel-red.jpg"
+                      alt="Amman Citadel illuminated at night during a MaraNasi event"
                       className="w-full h-full object-cover"
                     />
                   </div>

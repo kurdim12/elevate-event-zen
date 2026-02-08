@@ -1,34 +1,29 @@
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
-import corporateImage from "@/assets/corporate-event.jpg";
-import weddingImage from "@/assets/wedding-event.jpg";
-import brandImage from "@/assets/brand-activation.jpg";
-import privateImage from "@/assets/destination-event.jpg";
-
 const services = [
   {
     title: "Corporate Events",
     subtitle: "Conferences, MICE, Gala Dinners & Campaign Management",
-    image: corporateImage,
+    image: "/images/landing/lp-tedx-production.jpg",
     href: "/corporate-events",
   },
   {
     title: "Luxury Weddings",
     subtitle: "Bespoke celebrations, Cultural nights & Destination ceremonies",
-    image: weddingImage,
+    image: "/images/landing/lp-wedding-setting.jpg",
     href: "/destination-luxury-weddings",
   },
   {
     title: "Brand Activations",
     subtitle: "360 Campaigns, Exhibitions & Immersive brand experiences",
-    image: brandImage,
+    image: "/images/landing/lp-redbull-crowd.jpg",
     href: "/corporate-events",
   },
   {
     title: "Destination Events",
     subtitle: "Iconic locations, Retreats & VIP destination experiences",
-    image: privateImage,
+    image: "/images/landing/lp-jordan-tent.jpg",
     href: "/destinations",
   },
 ];
