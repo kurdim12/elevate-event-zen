@@ -10,6 +10,7 @@ import { DestinationsSection } from "@/components/home/DestinationsSection";
 import { LatestEventsSection } from "@/components/home/LatestEventsSection";
 import { FeaturedFilmsSection } from "@/components/home/FeaturedFilmsSection";
 import { VideoShowcaseSection } from "@/components/home/VideoShowcaseSection";
+import { PhotoMosaicSection } from "@/components/home/PhotoMosaicSection";
 import { CTASection } from "@/components/home/CTASection";
 import { RhythmBreak } from "@/components/home/RhythmBreak";
 
@@ -32,6 +33,7 @@ const Index = () => {
       <BeliefSection />
       <DestinationsSection />
       <LatestEventsSection />
+      <PhotoMosaicSection />
       <FeaturedFilmsSection />
       <CTASection />
     </Layout>
