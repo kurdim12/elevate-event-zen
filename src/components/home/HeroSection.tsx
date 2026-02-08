@@ -9,6 +9,8 @@ const heroItems = [
   { type: "video" as const, src: "/videos/hero-clip-3.mp4" },
 ];
 
+const PHOTO_DURATION = 6000;
+
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,13 +21,18 @@ export function HeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Auto-advance photos after PHOTO_DURATION; videos advance via onEnded
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % heroItems.length);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, []);
+    const currentItem = heroItems[activeIndex];
+    if (currentItem.type === "image") {
+      const timer = setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % heroItems.length);
+      }, PHOTO_DURATION);
+      return () => clearTimeout(timer);
+    }
+  }, [activeIndex]);
 
+  // Play/pause videos based on active state
   useEffect(() => {
     videoRefs.current.forEach((video, i) => {
       if (!video) return;
@@ -38,6 +45,8 @@ export function HeroSection() {
     });
   }, [activeIndex]);
 
+  const advance = () => setActiveIndex((prev) => (prev + 1) % heroItems.length);
+
   return (
     <section className="relative h-screen flex items-end overflow-hidden">
       {/* Background Items */}
@@ -45,7 +54,7 @@ export function HeroSection() {
         {heroItems.map((item, i) => (
           <div
             key={i}
-            className={`absolute inset-0 transition-opacity duration-1500 ${
+            className={`absolute inset-0 transition-opacity duration-1000 ${
               i === activeIndex ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -57,6 +66,7 @@ export function HeroSection() {
                 src={item.src}
                 muted
                 playsInline
+                onEnded={advance}
                 className="w-full h-full object-cover"
               />
             ) : (
@@ -68,7 +78,6 @@ export function HeroSection() {
             )}
           </div>
         ))}
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/5 to-foreground/10" />
       </div>
 
