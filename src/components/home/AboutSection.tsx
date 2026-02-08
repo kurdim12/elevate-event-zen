@@ -1,5 +1,4 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import teamPhoto from "@/assets/henna-night-stage.jpg";
 
 export function AboutSection() {
   return (
@@ -47,7 +46,7 @@ export function AboutSection() {
             <div className="relative group overflow-hidden">
               <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
                 <img
-                  src={teamPhoto}
+                  src="/images/corporate/mice-1.jpg"
                   alt="MaraNasi luxury event production at the Amman Citadel"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 />

@@ -2,14 +2,32 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { ArrowRight } from "lucide-react";
-import destinationImage from "@/assets/hero-destination.png";
 
 const destinationsList = [
-  { name: "Jordan", href: "/destinations/jordan" },
-  { name: "Egypt", href: "/destinations/egypt" },
-  { name: "United Arab Emirates", href: "/destinations/uae" },
-  { name: "Thailand", href: "/destinations/thailand" },
+  {
+    name: "Jordan",
+    href: "/destinations/jordan",
+    image: "/images/weddings/citadel-pomegranate-1.jpg",
+    subtitle: "Petra, Dead Sea, Amman Citadel",
+  },
+  {
+    name: "Egypt",
+    href: "/destinations/egypt",
+    image: "/images/corporate/gala-2.jpg",
+    subtitle: "Pyramids of Giza, North Coast, Alexandria",
+  },
+  {
+    name: "United Arab Emirates",
+    href: "/destinations/uae",
+    image: "/images/corporate/booth-5.jpg",
+    subtitle: "Dubai, Abu Dhabi, Sharjah",
+  },
+  {
+    name: "Thailand",
+    href: "/destinations/thailand",
+    image: "/images/corporate/retreats-6.jpg",
+    subtitle: "Bangkok, Pattaya, Phi Phi Islands",
+  },
 ];
 
 const DestinationsMain = () => {
@@ -25,8 +43,8 @@ const DestinationsMain = () => {
       <section className="relative h-[70vh] min-h-[500px] flex items-end">
         <div className="absolute inset-0">
           <img
-            src={destinationImage}
-            alt="Event destinations"
+            src="/images/weddings/kempinski-dead-sea-1.jpg"
+            alt="Event destinations — Dead Sea, Jordan"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/20" />
@@ -45,10 +63,10 @@ const DestinationsMain = () => {
         <div className="container-narrow text-center">
           <AnimatedSection>
             <p className="body-lg mb-4">
-              MaraNasi operates across destinations selected for impact, accessibility, 
-              and production feasibility. We deliver corporate events, destination 
-              weddings, and proposals across Jordan, Egypt, the UAE, and Thailand. 
-              Each destination includes signature locations and venue options suitable 
+              MaraNasi operates across destinations selected for impact, accessibility,
+              and production feasibility. We deliver corporate events, destination
+              weddings, and proposals across Jordan, Egypt, the UAE, and Thailand.
+              Each destination includes signature locations and venue options suitable
               for high value events.
             </p>
             <p className="body-md text-muted-foreground">
@@ -58,19 +76,29 @@ const DestinationsMain = () => {
         </div>
       </section>
 
-      {/* Destinations Grid */}
+      {/* Destinations Grid with Photos */}
       <section className="section-padding-sm bg-ivory-dark">
         <div className="container-wide">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {destinationsList.map((destination, index) => (
               <AnimatedSection key={destination.href} delay={index * 100}>
                 <Link
                   to={destination.href}
-                  className="block p-10 bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500 group"
+                  className="group block overflow-hidden bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500"
                 >
-                  <h2 className="font-serif text-2xl font-medium group-hover:text-primary transition-colors">
-                    {destination.name}
-                  </h2>
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img
+                      src={destination.image}
+                      alt={destination.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h2 className="font-serif text-2xl font-medium group-hover:text-primary transition-colors">
+                      {destination.name}
+                    </h2>
+                    <p className="text-sm text-muted-foreground mt-1">{destination.subtitle}</p>
+                  </div>
                 </Link>
               </AnimatedSection>
             ))}

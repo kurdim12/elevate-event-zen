@@ -3,13 +3,18 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { CinematicVideoSection } from "@/components/ui/CinematicVideoSection";
-import { ArrowRight } from "lucide-react";
-import weddingImage from "@/assets/wedding-event.jpg";
 
 const weddingServices = [
   { name: "Luxury Wedding Design and Planning", href: "/destination-luxury-weddings/luxury-wedding-design-and-planning" },
   { name: "Destination Luxury Weddings", href: "/destination-luxury-weddings/destination-luxury-weddings-service", videoId: "1-bWe1RN6Ys" },
   { name: "Destination Marriage Proposals", href: "/destination-luxury-weddings/destination-marriage-proposals" },
+];
+
+const galleryStrip = [
+  { src: "/images/weddings/kempinski-dead-sea-3.jpg", alt: "Wedding ceremony at Dead Sea" },
+  { src: "/images/weddings/citadel-pomegranate-3.jpg", alt: "Wedding at Amman Citadel" },
+  { src: "/images/weddings/henna-night-2.jpg", alt: "Henna night celebration" },
+  { src: "/images/weddings/kempinski-dead-sea-4.jpg", alt: "Evening reception at Dead Sea" },
 ];
 
 const WeddingsMain = () => {
@@ -25,8 +30,8 @@ const WeddingsMain = () => {
       <section className="relative h-[70vh] min-h-[500px] flex items-end">
         <div className="absolute inset-0">
           <img
-            src={weddingImage}
-            alt="Destination luxury weddings"
+            src="/images/weddings/kempinski-dead-sea-1.jpg"
+            alt="Destination luxury wedding at the Dead Sea, Jordan"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/20" />
@@ -47,13 +52,13 @@ const WeddingsMain = () => {
             <AnimatedSection>
               <div className="space-y-6">
                 <p className="body-lg">
-                  MaraNasi designs and produces destination luxury weddings and proposals 
-                  with a clear balance of aesthetics and execution. We handle concept, 
-                  design, venue coordination, supplier management, production readiness, 
+                  MaraNasi designs and produces destination luxury weddings and proposals
+                  with a clear balance of aesthetics and execution. We handle concept,
+                  design, venue coordination, supplier management, production readiness,
                   and on ground delivery across Jordan, Egypt, the UAE, and Thailand.
                 </p>
                 <p className="body-md text-muted-foreground">
-                  This service exists for couples who want an iconic location with premium 
+                  This service exists for couples who want an iconic location with premium
                   control. The wedding feels effortless because the operation is managed.
                 </p>
               </div>
@@ -94,6 +99,27 @@ const WeddingsMain = () => {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* Photo Strip */}
+      <section className="py-4 bg-background">
+        <div className="container-wide">
+          <AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {galleryStrip.map((img, i) => (
+                <div key={i} className="overflow-hidden">
+                  <div className="aspect-[4/3]">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

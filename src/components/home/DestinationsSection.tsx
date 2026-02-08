@@ -52,15 +52,28 @@ export function DestinationsSection() {
             </AnimatedSection>
           </div>
 
-          {/* Right - Image */}
+          {/* Right - Images */}
           <div className="lg:col-span-7">
             <AnimatedSection delay={150}>
-              <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[520px] overflow-hidden">
-                <img
-                  src="/images/weddings/kempinski-dead-sea-1.jpg"
-                  alt="Luxury wedding setup at sunset by the Dead Sea, Jordan"
-                  className="w-full h-full object-cover"
-                />
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative overflow-hidden">
+                  <div className="aspect-[3/4]">
+                    <img
+                      src="/images/weddings/kempinski-dead-sea-1.jpg"
+                      alt="Luxury wedding setup at sunset by the Dead Sea, Jordan"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="relative overflow-hidden mt-8">
+                  <div className="aspect-[3/4]">
+                    <img
+                      src="/images/corporate/mice-3.jpg"
+                      alt="Corporate gala dinner at Amman Citadel, Jordan"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </AnimatedSection>
           </div>

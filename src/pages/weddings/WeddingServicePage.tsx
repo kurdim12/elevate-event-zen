@@ -1,29 +1,38 @@
 import { useParams, Navigate } from "react-router-dom";
 import { SubServicePageLayout } from "@/components/services/SubServicePageLayout";
 import { weddingServices } from "@/data/services";
-import { destinationLuxuryWeddingsGallery } from "@/data/wedding-gallery";
+import {
+  destinationLuxuryWeddingsGallery,
+  luxuryWeddingDesignGallery,
+  marriageProposalsGallery,
+  type GalleryImage,
+} from "@/data/wedding-gallery";
 
-// Import hero images for each service
-import destinationWeddingHero from "@/assets/weddings/destination-wedding-1.jpg";
+const galleryMap: Record<string, { images: GalleryImage[]; title: string }> = {
+  "destination-luxury-weddings-service": {
+    images: destinationLuxuryWeddingsGallery,
+    title: "Crafted Moments",
+  },
+  "luxury-wedding-design-and-planning": {
+    images: luxuryWeddingDesignGallery,
+    title: "Wedding Design",
+  },
+  "destination-marriage-proposals": {
+    images: marriageProposalsGallery,
+    title: "Romantic Moments",
+  },
+};
 
 const WeddingServicePage = () => {
   const { serviceSlug } = useParams<{ serviceSlug: string }>();
-  
+
   const service = weddingServices.find(s => s.slug === serviceSlug);
-  
+
   if (!service) {
     return <Navigate to="/destination-luxury-weddings" replace />;
   }
 
-  // Get gallery images based on service slug
-  const galleryImages = service.hasGallery && serviceSlug === "destination-luxury-weddings-service" 
-    ? destinationLuxuryWeddingsGallery 
-    : undefined;
-
-  // Get hero image based on service slug
-  const heroImage = serviceSlug === "destination-luxury-weddings-service" 
-    ? destinationWeddingHero 
-    : undefined;
+  const gallery = serviceSlug ? galleryMap[serviceSlug] : undefined;
 
   return (
     <SubServicePageLayout
@@ -37,10 +46,10 @@ const WeddingServicePage = () => {
       parentLink={{ label: "Destination Luxury Weddings", href: "/destination-luxury-weddings" }}
       videoId={service.videoId}
       videoTitle={service.videoTitle}
-      galleryImages={galleryImages}
-      galleryTitle={service.galleryTitle}
-      heroImage={heroImage}
-      heroImageAlt="Destination luxury wedding at Amman Citadel, Jordan"
+      galleryImages={gallery?.images}
+      galleryTitle={gallery?.title}
+      heroImage={gallery?.images[0]?.src}
+      heroImageAlt={gallery?.images[0]?.alt}
     />
   );
 };

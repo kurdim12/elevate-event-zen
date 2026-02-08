@@ -9,6 +9,7 @@ import { BeliefSection } from "@/components/home/BeliefSection";
 import { DestinationsSection } from "@/components/home/DestinationsSection";
 import { LatestEventsSection } from "@/components/home/LatestEventsSection";
 import { FeaturedFilmsSection } from "@/components/home/FeaturedFilmsSection";
+import { VideoShowcaseSection } from "@/components/home/VideoShowcaseSection";
 import { CTASection } from "@/components/home/CTASection";
 import { RhythmBreak } from "@/components/home/RhythmBreak";
 
@@ -26,6 +27,7 @@ const Index = () => {
       <RhythmBreak />
       <ServiceSelector />
       <ServicesSection />
+      <VideoShowcaseSection />
       <SignatureMomentSection />
       <BeliefSection />
       <DestinationsSection />

@@ -2,18 +2,37 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { EditorialGallery } from "@/components/services/EditorialGallery";
 import { destinations } from "@/data/services";
-import destinationImage from "@/assets/destination-event.jpg";
-import heroImage from "@/assets/hero-event.jpg";
+
+const destinationHeroMap: Record<string, string> = {
+  jordan: "/images/weddings/citadel-pomegranate-1.jpg",
+  egypt: "/images/corporate/gala-2.jpg",
+  uae: "/images/corporate/booth-5.jpg",
+  thailand: "/images/corporate/retreats-6.jpg",
+};
+
+const jordanGallery = [
+  { src: "/images/weddings/kempinski-dead-sea-1.jpg", alt: "Luxury wedding at the Dead Sea, Jordan", caption: "Dead Sea — Jordan" },
+  { src: "/images/weddings/citadel-pomegranate-2.jpg", alt: "Wedding dinner at Amman Citadel" },
+  { src: "/images/corporate/mice-1.jpg", alt: "MICE gala dinner at Amman Citadel" },
+  { src: "/images/weddings/henna-night-1.jpg", alt: "Henna night at the Citadel" },
+  { src: "/images/corporate/show-1.jpg", alt: "TEDxAmman — largest in MENA" },
+  { src: "/images/corporate/gala-1.jpg", alt: "Corporate gala dinner production" },
+  { src: "/images/weddings/private-villa-1.jpg", alt: "Private villa wedding in Amman" },
+];
 
 const DestinationPage = () => {
   const { destinationSlug } = useParams<{ destinationSlug: string }>();
-  
+
   const destination = destinations.find(d => d.slug === `destinations-${destinationSlug}`);
-  
+
   if (!destination) {
     return <Navigate to="/destinations" replace />;
   }
+
+  const heroImage = destinationSlug ? destinationHeroMap[destinationSlug] : "/images/weddings/kempinski-dead-sea-1.jpg";
+  const showGallery = destinationSlug === "jordan";
 
   return (
     <Layout>
@@ -27,7 +46,7 @@ const DestinationPage = () => {
       <section className="relative h-[60vh] min-h-[450px] flex items-end">
         <div className="absolute inset-0">
           <img
-            src={destinationSlug === "jordan" ? destinationImage : heroImage}
+            src={heroImage}
             alt={destination.name}
             className="w-full h-full object-cover"
           />
@@ -89,6 +108,11 @@ const DestinationPage = () => {
         </div>
       </section>
 
+      {/* Gallery for Jordan */}
+      {showGallery && (
+        <EditorialGallery images={jordanGallery} title="Events in Jordan" />
+      )}
+
       {/* Services */}
       <section className="section-padding-sm bg-ivory-dark">
         <div className="container-wide">
@@ -97,8 +121,8 @@ const DestinationPage = () => {
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <AnimatedSection delay={100}>
-              <Link 
-                to="/corporate-events" 
+              <Link
+                to="/corporate-events"
                 className="block p-8 bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500 text-center"
               >
                 <h3 className="font-serif text-xl font-medium mb-2">Corporate Events</h3>
@@ -108,8 +132,8 @@ const DestinationPage = () => {
               </Link>
             </AnimatedSection>
             <AnimatedSection delay={150}>
-              <Link 
-                to="/destination-luxury-weddings" 
+              <Link
+                to="/destination-luxury-weddings"
                 className="block p-8 bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500 text-center"
               >
                 <h3 className="font-serif text-xl font-medium mb-2">Destination Weddings</h3>
