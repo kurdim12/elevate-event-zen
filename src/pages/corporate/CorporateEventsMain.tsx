@@ -1,9 +1,17 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { ArrowRight } from "lucide-react";
-import corporateImage from "@/assets/hero-corporate.jpg";
+
+const heroImages = [
+  { src: "/images/corporate/mice-1.jpg", alt: "Private MICE gala dinner at Amman Citadel" },
+  { src: "/images/corporate/conference-1.jpg", alt: "Conference management at BluePeace Conference" },
+  { src: "/images/corporate/entertainment-1.jpg", alt: "Live entertainment at Fas Meknas 2026" },
+  { src: "/images/corporate/show-1.jpg", alt: "Stage management at TEDxAmman" },
+  { src: "/images/corporate/gala-1.jpg", alt: "Gala dinner production" },
+  { src: "/images/corporate/exhibition-1.jpg", alt: "Exhibition management and production" },
+];
 
 const corporateServices = [
   { name: "MICE Event Management", href: "/corporate-events/mice-event-management" },
@@ -21,6 +29,15 @@ const corporateServices = [
 ];
 
 const CorporateEventsMain = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage(prev => (prev + 1) % heroImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <Layout>
       <SEO
@@ -29,25 +46,46 @@ const CorporateEventsMain = () => {
         canonicalPath="/corporate-events"
       />
 
-      {/* Hero */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-end">
-        <div className="absolute inset-0">
-          <img
-            src={corporateImage}
-            alt="Corporate events management"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/20" />
+      {/* Hero with image carousel */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
+        {heroImages.map((img, index) => (
+          <div
+            key={img.src}
+            className="absolute inset-0 transition-opacity duration-1000"
+            style={{ opacity: index === currentImage ? 1 : 0 }}
+          >
+            <img
+              src={img.src}
+              alt={img.alt}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/20" />
+
+        {/* Carousel dots */}
+        <div className="absolute bottom-6 right-6 flex gap-2 z-10">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImage(index)}
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                index === currentImage ? "bg-background w-4" : "bg-background/40"
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
         </div>
+
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
             <h1 className="heading-display text-background max-w-4xl">
               Corporate Events Management
             </h1>
             <p className="body-lg text-background/80 mt-6 max-w-2xl">
-              MaraNasi delivers corporate events with destination level ambition and 
-              operational control. We plan, produce, and run high value experiences 
-              across Jordan, Egypt, the UAE, and Thailand, including conferences, 
+              MaraNasi delivers corporate events with destination level ambition and
+              operational control. We plan, produce, and run high value experiences
+              across Jordan, Egypt, the UAE, and Thailand, including conferences,
               exhibitions, retreats, gala dinners, and brand activations.
             </p>
           </AnimatedSection>
@@ -62,9 +100,9 @@ const CorporateEventsMain = () => {
               <div className="space-y-6">
                 <h2 className="heading-lg mb-4">Our Approach</h2>
                 <p className="body-md text-muted-foreground">
-                  Our approach is simple. We treat every corporate project as a managed 
-                  system. Planning, suppliers, production, guest flow, and stage timing 
-                  are aligned before show day. The outcome is a premium experience that 
+                  Our approach is simple. We treat every corporate project as a managed
+                  system. Planning, suppliers, production, guest flow, and stage timing
+                  are aligned before show day. The outcome is a premium experience that
                   runs cleanly and protects the brand.
                 </p>
               </div>

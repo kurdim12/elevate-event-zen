@@ -1,15 +1,19 @@
 import { useParams, Navigate } from "react-router-dom";
 import { SubServicePageLayout } from "@/components/services/SubServicePageLayout";
 import { corporateServices } from "@/data/services";
+import { corporateGalleries } from "@/data/corporate-gallery";
 
 const CorporateServicePage = () => {
   const { serviceSlug } = useParams<{ serviceSlug: string }>();
-  
+
   const service = corporateServices.find(s => s.slug === serviceSlug);
-  
+
   if (!service) {
     return <Navigate to="/corporate-events" replace />;
   }
+
+  const galleryImages = corporateGalleries[service.slug];
+  const heroImage = galleryImages?.[0]?.src;
 
   return (
     <SubServicePageLayout
@@ -21,6 +25,10 @@ const CorporateServicePage = () => {
       features={service.features}
       ctaText={service.ctaText}
       parentLink={{ label: "Corporate Events", href: "/corporate-events" }}
+      heroImage={heroImage}
+      heroImageAlt={galleryImages?.[0]?.alt}
+      galleryImages={galleryImages}
+      galleryTitle="Our Work"
     />
   );
 };
