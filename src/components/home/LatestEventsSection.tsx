@@ -2,80 +2,90 @@ import { useRef } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// Real MaraNasi portfolio images
-import tedxAmmanImage from "@/assets/events/tedx-amman.jpg";
-import luxuryCarImage from "@/assets/events/luxury-car-event.jpg";
-import ingotBoothImage from "@/assets/events/ingot-booth.jpg";
-import exhibitionBoothImage from "@/assets/events/exhibition-booth.png";
-import aviationFighterImage from "@/assets/events/aviation-fighter.jpg";
-import aviationDroneImage from "@/assets/events/aviation-drone.jpg";
-import luxuryWeddingImage from "@/assets/events/luxury-wedding.png";
-import galaImage from "@/assets/events/gala-awards.png";
-import hennaNightImage from "@/assets/events/henna-night.jpg";
-
 const events = [
   {
     id: 1,
-    title: "TEDx Amman Conference",
-    category: "Conference",
+    title: "TEDxAmman — Largest in MENA",
+    category: "Conference & Show",
     location: "Amman, Jordan",
-    image: tedxAmmanImage,
+    image: "/images/events/tedx-activation-stage.jpg",
   },
   {
     id: 2,
-    title: "Luxury Car Exhibition",
-    category: "Brand Activation",
-    location: "Roman Amphitheater",
-    image: luxuryCarImage,
+    title: "MICE Gala Dinner at the Citadel",
+    category: "MICE Event",
+    location: "Amman Citadel, Jordan",
+    image: "/images/events/mice-citadel-lanterns.jpg",
   },
   {
     id: 3,
-    title: "INGOT Brand Experience",
-    category: "Activation",
-    location: "Amman, Jordan",
-    image: ingotBoothImage,
+    title: "Dead Sea Kempinski Wedding",
+    category: "Destination Wedding",
+    location: "Dead Sea, Jordan",
+    image: "/images/weddings/kempinski-dead-sea-1.jpg",
   },
   {
     id: 4,
-    title: "Exhibition Booth Design",
-    category: "Exhibition",
-    location: "Trade Show",
-    image: exhibitionBoothImage,
+    title: "Luxury Henna Night",
+    category: "Wedding",
+    location: "Amman Citadel, Jordan",
+    image: "/images/weddings/henna-night-1.jpg",
   },
   {
     id: 5,
-    title: "Aviation Event",
+    title: "Dead Sea RC Aviation Show",
     category: "Special Event",
-    location: "Jordan",
-    image: aviationFighterImage,
+    location: "Dead Sea, Jordan",
+    image: "/images/events/dead-sea-rc-show.jpg",
   },
   {
     id: 6,
-    title: "Drone Showcase",
-    category: "Aviation",
-    location: "Jordan",
-    image: aviationDroneImage,
+    title: "Fas Meknas Cultural Show",
+    category: "Entertainment",
+    location: "Amman, Jordan",
+    image: "/images/events/fas-meknas-show.jpg",
   },
   {
     id: 7,
-    title: "Destination Luxury Wedding",
-    category: "Wedding",
-    location: "Petra, Jordan",
-    image: luxuryWeddingImage,
+    title: "Citadel Pomegranate Wedding",
+    category: "Destination Wedding",
+    location: "Amman Citadel, Jordan",
+    image: "/images/weddings/citadel-pomegranate-1.jpg",
   },
   {
     id: 8,
-    title: "Corporate Gala Dinner",
-    category: "Gala & Awards",
+    title: "TEDxAmman Gala Dinner",
+    category: "Gala Dinner",
     location: "Amman, Jordan",
-    image: galaImage,
+    image: "/images/events/tedx-gala-dinner.jpg",
   },
   {
     id: 9,
-    title: "Henna & Cultural Night",
+    title: "Waqf Thareed Campaign",
+    category: "Campaign Management",
+    location: "Amman, Jordan",
+    image: "/images/events/waqf-thareed-campaign.jpg",
+  },
+  {
+    id: 10,
+    title: "Arab Pharma Exhibition Booth",
+    category: "Exhibition",
+    location: "Amman, Jordan",
+    image: "/images/events/arab-pharma-booth.jpg",
+  },
+  {
+    id: 11,
+    title: "Citadel Vanilla Lime Wedding",
+    category: "Destination Wedding",
+    location: "Amman Citadel, Jordan",
+    image: "/images/weddings/citadel-vanilla-1.jpg",
+  },
+  {
+    id: 12,
+    title: "Private Villa — Katb Ktab",
     category: "Wedding",
     location: "Amman, Jordan",
-    image: hennaNightImage,
+    image: "/images/weddings/private-villa-1.jpg",
   },
 ];
 

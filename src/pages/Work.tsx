@@ -2,48 +2,53 @@ import { Layout } from "@/components/layout/Layout";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
 
-import corporateImage from "@/assets/corporate-event.jpg";
-import weddingImage from "@/assets/wedding-event.jpg";
-import brandImage from "@/assets/brand-activation.jpg";
-import privateImage from "@/assets/private-event.jpg";
-import destinationImage from "@/assets/destination-event.jpg";
-import heroImage from "@/assets/hero-event.jpg";
-
 const projects = [
   {
-    title: "Royal Jordanian Gala",
-    category: "Corporate Events",
-    image: corporateImage,
+    title: "TEDxAmman — Largest in MENA",
+    category: "Conference & Entertainment",
+    image: "/images/events/tedx-activation-stage.jpg",
     year: "2024"
   },
   {
-    title: "Al-Faisaliah Wedding",
-    category: "Weddings",
-    image: weddingImage,
+    title: "Dead Sea Kempinski Wedding",
+    category: "Destination Wedding",
+    image: "/images/weddings/kempinski-dead-sea-1.jpg",
     year: "2024"
   },
   {
-    title: "Mercedes-Benz Launch",
-    category: "Brand Activations",
-    image: brandImage,
+    title: "MICE Gala Dinner at the Citadel",
+    category: "MICE Event",
+    image: "/images/events/mice-citadel-lanterns.jpg",
+    year: "2024"
+  },
+  {
+    title: "Luxury Henna Night",
+    category: "Destination Wedding",
+    image: "/images/weddings/henna-night-1.jpg",
+    year: "2024"
+  },
+  {
+    title: "Waqf Thareed Campaign",
+    category: "Campaign Management",
+    image: "/images/events/waqf-thareed-campaign.jpg",
+    year: "2024"
+  },
+  {
+    title: "Citadel Pomegranate Wedding",
+    category: "Destination Wedding",
+    image: "/images/weddings/citadel-pomegranate-1.jpg",
     year: "2023"
   },
   {
-    title: "Private Estate Celebration",
-    category: "Private Events",
-    image: privateImage,
-    year: "2023"
+    title: "Fas Meknas Cultural Show",
+    category: "Entertainment",
+    image: "/images/events/fas-meknas-show.jpg",
+    year: "2026"
   },
   {
-    title: "Petra Destination Event",
-    category: "Destinations",
-    image: destinationImage,
-    year: "2023"
-  },
-  {
-    title: "Annual Leadership Summit",
-    category: "Corporate Events",
-    image: heroImage,
+    title: "Arab Pharma Exhibition Booth",
+    category: "Exhibition & Booth",
+    image: "/images/events/arab-pharma-booth.jpg",
     year: "2024"
   }
 ];

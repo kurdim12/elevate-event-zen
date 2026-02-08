@@ -1,11 +1,3 @@
-import destinationWedding1 from "@/assets/weddings/destination-wedding-1.jpg";
-import destinationWedding2 from "@/assets/weddings/destination-wedding-2.jpg";
-import destinationWedding3 from "@/assets/weddings/destination-wedding-3.jpg";
-import destinationWedding4 from "@/assets/weddings/destination-wedding-4.jpg";
-import destinationWedding5 from "@/assets/weddings/destination-wedding-5.png";
-import destinationWedding6 from "@/assets/weddings/destination-wedding-6.png";
-import destinationWedding7 from "@/assets/weddings/destination-wedding-7.png";
-
 export interface GalleryImage {
   src: string;
   alt: string;
@@ -13,33 +5,33 @@ export interface GalleryImage {
 }
 
 export const destinationLuxuryWeddingsGallery: GalleryImage[] = [
-  { 
-    src: destinationWedding1, 
-    alt: "Outdoor wedding reception with red floral arrangements at historic venue", 
-    caption: "Amman Citadel — Jordan" 
+  {
+    src: "/images/weddings/kempinski-dead-sea-1.jpg",
+    alt: "Outdoor wedding reception setup at sunset by the Dead Sea",
+    caption: "Kempinski Ishtar — Dead Sea, Jordan"
   },
-  { 
-    src: destinationWedding2, 
-    alt: "Romantic wedding signage with floral decor" 
+  {
+    src: "/images/weddings/citadel-pomegranate-1.jpg",
+    alt: "Wedding dinner at Amman Citadel with Byzantine dome backdrop"
   },
-  { 
-    src: destinationWedding4, 
-    alt: "Golden hour table setting with roses and candles" 
+  {
+    src: "/images/weddings/henna-night-1.jpg",
+    alt: "Luxury henna night at Amman Citadel with red-illuminated dome"
   },
-  { 
-    src: destinationWedding3, 
-    alt: "Elegant place setting with personalized menu" 
+  {
+    src: "/images/weddings/kempinski-dead-sea-2.jpg",
+    alt: "Elegant table setting with white florals at Dead Sea wedding"
   },
-  { 
-    src: destinationWedding5, 
-    alt: "Bride and groom walking through flower aisle at night" 
+  {
+    src: "/images/weddings/citadel-vanilla-1.jpg",
+    alt: "White and cream floral arrangement at Amman Citadel wedding"
   },
-  { 
-    src: destinationWedding6, 
-    alt: "Ancient columns with floral installations at night" 
+  {
+    src: "/images/weddings/private-villa-1.jpg",
+    alt: "Fairy lights cascading through garden at private villa wedding"
   },
-  { 
-    src: destinationWedding7, 
-    alt: "Intimate table setting with golden accents and thank you card" 
+  {
+    src: "/images/weddings/citadel-pomegranate-2.jpg",
+    alt: "Guests dining al fresco at the Amman Citadel"
   }
 ];
