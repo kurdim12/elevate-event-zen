@@ -36,6 +36,10 @@ export const corporateGalleries: Record<string, GalleryImage[]> = {
     { src: "/images/corporate/booth-5.jpg", alt: "MAX by Mazaya exhibition stand at trade fair", caption: "MAX by Mazaya — Exhibition" },
     { src: "/images/corporate/booth-6.jpg", alt: "Branded exhibition booth with premium finish" },
     { src: "/images/corporate/booth-7.jpg", alt: "Trade show booth production and setup" },
+    { src: "/images/events/booth-coffeehouse.jpg", alt: "Coffee House booth design at TEDxAmman" },
+    { src: "/images/events/booth-redbull.jpg", alt: "Red Bull activation booth at outdoor event" },
+    { src: "/images/events/booth-fuel.jpg", alt: "Fuel booth design and production at amphitheatre" },
+    { src: "/images/events/booth-yellow.jpg", alt: "Pop-up booth production at event activation" },
   ],
   "360-campaign-management-activations": [
     { src: "/images/corporate/campaign-1.jpg", alt: "Waqf Thareed outdoor billboard campaign in Amman", caption: "Waqf Thareed — Amman" },
