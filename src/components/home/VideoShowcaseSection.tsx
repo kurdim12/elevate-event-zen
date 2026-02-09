@@ -53,7 +53,8 @@ export function VideoShowcaseSection() {
   };
 
   const featuredVideo = videos[0];
-  const secondaryVideos = videos.slice(1);
+  const secondFeaturedVideo = videos[1];
+  const shortVideos = videos.slice(2);
 
   return (
     <>
@@ -84,41 +85,76 @@ export function VideoShowcaseSection() {
 
           {/* Video Grid */}
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
-            {/* Featured Video - Large */}
-            <AnimatedSection delay={100}>
-              <button
-                onClick={() => openVideo(featuredVideo)}
-                className="group relative w-full aspect-video overflow-hidden bg-muted cursor-pointer text-left"
-              >
-                <img loading="lazy"
-                  src={featuredVideo.thumbnail}
-                  alt={featuredVideo.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/30 transition-colors duration-500" />
-                
-                {/* Play Button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-                    <Play className="w-6 h-6 md:w-8 md:h-8 text-foreground ml-1" fill="currentColor" />
-                  </div>
-                </div>
-
-                {/* Caption */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                  <span className="text-[10px] tracking-[0.18em] text-background/60 uppercase block mb-1.5">
-                    {featuredVideo.category}
-                  </span>
-                  <h3 className="font-serif text-lg md:text-xl text-background font-medium">
-                    {featuredVideo.title}
-                  </h3>
-                </div>
-              </button>
-            </AnimatedSection>
-
-            {/* Secondary Videos - Stacked */}
+            {/* Left Column - Two Featured Videos Stacked */}
             <div className="grid gap-6">
-              {secondaryVideos.map((video, index) => (
+              {/* Featured Video */}
+              <AnimatedSection delay={100}>
+                <button
+                  onClick={() => openVideo(featuredVideo)}
+                  className="group relative w-full aspect-video overflow-hidden bg-muted cursor-pointer text-left"
+                >
+                  <img loading="lazy"
+                    src={featuredVideo.thumbnail}
+                    alt={featuredVideo.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/30 transition-colors duration-500" />
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                      <Play className="w-6 h-6 md:w-8 md:h-8 text-foreground ml-1" fill="currentColor" />
+                    </div>
+                  </div>
+
+                  {/* Caption */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                    <span className="text-[10px] tracking-[0.18em] text-background/60 uppercase block mb-1.5">
+                      {featuredVideo.category}
+                    </span>
+                    <h3 className="font-serif text-lg md:text-xl text-background font-medium">
+                      {featuredVideo.title}
+                    </h3>
+                  </div>
+                </button>
+              </AnimatedSection>
+
+              {/* Second Featured Video */}
+              <AnimatedSection delay={150}>
+                <button
+                  onClick={() => openVideo(secondFeaturedVideo)}
+                  className="group relative w-full aspect-video overflow-hidden bg-muted cursor-pointer text-left"
+                >
+                  <img loading="lazy"
+                    src={secondFeaturedVideo.thumbnail}
+                    alt={secondFeaturedVideo.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/30 transition-colors duration-500" />
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                      <Play className="w-6 h-6 md:w-8 md:h-8 text-foreground ml-1" fill="currentColor" />
+                    </div>
+                  </div>
+
+                  {/* Caption */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                    <span className="text-[10px] tracking-[0.18em] text-background/60 uppercase block mb-1.5">
+                      {secondFeaturedVideo.category}
+                    </span>
+                    <h3 className="font-serif text-lg md:text-xl text-background font-medium">
+                      {secondFeaturedVideo.title}
+                    </h3>
+                  </div>
+                </button>
+              </AnimatedSection>
+            </div>
+
+            {/* Right Column - Short Videos Stacked */}
+            <div className="grid gap-6">
+              {shortVideos.map((video, index) => (
                 <AnimatedSection key={video.id} delay={200 + index * 100}>
                   <button
                     onClick={() => openVideo(video)}
