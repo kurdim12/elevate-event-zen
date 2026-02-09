@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import ingotBoothImage from "@/assets/events/ingot-booth.jpg";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
 
@@ -46,9 +47,9 @@ const projects = [
     year: "2026"
   },
   {
-    title: "Arab Pharma Exhibition Booth",
+    title: "Booth Design & Execution",
     category: "Exhibition & Booth",
-    image: "/images/events/arab-pharma-booth.jpg",
+    image: ingotBoothImage,
     year: "2024"
   }
 ];
