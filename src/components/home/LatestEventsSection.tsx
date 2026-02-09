@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -89,21 +89,40 @@ const events = [
   },
 ];
 
+const AUTO_SCROLL_INTERVAL = 4000;
+const SCROLL_AMOUNT = 400;
+
 export function LatestEventsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const scrollAmount = 400;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
+  const scroll = useCallback((direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const el = scrollRef.current;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+
+    if (direction === "right" && el.scrollLeft >= maxScroll - 10) {
+      el.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      el.scrollBy({
+        left: direction === "left" ? -SCROLL_AMOUNT : SCROLL_AMOUNT,
         behavior: "smooth",
       });
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => scroll("right"), AUTO_SCROLL_INTERVAL);
+    return () => clearInterval(timer);
+  }, [isPaused, scroll]);
 
   return (
-    <section className="py-28 md:py-36 lg:py-44 bg-background overflow-hidden">
+    <section
+      className="py-28 md:py-36 lg:py-44 bg-background overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="container-wide">
         <AnimatedSection>
           <div className="flex items-end justify-between mb-12 md:mb-16">
@@ -113,18 +132,17 @@ export function LatestEventsSection() {
                 Recent <span className="italic">Work</span>
               </h2>
             </div>
-            
-            {/* Navigation arrows - desktop only */}
+
             <div className="hidden md:flex items-center gap-3">
               <button
-                onClick={() => scroll("left")}
+                onClick={() => { setIsPaused(true); scroll("left"); }}
                 className="w-12 h-12 border border-border/50 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-500"
                 aria-label="Scroll left"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
-                onClick={() => scroll("right")}
+                onClick={() => { setIsPaused(true); scroll("right"); }}
                 className="w-12 h-12 border border-border/50 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-500"
                 aria-label="Scroll right"
               >
@@ -135,28 +153,23 @@ export function LatestEventsSection() {
         </AnimatedSection>
       </div>
 
-      {/* Horizontal scroll container */}
       <div
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scrollbar-hide px-6 md:px-8 lg:px-12 pb-4 snap-x snap-mandatory"
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {/* Left spacer for alignment with container */}
         <div className="flex-shrink-0 w-[calc((100vw-1200px)/2-24px)] hidden xl:block" />
-        
+
         {events.map((event, index) => (
           <AnimatedSection key={event.id} delay={index * 100}>
             <div className="flex-shrink-0 w-[320px] md:w-[380px] snap-start group cursor-pointer">
               <div className="aspect-[4/5] overflow-hidden mb-5 relative">
-                <img loading="lazy"
+                <img
+                  loading="lazy"
                   src={event.image}
                   alt={event.title}
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
-                {/* Subtle overlay on hover */}
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-700" />
               </div>
               <div className="space-y-2">
@@ -172,12 +185,10 @@ export function LatestEventsSection() {
             </div>
           </AnimatedSection>
         ))}
-        
-        {/* Right spacer */}
+
         <div className="flex-shrink-0 w-6 md:w-8 lg:w-12" />
       </div>
 
-      {/* Mobile swipe hint */}
       <div className="md:hidden mt-8 text-center">
         <p className="text-[11px] tracking-[0.15em] text-muted-foreground/40 uppercase">
           Swipe to explore
