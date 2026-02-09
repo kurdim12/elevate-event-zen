@@ -89,7 +89,7 @@ const events = [
   },
 ];
 
-const AUTO_SCROLL_INTERVAL = 4000;
+const AUTO_SCROLL_INTERVAL = 2000;
 const SCROLL_AMOUNT = 400;
 
 export function LatestEventsSection() {

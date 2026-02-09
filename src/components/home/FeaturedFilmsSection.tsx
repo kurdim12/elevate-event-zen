@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Play, X } from "lucide-react";
-import featuredHeritageThumbnail from "@/assets/featured-film-heritage.jpg";
+import featuredHeritageThumbnail from "@/assets/featured-heritage-cover.jpg";
 
 interface FeaturedVideo {
   id: string;
