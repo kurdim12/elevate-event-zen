@@ -110,7 +110,7 @@ export default function Contact() {
             <div className="lg:col-span-8">
               <AnimatedSection>
                 <p className="body-lg mb-10">
-                  Share the essentials and we will respond with a clear next step.
+                  Share the essentials. We'll respond with a clear next step.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-8">
@@ -278,7 +278,7 @@ export default function Contact() {
                     <div className="mt-6 space-y-2">
                       <Label htmlFor="notes">Additional Notes</Label>
                       <Textarea 
-                        placeholder="Tell us more about your event vision, specific requirements, or any questions you have..."
+                        placeholder="Tell us more about your event vision, specific requirements, or any questions..."
                         rows={5}
                         value={formData.notes || ""}
                         onChange={(e) => updateField("notes", e.target.value)}
@@ -335,7 +335,7 @@ export default function Contact() {
 
                   <div className="mt-8 pt-8 border-t border-border">
                     <p className="text-sm text-muted-foreground">
-                      Prefer to schedule a call? We're happy to discuss your event 
+                      Prefer to schedule a call? We're happy to discuss your 
                       requirements in detail.
                     </p>
                     <a 

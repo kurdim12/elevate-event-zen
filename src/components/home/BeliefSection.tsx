@@ -11,10 +11,10 @@ export function BeliefSection() {
             </p>
             
             <blockquote className="font-serif text-xl md:text-2xl lg:text-3xl font-normal leading-[1.4] text-foreground tracking-[-0.01em]">
-              We don't just plan events—
+              We don't plan events.
               <br />
               <span className="italic text-muted-foreground">
-                we craft stories that unfold in real time,
+                We craft stories that unfold in real time,
               </span>
               <br />
               <span className="italic text-muted-foreground">

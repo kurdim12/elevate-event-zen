@@ -83,10 +83,9 @@ const CorporateEventsMain = () => {
               Corporate Events Management
             </h1>
             <p className="body-lg text-background/80 mt-6 max-w-2xl">
-              MaraNasi delivers corporate events with destination level ambition and
-              operational control. We plan, produce, and run high value experiences
-              across Jordan, Egypt, the UAE, and Thailand, including conferences,
-              exhibitions, retreats, gala dinners, and brand activations.
+              Destination-level ambition. Operational control. We plan, produce, 
+              and run high-value experiences across Jordan, Egypt, the UAE, and 
+              Thailand. Conferences, exhibitions, retreats, gala dinners, brand activations.
             </p>
           </AnimatedSection>
         </div>
@@ -100,10 +99,10 @@ const CorporateEventsMain = () => {
               <div className="space-y-6">
                 <h2 className="heading-lg mb-4">Our Approach</h2>
                 <p className="body-md text-muted-foreground">
-                  Our approach is simple. We treat every corporate project as a managed
-                  system. Planning, suppliers, production, guest flow, and stage timing
-                  are aligned before show day. The outcome is a premium experience that
-                  runs cleanly and protects the brand.
+                  Simple. Every corporate project is a managed system. Planning, 
+                  suppliers, production, guest flow, stage timing—aligned before 
+                  show day. The outcome: a premium experience that runs cleanly 
+                  and protects the brand.
                 </p>
               </div>
             </AnimatedSection>

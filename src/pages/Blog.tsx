@@ -8,21 +8,21 @@ const blogPosts = [
   {
     slug: "choosing-the-right-destination-for-your-corporate-event",
     title: "Choosing the Right Destination for Your Corporate Event",
-    excerpt: "How to evaluate destinations based on objectives, logistics, and guest experience requirements.",
+    excerpt: "Evaluating destinations based on objectives, logistics, and guest experience requirements.",
     category: "Corporate Events",
     date: "Coming Soon"
   },
   {
     slug: "destination-wedding-planning-timeline",
     title: "Destination Wedding Planning Timeline",
-    excerpt: "A structured approach to planning your destination wedding from 18 months out to the day.",
+    excerpt: "A structured approach to planning your destination wedding from 18 months out.",
     category: "Weddings",
     date: "Coming Soon"
   },
   {
     slug: "production-readiness-checklist-for-conferences",
     title: "Production Readiness Checklist for Conferences",
-    excerpt: "Key technical and operational checks to ensure your conference runs smoothly.",
+    excerpt: "Key technical and operational checks to ensure smooth conference execution.",
     category: "Production",
     date: "Coming Soon"
   },
@@ -58,10 +58,9 @@ export default function Blog() {
         <div className="container-narrow text-center">
           <AnimatedSection>
             <p className="body-lg">
-              The MaraNasi blog covers corporate events management, destination execution, 
-              production discipline, and planning insights for luxury weddings and proposals. 
-              Content focuses on destinations, venues, and operational clarity for clients 
-              who want premium results.
+              Corporate events, destination execution, production discipline, 
+              and planning insights. Destinations, venues, and operational clarity 
+              for premium results.
             </p>
           </AnimatedSection>
         </div>

@@ -63,14 +63,13 @@ const DestinationsMain = () => {
         <div className="container-narrow text-center">
           <AnimatedSection>
             <p className="body-lg mb-4">
-              MaraNasi operates across destinations selected for impact, accessibility,
-              and production feasibility. We deliver corporate events, destination
-              weddings, and proposals across Jordan, Egypt, the UAE, and Thailand.
-              Each destination includes signature locations and venue options suitable
-              for high value events.
+              Selected for impact, accessibility, and production feasibility. 
+              Corporate events, destination weddings, proposals—Jordan, Egypt, 
+              UAE, Thailand. Signature locations. Venue options suited for 
+              high-value events.
             </p>
             <p className="body-md text-muted-foreground">
-              This page exists to help clients choose the right place before choosing the format.
+              Choose the right place before choosing the format.
             </p>
           </AnimatedSection>
         </div>
