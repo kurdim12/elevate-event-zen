@@ -49,6 +49,7 @@ export const corporateGalleries: Record<string, GalleryImage[]> = {
     { src: "/images/corporate/campaign-5.jpg", alt: "Brand activation billboard campaign Jordan" },
     { src: "/images/corporate/campaign-6.jpg", alt: "Corporate brand activation event with crowd" },
     { src: "/images/corporate/campaign-7.jpg", alt: "Live brand activation at corporate exhibition" },
+    { src: "/images/corporate/campaign-8.jpg", alt: "Waqf Thareed bridge billboard campaign in Amman" },
   ],
   "exhibition-management": [
     { src: "/images/corporate/exhibition-1.jpg", alt: "Exhibition management at trade show with brand activations" },
