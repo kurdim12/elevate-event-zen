@@ -31,10 +31,6 @@ export const luxuryWeddingDesignGallery: GalleryImage[] = [
     alt: "Sunset wedding reception at the Dead Sea"
   },
   {
-    src: "/images/weddings/garden-lights.jpg",
-    alt: "Garden venue with hanging fairy lights and greenery"
-  },
-  {
     src: "/images/weddings/citadel-red-tables.jpg",
     alt: "Citadel wedding reception with red floral table settings"
   },
@@ -71,10 +67,6 @@ export const marriageProposalsGallery: GalleryImage[] = [
     alt: "Sunset view over the Dead Sea for a destination proposal"
   },
   {
-    src: "/images/weddings/private-villa-1.jpg",
-    alt: "Private garden venue with fairy lights for romantic proposal"
-  },
-  {
     src: "/images/weddings/citadel-pomegranate-2.jpg",
     alt: "Candlelit dining setting at Amman Citadel"
   }
@@ -101,10 +93,6 @@ export const destinationLuxuryWeddingsGallery: GalleryImage[] = [
   {
     src: "/images/weddings/citadel-vanilla-1.jpg",
     alt: "White and cream floral arrangement at Amman Citadel wedding"
-  },
-  {
-    src: "/images/weddings/private-villa-1.jpg",
-    alt: "Fairy lights cascading through garden at private villa wedding"
   },
   {
     src: "/images/weddings/citadel-pomegranate-2.jpg",
