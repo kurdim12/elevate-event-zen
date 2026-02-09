@@ -1,18 +1,21 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
 import destinationAmmanImg2 from "@/assets/destination-amman-jordan-2.jpg";
-
-
-const destinations = [
-  { name: "Jordan", description: "Petra, Dead Sea, Amman" },
-  { name: "UAE", description: "Dubai, Abu Dhabi" },
-  { name: "Saudi Arabia", description: "Riyadh, Jeddah, AlUla" },
-  { name: "International", description: "Worldwide" },
-];
-
+const destinations = [{
+  name: "Jordan",
+  description: "Petra, Dead Sea, Amman"
+}, {
+  name: "UAE",
+  description: "Dubai, Abu Dhabi"
+}, {
+  name: "Saudi Arabia",
+  description: "Riyadh, Jeddah, AlUla"
+}, {
+  name: "International",
+  description: "Worldwide"
+}];
 export function DestinationsSection() {
-  return (
-    <section className="py-28 md:py-36 lg:py-44 bg-foreground text-background overflow-hidden">
+  return <section className="py-28 md:py-36 lg:py-44 bg-foreground text-background overflow-hidden">
       <div className="container-wide">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-6">
           {/* Left - Content */}
@@ -35,18 +38,13 @@ export function DestinationsSection() {
 
               {/* Destination list */}
               <div className="space-y-3 mb-10">
-                {destinations.map((dest) => (
-                  <div key={dest.name} className="flex items-baseline justify-between border-b border-background/8 pb-3">
+                {destinations.map(dest => <div key={dest.name} className="flex items-baseline justify-between border-b border-background/8 pb-3">
                     <span className="font-serif text-base text-background/85">{dest.name}</span>
                     <span className="text-[11px] text-background/35">{dest.description}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
-              <Link 
-                to="/destinations" 
-                className="inline-flex items-center text-[13px] tracking-[0.18em] text-background/40 uppercase hover:text-background/80 transition-colors duration-500 group"
-              >
+              <Link to="/destinations" className="inline-flex items-center text-[13px] tracking-[0.18em] text-background/40 uppercase hover:text-background/80 transition-colors duration-500 group">
                 <span className="mr-3">Explore destinations</span>
                 <span className="w-6 h-px bg-background/25 group-hover:w-12 group-hover:bg-background/60 transition-all duration-600" />
               </Link>
@@ -59,20 +57,12 @@ export function DestinationsSection() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative overflow-hidden">
                   <div className="aspect-[3/4]">
-                    <img loading="lazy"
-                      src="/images/landing/lp-citadel-flowers.jpg"
-                      alt="Amman Citadel at night with floral installations, Jordan"
-                      className="w-full h-full object-cover"
-                    />
+                    <img loading="lazy" alt="Amman Citadel at night with floral installations, Jordan" className="w-full h-full object-cover" src="/lovable-uploads/f682c732-4b70-4dcc-8bf2-78cbf9f203c2.jpg" />
                   </div>
                 </div>
                 <div className="relative overflow-hidden mt-8">
                   <div className="aspect-[3/4]">
-                    <img loading="lazy"
-                      src={destinationAmmanImg2}
-                      alt="MaraNasi team member preparing drinks at an outdoor event in Amman, Jordan"
-                      className="w-full h-full object-cover"
-                    />
+                    <img loading="lazy" src={destinationAmmanImg2} alt="MaraNasi team member preparing drinks at an outdoor event in Amman, Jordan" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -80,6 +70,5 @@ export function DestinationsSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
