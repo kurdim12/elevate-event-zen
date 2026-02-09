@@ -69,6 +69,18 @@ export const marriageProposalsGallery: GalleryImage[] = [
   {
     src: "/images/weddings/citadel-pomegranate-2.jpg",
     alt: "Candlelit dining setting at Amman Citadel"
+  },
+  {
+    src: "/images/weddings/dest-wedding-lights.jpg",
+    alt: "Romantic outdoor setting with dramatic light beams"
+  },
+  {
+    src: "/images/weddings/dest-wedding-tables.jpg",
+    alt: "Intimate candlelit dinner table with fairy light garden"
+  },
+  {
+    src: "/images/weddings/dest-wedding-venue.jpg",
+    alt: "Stunning evening venue with light installations"
   }
 ];
 
@@ -97,5 +109,17 @@ export const destinationLuxuryWeddingsGallery: GalleryImage[] = [
   {
     src: "/images/weddings/citadel-pomegranate-2.jpg",
     alt: "Guests dining al fresco at the Amman Citadel"
+  },
+  {
+    src: "/images/weddings/dest-wedding-lights.jpg",
+    alt: "Outdoor wedding reception with dramatic light beams at night"
+  },
+  {
+    src: "/images/weddings/dest-wedding-tables.jpg",
+    alt: "Elegant candlelit table setting with fairy lights in garden"
+  },
+  {
+    src: "/images/weddings/dest-wedding-venue.jpg",
+    alt: "Evening wedding venue with light installations and reflecting pool"
   }
 ];
