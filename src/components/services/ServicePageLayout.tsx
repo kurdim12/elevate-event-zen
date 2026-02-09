@@ -103,7 +103,7 @@ export function ServicePageLayout({
           <AnimatedSection>
             <h2 className="heading-lg mb-6">Ready to Begin?</h2>
             <p className="body-lg mb-8">
-              Let's discuss how we can bring your vision to life.
+              Share your vision. We'll respond with a clear next step.
             </p>
             <Link to="/contact" className="btn-primary">
               Request a Proposal

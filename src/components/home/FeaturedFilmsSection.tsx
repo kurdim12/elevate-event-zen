@@ -61,7 +61,7 @@ export function FeaturedFilmsSection() {
                 Stories Worth Telling
               </h2>
               <p className="mt-6 text-[15px] text-background/40 max-w-lg mx-auto leading-relaxed">
-                Every event we create becomes a cinematic experience. Watch the moments unfold.
+                Every event becomes a cinematic experience. Watch the moments unfold.
               </p>
             </div>
           </AnimatedSection>

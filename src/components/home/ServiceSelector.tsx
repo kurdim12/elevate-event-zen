@@ -120,7 +120,7 @@ export function ServiceSelector() {
         <AnimatedSection>
           <div className="text-center">
             <h2 className="font-serif text-xl md:text-2xl lg:text-[1.75rem] font-normal leading-[1.5] text-foreground">
-              We specialize in crafting{" "}
+              We design{" "}
               <InlineDropdown
                 options={eventTypes}
                 selected={selectedEvent}

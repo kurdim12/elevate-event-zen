@@ -127,7 +127,7 @@ const DestinationPage = () => {
               >
                 <h3 className="font-serif text-xl font-medium mb-2">Corporate Events</h3>
                 <p className="text-sm text-muted-foreground">
-                  Conferences, exhibitions, retreats, and gala dinners
+                  Conferences, exhibitions, retreats, gala dinners
                 </p>
               </Link>
             </AnimatedSection>
@@ -156,7 +156,7 @@ const DestinationPage = () => {
               <span className="italic">{destination.name}</span>
             </h2>
             <p className="body-lg text-background/70 mb-10">
-              Share your requirements and we'll provide venue options and a clear next step.
+              Share your requirements. We'll provide venue options and a clear next step.
             </p>
             <Link to="/contact" className="btn-gold">
               {destination.ctaText}

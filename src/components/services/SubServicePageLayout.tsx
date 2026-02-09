@@ -157,7 +157,7 @@ export function SubServicePageLayout({
           <AnimatedSection>
             <h2 className="heading-lg text-background mb-6">Ready to Begin?</h2>
             <p className="body-lg text-background/70 mb-8">
-              Let's discuss how we can bring your vision to life.
+              Share your vision. We'll respond with a clear next step.
             </p>
             <Link to="/contact" className="btn-gold">
               Request a Proposal
