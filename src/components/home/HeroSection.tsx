@@ -36,6 +36,10 @@ export function HeroSection() {
   useEffect(() => {
     videoRefs.current.forEach((video, i) => {
       if (!video) return;
+      // Set normal playback rate for first video (was playing too fast)
+      if (i === 0) {
+        video.playbackRate = 0.75;
+      }
       if (i === activeIndex) {
         video.currentTime = 0;
         video.play().catch(() => {});
@@ -67,7 +71,7 @@ export function HeroSection() {
                 muted
                 playsInline
                 onEnded={advance}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${i === 2 ? "scale-x-[-1]" : ""}`}
               />
             ) : (
               <img

@@ -18,6 +18,12 @@ const videos: VideoItem[] = [
     thumbnail: "https://img.youtube.com/vi/l5N0SGYhyWI/maxresdefault.jpg",
   },
   {
+    id: "plQYv4CBRfM",
+    title: "Event Highlights",
+    category: "Events",
+    thumbnail: "https://img.youtube.com/vi/plQYv4CBRfM/maxresdefault.jpg",
+  },
+  {
     id: "TJjQPwqN8yw",
     title: "Pre-Wedding Video Ideas",
     category: "Weddings",
