@@ -87,6 +87,34 @@ const events = [
     location: "Amman, Jordan",
     image: "/images/weddings/private-villa-cover.jpg",
   },
+  {
+    id: 13,
+    title: "Coffee House Booth — TEDx",
+    category: "Exhibition & Booth",
+    location: "Amman, Jordan",
+    image: "/images/events/booth-coffeehouse.jpg",
+  },
+  {
+    id: 14,
+    title: "Red Bull Activation Booth",
+    category: "Exhibition & Booth",
+    location: "Amman, Jordan",
+    image: "/images/events/booth-redbull.jpg",
+  },
+  {
+    id: 15,
+    title: "Fuel Booth Design",
+    category: "Exhibition & Booth",
+    location: "Amman, Jordan",
+    image: "/images/events/booth-fuel.jpg",
+  },
+  {
+    id: 16,
+    title: "Pop-Up Booth Production",
+    category: "Exhibition & Booth",
+    location: "Amman, Jordan",
+    image: "/images/events/booth-yellow.jpg",
+  },
 ];
 
 const AUTO_SCROLL_INTERVAL = 2000;
