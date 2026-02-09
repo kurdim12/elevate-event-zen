@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram, Youtube, Linkedin, Facebook } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -97,38 +98,42 @@ export function Footer() {
           <p className="text-background/25 text-[11px] tracking-wide">
             © {currentYear} Maranasi
           </p>
-          <div className="flex gap-6">
+          <div className="flex items-center gap-5">
             <a 
               href="https://www.instagram.com/maranasi.mena" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
+              className="text-background/40 hover:text-background/70 transition-colors duration-400"
+              aria-label="Instagram"
             >
-              Instagram
+              <Instagram className="w-5 h-5" />
             </a>
             <a 
               href="https://www.youtube.com/@MaraNasiForEvents" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
+              className="text-background/40 hover:text-background/70 transition-colors duration-400"
+              aria-label="YouTube"
             >
-              YouTube
+              <Youtube className="w-5 h-5" />
             </a>
             <a 
               href="https://jo.linkedin.com/company/maranasi" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
+              className="text-background/40 hover:text-background/70 transition-colors duration-400"
+              aria-label="LinkedIn"
             >
-              LinkedIn
+              <Linkedin className="w-5 h-5" />
             </a>
             <a 
               href="https://www.facebook.com/people/MaraNasi/100095634037516/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
+              className="text-background/40 hover:text-background/70 transition-colors duration-400"
+              aria-label="Facebook"
             >
-              Facebook
+              <Facebook className="w-5 h-5" />
             </a>
           </div>
         </div>
