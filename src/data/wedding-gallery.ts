@@ -31,8 +31,20 @@ export const luxuryWeddingDesignGallery: GalleryImage[] = [
     alt: "Sunset wedding reception at the Dead Sea"
   },
   {
-    src: "/images/weddings/private-villa-2.jpg",
-    alt: "Private villa garden wedding with string lights"
+    src: "/images/weddings/garden-lights.jpg",
+    alt: "Garden venue with hanging fairy lights and greenery"
+  },
+  {
+    src: "/images/weddings/citadel-red-tables.jpg",
+    alt: "Citadel wedding reception with red floral table settings"
+  },
+  {
+    src: "/images/weddings/citadel-plate-detail.jpg",
+    alt: "Elegant plate detail with ornate charger and menu card"
+  },
+  {
+    src: "/images/weddings/citadel-omar-wayan.jpg",
+    alt: "Omar & Wayan wedding signage with red roses at the Citadel"
   }
 ];
 
