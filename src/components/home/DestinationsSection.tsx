@@ -1,5 +1,6 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
+import destinationAmmanImg2 from "@/assets/destination-amman-jordan-2.jpg";
 
 
 const destinations = [
@@ -68,8 +69,8 @@ export function DestinationsSection() {
                 <div className="relative overflow-hidden mt-8">
                   <div className="aspect-[3/4]">
                     <img loading="lazy"
-                      src="/images/landing/lp-citadel-red.jpg"
-                      alt="Amman Citadel illuminated at night during a MaraNasi event"
+                      src={destinationAmmanImg2}
+                      alt="MaraNasi team member preparing drinks at an outdoor event in Amman, Jordan"
                       className="w-full h-full object-cover"
                     />
                   </div>
