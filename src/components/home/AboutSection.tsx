@@ -45,11 +45,15 @@ export function AboutSection() {
           <AnimatedSection delay={150} className="lg:col-span-6">
             <div className="relative group overflow-hidden">
               <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
-                <img loading="lazy"
-                  src="/images/landing/lp-ceremony-setup.jpg"
-                  alt="MaraNasi luxury wedding ceremony setup at the Amman Citadel"
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                />
+                >
+                  <source src="/videos/about-section.mp4" type="video/mp4" />
+                </video>
               </div>
               {/* Subtle overlay on hover */}
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-700" />
