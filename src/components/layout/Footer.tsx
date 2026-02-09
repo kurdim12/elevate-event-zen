@@ -99,7 +99,7 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             <a 
-              href="https://instagram.com/maranasi_events" 
+              href="https://www.instagram.com/maranasi.mena" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
@@ -115,12 +115,20 @@ export function Footer() {
               YouTube
             </a>
             <a 
-              href="https://linkedin.com/company/maranasi" 
+              href="https://jo.linkedin.com/company/maranasi" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
             >
               LinkedIn
+            </a>
+            <a 
+              href="https://www.facebook.com/people/MaraNasi/100095634037516/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-background/25 hover:text-background/50 transition-colors duration-400 text-[11px] tracking-wide"
+            >
+              Facebook
             </a>
           </div>
         </div>

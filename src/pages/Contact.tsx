@@ -307,11 +307,11 @@ export default function Contact() {
                   
                   <div className="space-y-6">
                     <a 
-                      href="tel:+962791234567" 
+                      href="tel:+962796565971" 
                       className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <Phone className="w-5 h-5 text-primary" />
-                      <span>+962 79 123 4567</span>
+                      <span>+962 79 656 5971</span>
                     </a>
                     
                     <a 
@@ -323,7 +323,7 @@ export default function Contact() {
                     </a>
                     
                     <a 
-                      href="https://wa.me/962791234567" 
+                      href="https://wa.me/962796565971" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
