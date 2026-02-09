@@ -85,7 +85,7 @@ const events = [
     title: "Private Villa — Katb Ktab",
     category: "Wedding",
     location: "Amman, Jordan",
-    image: "/images/weddings/private-villa-1.jpg",
+    image: "/images/weddings/private-villa-cover.jpg",
   },
 ];
 
