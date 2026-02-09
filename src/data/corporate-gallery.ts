@@ -106,7 +106,8 @@ export const corporateGalleries: Record<string, GalleryImage[]> = {
     { src: "/images/corporate/gala-7.jpg", alt: "MICE gala dinner at Amman Citadel with candlelit setting", caption: "Amman Citadel — Jordan" },
   ],
   "show-calling-stage-management": [
-    { src: "/images/corporate/show-1.jpg", alt: "Show calling and stage management at TEDxAmman", caption: "TEDxAmman — Largest in MENA" },
+    { src: "/images/corporate/show-calling-hero.jpg", alt: "TEDxAmman show calling control room with live production monitors", caption: "TEDxAmman — Largest in MENA" },
+    { src: "/images/corporate/show-1.jpg", alt: "Show calling and stage management at TEDxAmman" },
     { src: "/images/corporate/show-2.jpg", alt: "Stage management for large conference event" },
     { src: "/images/corporate/show-3.jpg", alt: "Show production with timing control and stage flow" },
     { src: "/images/corporate/show-4.jpg", alt: "Live show calling at TEDxAmman event" },
