@@ -24,7 +24,7 @@ export function PhotoMosaicSection() {
         <AnimatedSection className="mb-12">
           <p className="label-uppercase mb-4">Behind the scenes</p>
           <h2 className="heading-xl">
-            Every detail, <span className="italic">crafted</span>
+            Every detail, <span className="italic">considered</span>
           </h2>
         </AnimatedSection>
 

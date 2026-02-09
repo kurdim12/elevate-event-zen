@@ -17,8 +17,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-[14px] text-background/40 leading-[1.7] max-w-xs mb-6">
-              Crafting extraordinary events across Jordan, the UAE, Saudi Arabia, 
-              and beyond. Where vision meets flawless execution.
+              Extraordinary events across Jordan, UAE, Saudi Arabia, and beyond. 
+              Vision meets execution.
             </p>
             <a 
               href="mailto:hello@maranasi.com" 

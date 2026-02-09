@@ -68,7 +68,7 @@ export function VideoShowcaseSection() {
                   Behind the Scenes
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium text-foreground leading-tight max-w-xl">
-                  See Our Events in Motion
+                  Events in Motion
                 </h2>
               </div>
               <a

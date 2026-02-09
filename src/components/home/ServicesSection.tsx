@@ -4,25 +4,25 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 const services = [
   {
     title: "Corporate Events",
-    subtitle: "Conferences, MICE, Gala Dinners & Campaign Management",
+    subtitle: "Conferences, MICE, gala dinners, campaign management",
     image: "/images/landing/lp-tedx-production.jpg",
     href: "/corporate-events",
   },
   {
     title: "Luxury Weddings",
-    subtitle: "Bespoke celebrations, Cultural nights & Destination ceremonies",
+    subtitle: "Bespoke celebrations, cultural nights, destination ceremonies",
     image: "/images/landing/lp-wedding-setting.jpg",
     href: "/destination-luxury-weddings",
   },
   {
     title: "Brand Activations",
-    subtitle: "360 Campaigns, Exhibitions & Immersive brand experiences",
+    subtitle: "360 campaigns, exhibitions, immersive brand experiences",
     image: "/images/landing/lp-redbull-crowd.jpg",
     href: "/corporate-events",
   },
   {
     title: "Destination Events",
-    subtitle: "Iconic locations, Retreats & VIP destination experiences",
+    subtitle: "Iconic locations, retreats, VIP destination experiences",
     image: "/images/landing/lp-jordan-tent.jpg",
     href: "/destinations",
   },
@@ -93,7 +93,7 @@ export function ServicesSection() {
             to="/work"
             className="inline-flex items-center text-[13px] tracking-[0.18em] text-muted-foreground/60 uppercase hover:text-foreground transition-colors duration-500 group"
           >
-            <span className="mr-3">View our portfolio</span>
+            <span className="mr-3">View portfolio</span>
             <span className="w-6 h-px bg-muted-foreground/25 group-hover:w-12 group-hover:bg-foreground transition-all duration-600" />
           </Link>
         </AnimatedSection>

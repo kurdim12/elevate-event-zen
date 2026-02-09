@@ -16,7 +16,7 @@ const NotFound = () => {
           <p className="label-uppercase mb-4">Error 404</p>
           <h1 className="heading-xl mb-6">Page Not Found</h1>
           <p className="body-lg text-muted-foreground mb-10 max-w-md mx-auto">
-            The page you're looking for doesn't exist or has been moved.
+            This page doesn't exist or has been moved.
           </p>
           <Link to="/" className="btn-primary">
             Return Home

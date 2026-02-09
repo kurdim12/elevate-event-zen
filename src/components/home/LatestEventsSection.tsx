@@ -110,7 +110,7 @@ export function LatestEventsSection() {
             <div>
               <p className="label-uppercase mb-4">Portfolio</p>
               <h2 className="heading-xl">
-                Latest <span className="italic">Events</span>
+                Recent <span className="italic">Work</span>
               </h2>
             </div>
             
