@@ -25,14 +25,14 @@ const videos: VideoItem[] = [
   },
   {
     id: "CuqnxW3Jz70",
-    title: "Pre-Wedding Video Ideas",
+    title: "Deya Elayyan Joins Waqf Thareed",
     category: "Weddings",
     thumbnail: "https://img.youtube.com/vi/CuqnxW3Jz70/maxresdefault.jpg",
     isShort: true,
   },
   {
     id: "lvVjAxf8BSs",
-    title: "Engagement Tips",
+    title: "Stories of Resilience",
     category: "Weddings",
     thumbnail: "https://img.youtube.com/vi/lvVjAxf8BSs/maxresdefault.jpg",
     isShort: true,
