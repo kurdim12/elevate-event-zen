@@ -1,55 +1,37 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 const heroItems = [
-  { type: "video" as const, src: "/videos/hero-clip-1.mp4" },
+  { type: "youtube" as const, id: "iHFzJBF8t30" },
   { type: "image" as const, src: "/images/landing/lp-hero.jpg" },
-  { type: "video" as const, src: "/videos/hero-clip-2.mp4" },
+  { type: "youtube" as const, id: "VISSs12n7-w" },
   { type: "image" as const, src: "/images/landing/lp-redbull-crowd.jpg" },
-  { type: "video" as const, src: "/videos/hero-clip-3.mp4" },
+  { type: "youtube" as const, id: "HU0wV-E6mUw" },
 ];
 
+const VIDEO_DURATION = 12000; // 12 seconds for YouTube clips
 const PHOTO_DURATION = 6000;
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 150);
     return () => clearTimeout(timer);
   }, []);
 
-  // Auto-advance photos after PHOTO_DURATION; videos advance via onEnded
+  // Auto-advance based on content type
   useEffect(() => {
     const currentItem = heroItems[activeIndex];
-    if (currentItem.type === "image") {
-      const timer = setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % heroItems.length);
-      }, PHOTO_DURATION);
-      return () => clearTimeout(timer);
-    }
+    const duration = currentItem.type === "image" ? PHOTO_DURATION : VIDEO_DURATION;
+    
+    const timer = setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % heroItems.length);
+    }, duration);
+    
+    return () => clearTimeout(timer);
   }, [activeIndex]);
-
-  // Play/pause videos based on active state
-  useEffect(() => {
-    videoRefs.current.forEach((video, i) => {
-      if (!video) return;
-      // Set normal playback rate for first video (was playing too fast)
-      if (i === 0) {
-        video.playbackRate = 0.75;
-      }
-      if (i === activeIndex) {
-        video.currentTime = 0;
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-      }
-    });
-  }, [activeIndex]);
-
-  const advance = () => setActiveIndex((prev) => (prev + 1) % heroItems.length);
 
   return (
     <section className="relative h-screen flex items-end overflow-hidden">
@@ -62,17 +44,16 @@ export function HeroSection() {
               i === activeIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            {item.type === "video" ? (
-              <video
-                ref={(el) => {
-                  videoRefs.current[i] = el;
-                }}
-                src={item.src}
-                muted
-                playsInline
-                onEnded={advance}
-                className={`w-full h-full object-cover ${i === 2 ? "scale-x-[-1]" : ""}`}
-              />
+            {item.type === "youtube" ? (
+              <div className="absolute inset-0 overflow-hidden">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${item.id}?autoplay=1&mute=1&loop=1&playlist=${item.id}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3`}
+                  title="Hero video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full pointer-events-none"
+                  style={{ border: 'none' }}
+                />
+              </div>
             ) : (
               <img
                 src={item.src}
