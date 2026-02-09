@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Play, X } from "lucide-react";
+import featuredHeritageThumbnail from "@/assets/featured-film-heritage.jpg";
 
 interface FeaturedVideo {
   id: string;
@@ -76,7 +77,7 @@ export function FeaturedFilmsSection() {
                 {/* Thumbnail with cinematic aspect ratio */}
                 <div className="relative aspect-[21/9] overflow-hidden">
                   <img loading="lazy"
-                    src={`https://img.youtube.com/vi/${featuredVideos[0].id}/maxresdefault.jpg`}
+                    src={featuredHeritageThumbnail}
                     alt={featuredVideos[0].title}
                     className="w-full h-full object-cover transition-all duration-[1.5s] ease-out group-hover:scale-[1.03]"
                   />
