@@ -164,6 +164,71 @@ export function EditorialGallery({ images, title = "Moments That Define Us" }: E
               </AnimatedSection>
             )}
           </div>
+
+          {/* Row 4: Additional images (if available) */}
+          {images.length > 7 && (
+            <div className="grid grid-cols-12 gap-4 md:gap-6">
+              {images[7] && (
+                <AnimatedSection className="col-span-6 lg:col-span-3" delay={400}>
+                  <div className="relative overflow-hidden group cursor-pointer">
+                    <div className="aspect-[4/3]">
+                      <img loading="lazy"
+                        src={images[7].src}
+                        alt={images[7].alt}
+                        className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  </div>
+                </AnimatedSection>
+              )}
+
+              {images[8] && (
+                <AnimatedSection className="col-span-6 lg:col-span-3" delay={450}>
+                  <div className="relative overflow-hidden group cursor-pointer">
+                    <div className="aspect-[4/3]">
+                      <img loading="lazy"
+                        src={images[8].src}
+                        alt={images[8].alt}
+                        className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  </div>
+                </AnimatedSection>
+              )}
+
+              {images[9] && (
+                <AnimatedSection className="col-span-6 lg:col-span-3" delay={500}>
+                  <div className="relative overflow-hidden group cursor-pointer">
+                    <div className="aspect-[4/3]">
+                      <img loading="lazy"
+                        src={images[9].src}
+                        alt={images[9].alt}
+                        className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  </div>
+                </AnimatedSection>
+              )}
+
+              {images[10] && (
+                <AnimatedSection className="col-span-6 lg:col-span-3" delay={550}>
+                  <div className="relative overflow-hidden group cursor-pointer">
+                    <div className="aspect-[4/3]">
+                      <img loading="lazy"
+                        src={images[10].src}
+                        alt={images[10].alt}
+                        className="w-full h-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  </div>
+                </AnimatedSection>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Bottom accent */}
