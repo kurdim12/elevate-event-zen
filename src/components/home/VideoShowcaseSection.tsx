@@ -24,17 +24,17 @@ const videos: VideoItem[] = [
     thumbnail: "https://img.youtube.com/vi/plQYv4CBRfM/maxresdefault.jpg",
   },
   {
-    id: "TJjQPwqN8yw",
+    id: "CuqnxW3Jz70",
     title: "Pre-Wedding Video Ideas",
     category: "Weddings",
-    thumbnail: "https://img.youtube.com/vi/TJjQPwqN8yw/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/CuqnxW3Jz70/maxresdefault.jpg",
     isShort: true,
   },
   {
-    id: "NOwJEWcschc",
+    id: "lvVjAxf8BSs",
     title: "Engagement Tips",
     category: "Weddings",
-    thumbnail: "https://img.youtube.com/vi/NOwJEWcschc/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/lvVjAxf8BSs/maxresdefault.jpg",
     isShort: true,
   },
 ];
