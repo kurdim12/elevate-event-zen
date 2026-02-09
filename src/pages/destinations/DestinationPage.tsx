@@ -8,7 +8,7 @@ import { destinations } from "@/data/services";
 const destinationHeroMap: Record<string, string> = {
   jordan: "/images/weddings/citadel-pomegranate-1.jpg",
   egypt: "/images/destinations/egypt-pyramids.jpg",
-  uae: "/images/corporate/booth-5.jpg",
+  uae: "/images/destinations/uae-concert.webp",
   thailand: "/images/corporate/retreats-6.jpg",
 };
 
