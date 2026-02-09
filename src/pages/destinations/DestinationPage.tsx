@@ -19,7 +19,7 @@ const jordanGallery = [
   { src: "/images/weddings/henna-night-1.jpg", alt: "Henna night at the Citadel" },
   { src: "/images/corporate/show-1.jpg", alt: "TEDxAmman — largest in MENA" },
   { src: "/images/corporate/gala-1.jpg", alt: "Corporate gala dinner production" },
-  { src: "/images/weddings/private-villa-1.jpg", alt: "Private villa wedding in Amman" },
+  { src: "/images/weddings/kempinski-dead-sea-1.jpg", alt: "Destination wedding at the Dead Sea" },
 ];
 
 const DestinationPage = () => {
