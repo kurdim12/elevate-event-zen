@@ -22,7 +22,7 @@ const events = [
     title: "Dead Sea Kempinski Wedding",
     category: "Destination Wedding",
     location: "Dead Sea, Jordan",
-    image: "/images/weddings/kempinski-dead-sea-1.jpg",
+    image: "/images/weddings/kempinski-dead-sea-cover.jpg",
   },
   {
     id: 4,
