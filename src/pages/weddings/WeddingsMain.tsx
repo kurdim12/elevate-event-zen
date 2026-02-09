@@ -52,14 +52,13 @@ const WeddingsMain = () => {
             <AnimatedSection>
               <div className="space-y-6">
                 <p className="body-lg">
-                  MaraNasi designs and produces destination luxury weddings and proposals
-                  with a clear balance of aesthetics and execution. We handle concept,
-                  design, venue coordination, supplier management, production readiness,
-                  and on ground delivery across Jordan, Egypt, the UAE, and Thailand.
+                  Aesthetics and execution. In balance. We handle concept, design, 
+                  venue coordination, supplier management, production readiness, 
+                  and on-ground delivery. Jordan, Egypt, UAE, Thailand.
                 </p>
                 <p className="body-md text-muted-foreground">
-                  This service exists for couples who want an iconic location with premium
-                  control. The wedding feels effortless because the operation is managed.
+                  Iconic locations with premium control. The wedding feels effortless 
+                  because the operation is managed.
                 </p>
               </div>
             </AnimatedSection>

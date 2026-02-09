@@ -28,8 +28,8 @@ export function DestinationsSection() {
               </h2>
               
               <p className="text-[15px] text-background/45 leading-[1.7] mb-10 max-w-sm">
-                From the ancient wonders of Petra to the modern elegance of Dubai, 
-                we transform iconic locations into unforgettable venues.
+                Ancient wonders of Petra to modern elegance of Dubai. 
+                Iconic locations transformed into unforgettable venues.
               </p>
 
               {/* Destination list */}

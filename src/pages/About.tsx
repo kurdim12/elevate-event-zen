@@ -30,16 +30,15 @@ export default function About() {
             <AnimatedSection>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="body-lg text-foreground">
-                  MaraNasi is built for clients who expect premium results without 
-                  operational noise. We manage corporate events and destination luxury 
-                  weddings with disciplined planning, supplier control, and a strong 
-                  production backbone. We operate across Jordan, Egypt, the UAE, and Thailand, 
-                  delivering experiences in iconic venues and rare locations while 
-                  maintaining timing control and guest experience standards.
+                  Built for clients who expect premium results without operational 
+                  noise. Corporate events and destination luxury weddings—disciplined 
+                  planning, supplier control, strong production backbone. Jordan, Egypt, 
+                  UAE, Thailand. Iconic venues. Rare locations. Timing control. Guest 
+                  experience standards.
                 </p>
                 <p>
-                  Our work is guided by one principle. Design must be supported by 
-                  operations. When both align, the event feels effortless.
+                  One principle guides our work: design must be supported by operations. 
+                  When both align, the event feels effortless.
                 </p>
               </div>
             </AnimatedSection>

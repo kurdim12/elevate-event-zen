@@ -112,7 +112,7 @@ export default function Work() {
               Ready to Create Your Story?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-10">
-              Every project in our portfolio began with a conversation. 
+              Every project began with a conversation. 
               Let's discuss how we can bring your vision to life.
             </p>
             <Link to="/contact" className="btn-primary">

@@ -15,7 +15,7 @@ export function CTASection() {
             <span className="italic text-muted-foreground">unforgettable moment</span>
           </h2>
           <p className="text-[15px] text-muted-foreground leading-[1.7] max-w-md mx-auto mb-8">
-            From initial concept to flawless execution, we're here to bring your vision to life.
+            From concept to execution—we're here to bring your vision to life.
           </p>
           
           <Link to="/contact" className="btn-primary">

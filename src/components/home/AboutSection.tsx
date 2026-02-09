@@ -11,16 +11,16 @@ export function AboutSection() {
               Serious Business & Stunning Events
             </p>
             <h2 className="font-serif text-[1.75rem] md:text-3xl lg:text-4xl font-medium leading-[1.25] tracking-[-0.01em]">
-              Crafting unforgettable experiences with precision, creativity, and a deep understanding of
-              <span className="italic text-muted-foreground"> what makes moments truly extraordinary.</span>
+              Precision, creativity, and a deep understanding of
+              <span className="italic text-muted-foreground"> what makes moments extraordinary.</span>
             </h2>
             
             <div className="mt-8 space-y-6">
               <p className="text-[15px] text-muted-foreground leading-[1.7]">
-                MaraNasi Events Management is Jordan's premier event planning and 
-                production company. From world-class conferences to intimate luxury 
-                weddings, we bring together film directors, architectural visionaries, 
-                and master craftsmen to create experiences that transcend expectations.
+                Jordan's premier event planning and production company. World-class 
+                conferences to intimate luxury weddings—film directors, architectural 
+                visionaries, and master craftsmen creating experiences that transcend 
+                expectations.
               </p>
               
               {/* Refined stats */}
