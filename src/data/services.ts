@@ -325,16 +325,6 @@ export const destinations: DestinationData[] = [
     ctaText: "Request Jordan Options"
   },
   {
-    slug: "destinations-saudi-arabia",
-    name: "Saudi Arabia",
-    metaTitle: "Events and Weddings in Saudi Arabia | MaraNasi",
-    metaDescription: "Corporate events, luxury weddings, and brand activations in Saudi Arabia across Riyadh, Jeddah, and AlUla with premium planning and execution.",
-    h1: "Saudi Arabia",
-    content: "Vision 2030 energy. World-class venues, ambitious formats, premium hospitality. Riyadh, Jeddah, AlUla—corporate programs, gala dinners, brand activations, and destination weddings delivered with scale and precision.",
-    locations: ["Riyadh", "Jeddah", "AlUla", "NEOM", "Diriyah"],
-    ctaText: "Request Saudi Arabia Options"
-  },
-  {
     slug: "destinations-egypt",
     name: "Egypt",
     metaTitle: "Events and Weddings in Egypt | MaraNasi",
@@ -355,84 +345,14 @@ export const destinations: DestinationData[] = [
     ctaText: "Request UAE Options"
   },
   {
-    slug: "destinations-dubai",
-    name: "Dubai",
-    metaTitle: "Events and Weddings in Dubai | MaraNasi",
-    metaDescription: "Luxury corporate events, destination weddings, and brand activations in Dubai with world-class venues, production coordination, and premium execution.",
-    h1: "Dubai",
-    content: "The global stage. Iconic skyline venues, luxury hospitality, world-class production infrastructure. Corporate galas, destination weddings, product launches, brand activations—Dubai delivers scale with sophistication. Premium venues and controlled execution.",
-    locations: ["Downtown Dubai", "Palm Jumeirah", "Dubai Marina", "DIFC", "Jumeirah Beach", "Dubai Creek"],
-    ctaText: "Request Dubai Options"
-  },
-  {
-    slug: "destinations-doha",
-    name: "Doha",
-    metaTitle: "Events and Weddings in Doha, Qatar | MaraNasi",
-    metaDescription: "Corporate events, luxury weddings, and premium experiences in Doha, Qatar with world-class venues and controlled execution.",
-    h1: "Doha, Qatar",
-    content: "Modern ambition meets cultural depth. World-class venues, premium hospitality, and a growing events landscape. Corporate programs, gala dinners, destination weddings—Doha delivers prestige and production quality in a compact, accessible city.",
-    locations: ["West Bay", "The Pearl", "Lusail", "Katara Cultural Village", "Souq Waqif"],
-    ctaText: "Request Doha Options"
-  },
-  {
     slug: "destinations-thailand",
     name: "Thailand",
     metaTitle: "Events and Weddings in Thailand | MaraNasi",
     metaDescription: "Corporate events and destination weddings in Thailand across Bangkok, Pattaya, and Phi Phi Islands with premium venues and destination execution.",
     h1: "Thailand",
     content: "Luxury city venues, resort hospitality, iconic island experiences. Corporate hosting, destination weddings, proposals. Bangkok, Pattaya, Phi Phi Islands—venue coordination, on-ground execution, timing control, premium production readiness.",
-    locations: ["Bangkok", "Pattaya", "Phi Phi Islands", "Phuket", "Koh Samui"],
+    locations: ["Bangkok", "Pattaya", "Phi Phi Islands"],
     ctaText: "Request Thailand Options"
-  },
-  {
-    slug: "destinations-india",
-    name: "India",
-    metaTitle: "Events and Weddings in India | MaraNasi",
-    metaDescription: "Luxury destination weddings, corporate events, and celebrations in India across Mumbai, Delhi, Udaipur, Goa, and Jaipur with premium execution.",
-    h1: "India",
-    content: "Grand scale. Rich heritage. Unmatched hospitality. Palace weddings, corporate summits, multi-day celebrations. Mumbai, Delhi, Udaipur, Goa, Jaipur—venues that range from royal palaces to modern luxury resorts. Production coordination with cultural sensitivity.",
-    locations: ["Mumbai", "New Delhi", "Udaipur", "Goa", "Jaipur", "Bangalore"],
-    ctaText: "Request India Options"
-  },
-  {
-    slug: "destinations-vietnam",
-    name: "Vietnam",
-    metaTitle: "Events and Weddings in Vietnam | MaraNasi",
-    metaDescription: "Destination weddings and corporate events in Vietnam across Ho Chi Minh City, Hanoi, Da Nang, and Phu Quoc with premium venues and execution.",
-    h1: "Vietnam",
-    content: "Emerging luxury. Stunning coastlines, boutique resorts, vibrant cities. Destination weddings, corporate retreats, intimate celebrations. Ho Chi Minh City, Hanoi, Da Nang, Phu Quoc—a rising destination with exceptional value and visual impact.",
-    locations: ["Ho Chi Minh City", "Hanoi", "Da Nang", "Phu Quoc", "Hoi An"],
-    ctaText: "Request Vietnam Options"
-  },
-  {
-    slug: "destinations-china",
-    name: "China",
-    metaTitle: "Events and Weddings in China | MaraNasi",
-    metaDescription: "Corporate events, luxury weddings, and brand activations in China across Shanghai, Beijing, Shenzhen, and Hangzhou with premium planning.",
-    h1: "China",
-    content: "Scale, speed, sophistication. World-class convention centers, luxury hotels, iconic landmarks. Corporate conferences, product launches, gala dinners, destination weddings. Shanghai, Beijing, Shenzhen—production infrastructure that matches ambition.",
-    locations: ["Shanghai", "Beijing", "Shenzhen", "Hangzhou", "Guangzhou"],
-    ctaText: "Request China Options"
-  },
-  {
-    slug: "destinations-usa",
-    name: "United States",
-    metaTitle: "Events and Weddings in the United States | MaraNasi",
-    metaDescription: "Luxury events, destination weddings, and corporate experiences across the United States including New Jersey, Chicago, Texas, Houston, California, Boston, and Los Angeles.",
-    h1: "United States",
-    content: "Coast to coast. Premium venues, diverse landscapes, world-class hospitality. Corporate events, destination weddings, brand activations. From New Jersey to California—iconic American cities and resort destinations with full production coordination.",
-    locations: ["New Jersey", "Chicago, Illinois", "Houston, Texas", "Dallas, Texas", "California", "Los Angeles", "Boston"],
-    ctaText: "Request US Options"
-  },
-  {
-    slug: "destinations-canada",
-    name: "Canada",
-    metaTitle: "Events and Weddings in Canada | MaraNasi",
-    metaDescription: "Luxury events and destination weddings in Canada across Toronto and Ottawa with premium venue coordination and execution.",
-    h1: "Canada",
-    content: "Refined elegance. World-class venues, multicultural hospitality, stunning natural backdrops. Corporate events, destination weddings, intimate celebrations. Toronto, Ottawa—premium Canadian destinations with sophisticated production standards.",
-    locations: ["Toronto", "Ottawa", "Vancouver"],
-    ctaText: "Request Canada Options"
   }
 ];
 
@@ -446,7 +366,7 @@ export const faqs: FAQData[] = [
   {
     category: "Corporate",
     questions: [
-      { q: "Which destinations do you operate in?", a: "Middle East (Jordan, Saudi Arabia, Egypt, UAE, Dubai, Doha), Asia (Thailand, India, Vietnam, China), and North America (US, Canada)." },
+      { q: "Which destinations do you operate in?", a: "Jordan, Egypt, UAE, and Thailand." },
       { q: "Do you provide full production?", a: "Yes. Lighting, sound coordination, and show flow control." },
       { q: "Can you handle VIP guests and delegations?", a: "Yes. Greet and meet facilitation with routing plans." },
       { q: "Do you manage conferences and exhibitions?", a: "Yes. Full operations planning and onsite execution." },
