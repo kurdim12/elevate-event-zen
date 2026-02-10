@@ -7,17 +7,9 @@ import { destinations } from "@/data/services";
 
 const destinationHeroMap: Record<string, string> = {
   jordan: "/images/weddings/citadel-pomegranate-1.jpg",
-  "saudi-arabia": "/images/corporate/gala-1.jpg",
   egypt: "/images/destinations/egypt-pyramids.jpg",
   uae: "/images/destinations/uae-concert.webp",
-  dubai: "/images/corporate/dest-corp-1.jpg",
-  doha: "/images/corporate/conference-1.jpg",
   thailand: "/images/corporate/retreats-6.jpg",
-  india: "/images/corporate/entertainment-1.jpg",
-  vietnam: "/images/corporate/retreats-1.jpg",
-  china: "/images/corporate/conference-2.jpg",
-  usa: "/images/corporate/dest-corp-2.jpg",
-  canada: "/images/corporate/dest-corp-3.jpg",
 };
 
 const jordanGallery = [
