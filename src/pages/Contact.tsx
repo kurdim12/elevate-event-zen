@@ -87,7 +87,8 @@ export default function Contact() {
     <Layout>
       <SEO 
         title="Contact MaraNasi | Request a Proposal"
-        description="Contact MaraNasi to request a proposal for corporate events, destination weddings, and proposals across Jordan, Egypt, UAE, and Thailand."
+        description="Contact MaraNasi to request a proposal for corporate events, destination weddings, and proposals across Jordan, Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada."
+        keywords="contact event planner Jordan, request wedding proposal Dubai, corporate event inquiry Saudi Arabia, destination wedding consultation India, event planner contact New Jersey Chicago Houston Texas California Boston Los Angeles Toronto Canada"
         canonicalPath="/contact"
       />
 

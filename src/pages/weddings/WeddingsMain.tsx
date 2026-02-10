@@ -22,7 +22,8 @@ const WeddingsMain = () => {
     <Layout>
       <SEO
         title="Destination Luxury Weddings and Proposals | MaraNasi"
-        description="Luxury wedding design, destination weddings, and marriage proposals across Jordan, Egypt, UAE, and Thailand with premium planning, production coordination, and onsite execution."
+        description="Luxury wedding design, destination weddings, and marriage proposals across Jordan, Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada with premium planning and execution."
+        keywords="destination wedding Jordan, luxury wedding planner Dubai, wedding planner Saudi Arabia Riyadh, destination wedding Doha Qatar, wedding planner India Mumbai Udaipur, destination wedding Thailand, wedding planner Vietnam, luxury wedding China Shanghai, destination wedding New Jersey, wedding planner Chicago Houston Texas, luxury wedding California Los Angeles Boston, wedding planner Toronto Canada Ottawa"
         canonicalPath="/destination-luxury-weddings"
       />
 
