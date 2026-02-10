@@ -8,7 +8,8 @@ export default function About() {
     <Layout>
       <SEO 
         title="About MaraNasi | Luxury Events Management"
-        description="MaraNasi is a luxury events management agency delivering corporate events and destination weddings across Jordan, Egypt, UAE, and Thailand with operational control and premium execution."
+        description="MaraNasi is a luxury events management agency delivering corporate events and destination weddings across Jordan, Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada."
+        keywords="about MaraNasi, luxury event planner Jordan, event management company Dubai, wedding planner Saudi Arabia, corporate event agency Middle East, destination event planner India Thailand Vietnam China, event company serving US Canada"
         canonicalPath="/about"
       />
 
