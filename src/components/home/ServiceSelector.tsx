@@ -18,10 +18,16 @@ const eventTypes: Option[] = [
 ];
 
 const destinations: Option[] = [
-  { label: "Jordan", value: "jordan", href: "/destinations?region=jordan" },
-  { label: "the UAE", value: "uae", href: "/destinations?region=uae" },
-  { label: "Saudi Arabia", value: "saudi", href: "/destinations?region=saudi" },
-  { label: "anywhere", value: "international", href: "/destinations?region=international" },
+  { label: "Jordan", value: "jordan", href: "/destinations/jordan" },
+  { label: "Saudi Arabia", value: "saudi", href: "/destinations/saudi-arabia" },
+  { label: "the UAE", value: "uae", href: "/destinations/uae" },
+  { label: "Dubai", value: "dubai", href: "/destinations/dubai" },
+  { label: "Doha", value: "doha", href: "/destinations/doha" },
+  { label: "Thailand", value: "thailand", href: "/destinations/thailand" },
+  { label: "India", value: "india", href: "/destinations/india" },
+  { label: "the US", value: "usa", href: "/destinations/usa" },
+  { label: "Canada", value: "canada", href: "/destinations/canada" },
+  { label: "anywhere", value: "international", href: "/destinations" },
 ];
 
 interface InlineDropdownProps {

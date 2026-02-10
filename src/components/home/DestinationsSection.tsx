@@ -5,14 +5,17 @@ const destinations = [{
   name: "Jordan",
   description: "Petra, Dead Sea, Amman"
 }, {
-  name: "UAE",
-  description: "Dubai, Abu Dhabi"
-}, {
   name: "Saudi Arabia",
   description: "Riyadh, Jeddah, AlUla"
 }, {
-  name: "International",
-  description: "Worldwide"
+  name: "UAE & Dubai",
+  description: "Dubai, Abu Dhabi"
+}, {
+  name: "Asia",
+  description: "Thailand, India, Vietnam, China"
+}, {
+  name: "North America",
+  description: "US & Canada"
 }];
 export function DestinationsSection() {
   return <section className="py-28 md:py-36 lg:py-44 bg-foreground text-background overflow-hidden">
