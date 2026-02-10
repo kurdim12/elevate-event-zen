@@ -19,6 +19,7 @@ const CorporateServicePage = () => {
     <SubServicePageLayout
       metaTitle={service.metaTitle}
       metaDescription={service.metaDescription}
+      metaKeywords={service.metaKeywords}
       canonicalPath={`/corporate-events/${service.slug}`}
       h1={service.h1}
       content={service.content}

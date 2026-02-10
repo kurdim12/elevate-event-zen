@@ -41,9 +41,9 @@ const CorporateEventsMain = () => {
   return (
     <Layout>
       <SEO
-        title="Corporate Events Management | MaraNasi"
-        description="Corporate events management across Jordan, Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada. MICE, conferences, exhibitions, retreats, gala dinners, activations, booth production, VIP facilitation, and show calling."
-        keywords="corporate event planner Jordan, MICE event management Saudi Arabia, conference management Dubai, exhibition management Doha Qatar, corporate retreat Thailand, gala dinner India, brand activation Vietnam, corporate events China, event planner New Jersey Chicago, corporate event Houston Texas California, event management Boston Los Angeles, corporate events Toronto Canada"
+        title="Corporate Events Management in Jordan | Amman | MaraNasi"
+        description="Corporate events management in Jordan and Amman. MICE, conferences, exhibitions, retreats, gala dinners, activations, booth production, VIP facilitation, and show calling. Also serving Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada."
+        keywords="corporate event planner Jordan, corporate event planner Amman, MICE event management Jordan, conference management Amman, exhibition management Jordan, gala dinner planner Amman, corporate retreat Jordan, brand activation Amman, corporate events Jordan, MICE event management Saudi Arabia, conference management Dubai, exhibition management Doha Qatar, corporate retreat Thailand, event planner New Jersey Chicago Houston Texas California Boston Los Angeles Toronto Canada"
         canonicalPath="/corporate-events"
       />
 

@@ -9,8 +9,9 @@ export default function FAQs() {
   return (
     <Layout>
       <SEO 
-        title="FAQs | MaraNasi Events Management"
-        description="FAQs about corporate events, destination weddings, proposals, production, timelines, destinations, and planning process."
+        title="FAQs | Event Planning in Jordan | MaraNasi"
+        description="FAQs about corporate events, destination weddings, proposals, production, timelines, and planning in Jordan, Amman, and across the Middle East."
+        keywords="event planning FAQ Jordan, wedding planner FAQ Amman, corporate events questions Jordan, destination wedding FAQ Jordan, event management FAQ Amman"
         canonicalPath="/faqs"
       />
 

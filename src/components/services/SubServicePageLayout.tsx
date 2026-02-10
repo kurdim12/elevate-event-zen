@@ -11,6 +11,7 @@ import type { GalleryImage } from "@/data/wedding-gallery";
 interface SubServicePageLayoutProps {
   metaTitle: string;
   metaDescription: string;
+  metaKeywords?: string;
   canonicalPath: string;
   h1: string;
   subtitle?: string;
@@ -29,6 +30,7 @@ interface SubServicePageLayoutProps {
 export function SubServicePageLayout({
   metaTitle,
   metaDescription,
+  metaKeywords,
   canonicalPath,
   h1,
   subtitle,
@@ -48,6 +50,7 @@ export function SubServicePageLayout({
       <SEO
         title={metaTitle}
         description={metaDescription}
+        keywords={metaKeywords}
         canonicalPath={canonicalPath}
       />
 
