@@ -1,163 +1,100 @@
 
-# Landing Page Visual Enhancement Plan
 
-## Overview
-Integrate 9 uploaded photos across the landing page to create a stunning, visually compelling experience that showcases Maranasi's diverse event portfolio - from luxury weddings to corporate conferences to aviation events.
+# SEO Domination Strategy for Jordan — Sector by Sector
 
----
+## The Problem
 
-## Photo Assignments
+Right now, every service page and sub-service page targets broad regions (Jordan, Egypt, UAE, Thailand, etc.) in its meta description and keywords. But none of them specifically target **Jordan-specific search terms** with enough depth to rank for sector queries like:
 
-| Photo | Section | Purpose |
-|-------|---------|---------|
-| Citadel Red Lighting | Hero Section | Main hero background |
-| Team Photo | About Section | Human element, trust |
-| Henna Night Stage | Signature Moment | Emotional centerpiece |
-| TEDx Amman | Latest Events Gallery | Corporate/conference |
-| Luxury Car Event | Latest Events Gallery | Brand activation |
-| INGOT Booth | Latest Events Gallery | Retail activation |
-| Pharmaceuticals Booth | Latest Events Gallery | Exhibition design |
-| Fighter Jet | Latest Events Gallery | Aviation event |
-| Small Aircraft | Latest Events Gallery | Aviation/drone event |
+- "corporate event planner Amman"
+- "wedding planner Jordan"  
+- "exhibition booth design Amman"
+- "conference management Jordan"
+- "gala dinner organizer Amman"
 
----
+Google ranks pages that are **deeply relevant** to a specific query. To dominate Jordan, every service page needs Jordan-specific keywords baked into its invisible SEO layer.
 
-## Implementation Steps
+## How This Works (Non-Technical)
 
-### Step 1: Copy Images to Project
+When someone in Jordan searches "conference management Amman" or "wedding planner Jordan", Google looks at your page's title, description, and keywords to decide if your page is relevant. Right now, your pages mention Jordan generically alongside 10 other countries — so Google doesn't see you as the **specialist** for Jordan.
 
-Copy all 9 uploaded images from user-uploads to `src/assets/` folder with descriptive names:
+The fix: make every service page's hidden SEO data prioritize Jordan and Amman **first**, then list other regions second. This signals to Google that you are the go-to for each sector in Jordan.
 
-```text
-src/assets/
-  hero-citadel.png         (Citadel red lighting)
-  team-photo.jpg           (Team at event)
-  henna-night-stage.jpg    (Wedding stage setup)
-  events/
-    tedx-amman.jpg         (TEDx entrance)
-    luxury-car-event.jpg   (Corvette at amphitheater)
-    ingot-booth.jpg        (INGOT brand activation)
-    exhibition-booth.jpg   (Pharmaceuticals booth)
-    aviation-fighter.jpg   (Fighter jet)
-    aviation-drone.jpg     (Small aircraft)
-```
+Once Jordan is dominated, the same approach expands to Saudi Arabia, UAE, and so on — one region at a time.
 
-### Step 2: Update Hero Section
+## What Changes (All Invisible)
 
-**File:** `src/components/home/HeroSection.tsx`
+No visible UI changes. Only meta titles, descriptions, and keywords update.
 
-- Replace import from `hero-main.jpg` to `hero-citadel.png`
-- Update alt text to "Luxury gala at Amman Citadel"
-- The dramatic red lighting will create an unforgettable first impression
+### 1. Corporate Sub-Service Pages (12 pages)
 
-### Step 3: Add Team Photo to About Section
+Update `src/data/services.ts` — each corporate service's `metaTitle` and `metaDescription` will lead with "in Jordan" or "in Amman" phrasing, and add a new `metaKeywords` field.
 
-**File:** `src/components/home/AboutSection.tsx`
+Examples:
+- **MICE Event Management**: "MICE Event Management in Jordan | MaraNasi" with keywords like "MICE event planner Amman, MICE Jordan, incentive travel Jordan"
+- **Conference Management**: "Conference Management in Jordan | MaraNasi" with "conference organizer Amman, conference planner Jordan"
+- **Exhibition Booth Design**: "Exhibition Booth Design Jordan | MaraNasi" with "exhibition booth Amman, booth design Jordan"
+- **Gala Dinner**: "Gala Dinner Production in Jordan | MaraNasi" with "gala dinner Amman, banquet planner Jordan"
+- And so on for all 12 corporate services
 
-Current layout is text-only. Enhance with:
-- Add team photo on the right side (desktop)
-- Subtle hover effect with scale transform
-- Caption: "The Maranasi Team"
-- Maintains the clean editorial feel while adding human warmth
+### 2. Wedding Sub-Service Pages (3 pages)
 
-### Step 4: Update Signature Moment Section
+Same approach in `src/data/services.ts` for wedding services:
+- "Luxury Wedding Planning in Jordan | MaraNasi"
+- "Destination Weddings in Jordan | MaraNasi"  
+- "Marriage Proposals in Jordan | MaraNasi"
 
-**File:** `src/components/home/SignatureMomentSection.tsx`
+### 3. Main Category Pages (3 pages)
 
-- Replace current `wedding-event.jpg` with the beautiful henna night stage photo
-- The arched backdrop with orange curtains and candlelit ambiance perfectly captures "the details are the design"
+- `CorporateEventsMain.tsx` — lead with "Corporate Events Jordan | Amman"
+- `WeddingsMain.tsx` — lead with "Destination Weddings Jordan"
+- `DestinationsMain.tsx` — already Jordan-focused
 
-### Step 5: Enhance Latest Events Gallery
+### 4. Supporting Pages (4 pages)
 
-**File:** `src/components/home/LatestEventsSection.tsx`
+- `Blog.tsx` — add Jordan-focused keywords
+- `FAQs.tsx` — add Jordan-specific keywords
+- `Work.tsx` — add SEO component with Jordan portfolio keywords
+- `Contact.tsx` — add "contact event planner Jordan Amman" keywords
 
-Replace/add events with new photos:
+### 5. Sub-Service Page Layout
 
-```text
-1. TEDx Amman Conference (tedx-amman.jpg)
-   Category: Conference | Location: Amman, Jordan
-
-2. Luxury Car Exhibition (luxury-car-event.jpg)
-   Category: Brand Activation | Location: Roman Amphitheater
-
-3. INGOT Brand Experience (ingot-booth.jpg)
-   Category: Activation | Location: Amman, Jordan
-
-4. Exhibition Booth Design (exhibition-booth.jpg)
-   Category: Exhibition | Location: Trade Show
-
-5. Aviation Event (aviation-fighter.jpg)
-   Category: Special Event | Location: Jordan
-
-6. Drone Showcase (aviation-drone.jpg)
-   Category: Aviation | Location: Jordan
-
-+ Keep 2-3 existing wedding/gala photos for variety
-```
-
----
-
-## Visual Hierarchy After Changes
-
-```text
-HERO (Citadel Red Lighting)
-    |
-    v
-ABOUT (Team Photo + Company Story)
-    |
-    v
-RHYTHM BREAK
-    |
-    v
-SERVICE SELECTOR
-    |
-    v
-SERVICES LIST
-    |
-    v
-SIGNATURE MOMENT (Henna Night Stage)
-    |
-    v
-BELIEFS
-    |
-    v
-DESTINATIONS
-    |
-    v
-LATEST EVENTS GALLERY (All new photos)
-    |
-    v
-CTA
-```
-
----
+- Update `SubServicePageLayout.tsx` and `CorporateServicePage.tsx` to pass the new `metaKeywords` field to the SEO component.
 
 ## Technical Details
 
-### Files to Modify
-1. `src/components/home/HeroSection.tsx` - New hero image import
-2. `src/components/home/AboutSection.tsx` - Add team photo with layout enhancement
-3. `src/components/home/SignatureMomentSection.tsx` - New background image
-4. `src/components/home/LatestEventsSection.tsx` - New event photos and metadata
+### Data Model Change
 
-### Image Optimization
-- All images will be imported as ES6 modules for proper bundling
-- Aspect ratios preserved with `object-cover`
-- Lazy loading maintained for gallery items
+Add `metaKeywords` to the `ServiceData` interface in `src/data/services.ts`:
 
-### Styling Consistency
-- Maintain existing Ken Burns effect on hero
-- Keep current gradient overlays
-- Preserve hover animations on gallery items
-- Editorial caption styling unchanged
+```text
+export interface ServiceData {
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  metaKeywords?: string;       // <-- new field
+  h1: string;
+  ...
+}
+```
 
----
+### Files Modified
 
-## Expected Result
+| File | Change |
+|------|--------|
+| `src/data/services.ts` | Add `metaKeywords` to interface + all 15 services get Jordan-first meta titles, descriptions, and keywords |
+| `src/pages/corporate/CorporateServicePage.tsx` | Pass `metaKeywords` to SubServicePageLayout |
+| `src/pages/weddings/WeddingServicePage.tsx` | Pass `metaKeywords` to SubServicePageLayout |
+| `src/components/services/SubServicePageLayout.tsx` | Accept and pass `keywords` to SEO component |
+| `src/pages/corporate/CorporateEventsMain.tsx` | Jordan-first SEO metadata |
+| `src/pages/weddings/WeddingsMain.tsx` | Jordan-first SEO metadata |
+| `src/pages/destinations/DestinationsMain.tsx` | Jordan-first SEO metadata |
+| `src/pages/Blog.tsx` | Add Jordan keywords |
+| `src/pages/FAQs.tsx` | Add Jordan keywords |
+| `src/pages/Work.tsx` | Add SEO component with Jordan keywords |
+| `src/pages/Contact.tsx` | Jordan-first keywords |
 
-A landing page that:
-- Opens with a dramatic, unforgettable hero image (Citadel)
-- Shows the team behind the brand (About section)
-- Creates emotional impact (Henna night signature moment)
-- Showcases portfolio diversity (corporate, weddings, aviation, activations)
-- Demonstrates range from intimate ceremonies to large-scale conferences
+### Expansion Strategy
+
+Once Jordan SEO is established (typically 4-8 weeks for indexing), the same `metaKeywords` fields can be expanded to prioritize the next target market (e.g., Saudi Arabia) without changing any architecture.
+
