@@ -39,8 +39,9 @@ export default function Blog() {
   return (
     <Layout>
       <SEO 
-        title="MaraNasi Blog | Corporate Events and Destination Weddings"
-        description="Insights on corporate events, MICE, exhibitions, production, destination weddings, proposals, and venues across Jordan, Egypt, UAE, and Thailand."
+        title="MaraNasi Blog | Events and Weddings in Jordan"
+        description="Insights on corporate events, MICE, exhibitions, production, destination weddings, proposals, and venues in Jordan and Amman. Covering Egypt, UAE, and Thailand."
+        keywords="event planning blog Jordan, wedding planning tips Amman, corporate events insights Jordan, destination wedding guide Jordan, MICE planning Jordan, conference tips Amman"
         canonicalPath="/blog"
       />
 

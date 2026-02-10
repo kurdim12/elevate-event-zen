@@ -38,6 +38,7 @@ const WeddingServicePage = () => {
     <SubServicePageLayout
       metaTitle={service.metaTitle}
       metaDescription={service.metaDescription}
+      metaKeywords={service.metaKeywords}
       canonicalPath={`/destination-luxury-weddings/${service.slug}`}
       h1={service.h1}
       content={service.content}
