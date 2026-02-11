@@ -21,10 +21,10 @@ export function Footer() {
               Vision meets execution.
             </p>
             <a 
-              href="mailto:hello@maranasi.com" 
+              href="mailto:info@maranasi.com" 
               className="inline-flex items-center text-[13px] tracking-[0.12em] text-background/35 uppercase hover:text-background/70 transition-colors duration-500 group"
             >
-              <span className="mr-3">hello@maranasi.com</span>
+              <span className="mr-3">info@maranasi.com</span>
               <span className="w-5 h-px bg-background/15 group-hover:w-10 group-hover:bg-background/50 transition-all duration-600" />
             </a>
           </div>

@@ -316,11 +316,11 @@ export default function Contact() {
                     </a>
                     
                     <a 
-                      href="mailto:hello@maranasi.com" 
+                      href="mailto:info@maranasi.com" 
                       className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <Mail className="w-5 h-5 text-primary" />
-                      <span>hello@maranasi.com</span>
+                      <span>info@maranasi.com</span>
                     </a>
                     
                     <a 
