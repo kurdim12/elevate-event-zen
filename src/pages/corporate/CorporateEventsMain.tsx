@@ -41,10 +41,14 @@ const CorporateEventsMain = () => {
   return (
     <Layout>
       <SEO
-        title="Corporate Events Management in Jordan | Amman | MaraNasi"
-        description="Corporate events management in Jordan and Amman. MICE, conferences, exhibitions, retreats, gala dinners, activations, booth production, VIP facilitation, and show calling. Also serving Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada."
-        keywords="corporate event planner Jordan, corporate event planner Amman, MICE event management Jordan, conference management Amman, exhibition management Jordan, gala dinner planner Amman, corporate retreat Jordan, brand activation Amman, corporate events Jordan, MICE event management Saudi Arabia, conference management Dubai, exhibition management Doha Qatar, corporate retreat Thailand, event planner New Jersey Chicago Houston Texas California Boston Los Angeles Toronto Canada"
+        title="Corporate Event Management in Jordan | Maranasi"
+        description="World-class corporate events in Jordan — conferences, product launches, team building, and award ceremonies. Producers of TEDxAmman for 4,000+ guests."
+        keywords="corporate event management Jordan, corporate event planner Amman, MICE event management Jordan, conference management Jordan, exhibition management Jordan, gala dinner planner Amman, brand activation Jordan"
         canonicalPath="/corporate-events"
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "Corporate Events", url: "https://maranasi.com/corporate-events" }
+        ]}
       />
 
       {/* Hero with image carousel */}
@@ -81,7 +85,7 @@ const CorporateEventsMain = () => {
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
             <h1 className="heading-display text-background max-w-4xl">
-              Corporate Events Management
+              Corporate Event Management in Jordan
             </h1>
             <p className="body-lg text-background/80 mt-6 max-w-2xl">
               Destination-level ambition. Operational control. We plan, produce, 

@@ -86,10 +86,14 @@ export default function Contact() {
   return (
     <Layout>
       <SEO 
-        title="Contact MaraNasi | Event Planner Jordan Amman"
-        description="Contact MaraNasi to request a proposal for corporate events, destination weddings, and proposals in Jordan and Amman. Also serving Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada."
-        keywords="contact event planner Jordan, contact event planner Amman, request proposal Jordan, wedding planner contact Amman, corporate event inquiry Jordan, event planner Jordan Amman, contact event planner Saudi Arabia Dubai, event planner New Jersey Chicago Houston Texas California Boston Los Angeles Toronto Canada"
+        title="Contact Maranasi — Plan Your Event in Jordan"
+        description="Get in touch with Maranasi to plan your luxury event in Jordan. Weddings, corporate events, gala dinners, and brand activations. Based in Amman, serving all of MENA."
+        keywords="contact event planner Jordan, contact Maranasi Amman, request proposal Jordan, wedding planner contact Amman, corporate event inquiry Jordan"
         canonicalPath="/contact"
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "Contact", url: "https://maranasi.com/contact" }
+        ]}
       />
 
       {/* Hero */}
@@ -97,7 +101,7 @@ export default function Contact() {
         <div className="container-wide">
           <AnimatedSection>
             <h1 className="heading-display max-w-4xl">
-              Request a Proposal
+              Plan Your Event with Maranasi
             </h1>
           </AnimatedSection>
         </div>

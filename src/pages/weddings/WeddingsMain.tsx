@@ -21,10 +21,24 @@ const WeddingsMain = () => {
   return (
     <Layout>
       <SEO
-        title="Destination Luxury Weddings in Jordan | Amman | MaraNasi"
-        description="Luxury wedding design, destination weddings, and marriage proposals in Jordan including Petra, Dead Sea, and Amman Citadel. Premium planning and execution. Also serving Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada."
-        keywords="destination wedding Jordan, luxury wedding planner Amman, wedding planner Jordan, destination wedding Petra, wedding planner Dead Sea, luxury wedding Amman Citadel, wedding planner Wadi Rum, destination wedding Jordan Amman, luxury wedding planner Dubai, wedding planner Saudi Arabia Riyadh, destination wedding Doha Qatar, wedding planner India Mumbai Udaipur, destination wedding Thailand, destination wedding New Jersey, wedding planner Chicago Houston Texas, luxury wedding California Los Angeles Boston, wedding planner Toronto Canada Ottawa"
+        title="Luxury Wedding Planner in Jordan | Maranasi"
+        description="Plan your dream luxury wedding in Jordan with Maranasi. Destination weddings at Petra, Wadi Rum, the Dead Sea, and Amman. Full-service planning and cinematic production."
+        keywords="luxury wedding planner Jordan, destination wedding Jordan, wedding planner Amman, destination wedding Petra, luxury wedding Dead Sea, wedding planner Wadi Rum"
         canonicalPath="/destination-luxury-weddings"
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "Weddings", url: "https://maranasi.com/destination-luxury-weddings" }
+        ]}
+        jsonLd={[{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Luxury Wedding Planning in Jordan",
+          "provider": { "@type": "LocalBusiness", "name": "Maranasi", "url": "https://maranasi.com" },
+          "serviceType": "Wedding Planning",
+          "areaServed": "Jordan",
+          "description": "Full-service luxury wedding planning and production in Jordan, including destination weddings at Petra, Wadi Rum, the Dead Sea, and Amman. Cinematic film production included.",
+          "url": "https://maranasi.com/destination-luxury-weddings"
+        }]}
       />
 
       {/* Hero */}
@@ -40,7 +54,7 @@ const WeddingsMain = () => {
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
             <h1 className="heading-display text-background max-w-4xl">
-              Destination Luxury Weddings
+              Luxury Wedding Planning in Jordan
             </h1>
           </AnimatedSection>
         </div>
