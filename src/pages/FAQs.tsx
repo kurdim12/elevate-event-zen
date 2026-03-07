@@ -9,10 +9,14 @@ export default function FAQs() {
   return (
     <Layout>
       <SEO 
-        title="FAQs | Event Planning in Jordan | MaraNasi"
+        title="FAQs | Event Planning in Jordan | Maranasi"
         description="FAQs about corporate events, destination weddings, proposals, production, timelines, and planning in Jordan, Amman, and across the Middle East."
-        keywords="event planning FAQ Jordan, wedding planner FAQ Amman, corporate events questions Jordan, destination wedding FAQ Jordan, event management FAQ Amman"
+        keywords="event planning FAQ Jordan, wedding planner FAQ Amman, corporate events questions Jordan, destination wedding FAQ Jordan"
         canonicalPath="/faqs"
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "FAQs", url: "https://maranasi.com/faqs" }
+        ]}
       />
 
       {/* Hero */}

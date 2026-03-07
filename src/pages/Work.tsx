@@ -59,10 +59,14 @@ export default function Work() {
   return (
     <Layout>
       <SEO
-        title="Our Work | Events and Weddings Portfolio Jordan | MaraNasi"
-        description="Portfolio of corporate events, destination weddings, exhibitions, gala dinners, and brand activations in Jordan and Amman. TEDxAmman, MICE events, luxury weddings at the Dead Sea and Amman Citadel."
-        keywords="event portfolio Jordan, wedding portfolio Amman, corporate events work Jordan, destination wedding portfolio Jordan, TEDxAmman events, gala dinner portfolio Amman, exhibition portfolio Jordan"
+        title="Our Work | Events & Weddings Portfolio Jordan | Maranasi"
+        description="Portfolio of corporate events, destination weddings, exhibitions, gala dinners, and brand activations in Jordan and Amman."
+        keywords="event portfolio Jordan, wedding portfolio Amman, corporate events work Jordan, destination wedding portfolio Jordan"
         canonicalPath="/work"
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "Work", url: "https://maranasi.com/work" }
+        ]}
       />
       {/* Hero */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-28">

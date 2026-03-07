@@ -57,7 +57,7 @@ export function HeroSection() {
             ) : (
               <img
                 src={item.src}
-                alt="MaraNasi luxury event"
+                alt="Luxury event planning in Jordan — Maranasi"
                 className="w-full h-full object-cover"
               />
             )}
@@ -83,9 +83,9 @@ export function HeroSection() {
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Moments that
+              Luxury Event Planning
               <br />
-              <span className="italic text-background/85">define legacy</span>
+              <span className="italic text-background/85">in Jordan</span>
             </h1>
 
             <div

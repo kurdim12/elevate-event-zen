@@ -39,10 +39,14 @@ export default function Blog() {
   return (
     <Layout>
       <SEO 
-        title="MaraNasi Blog | Events and Weddings in Jordan"
-        description="Insights on corporate events, MICE, exhibitions, production, destination weddings, proposals, and venues in Jordan and Amman. Covering Egypt, UAE, and Thailand."
-        keywords="event planning blog Jordan, wedding planning tips Amman, corporate events insights Jordan, destination wedding guide Jordan, MICE planning Jordan, conference tips Amman"
+        title="Maranasi Blog | Events & Weddings in Jordan"
+        description="Insights on corporate events, MICE, exhibitions, production, destination weddings, proposals, and venues in Jordan and Amman."
+        keywords="event planning blog Jordan, wedding planning tips Amman, corporate events insights Jordan, destination wedding guide Jordan"
         canonicalPath="/blog"
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "Blog", url: "https://maranasi.com/blog" }
+        ]}
       />
 
       {/* Hero */}
