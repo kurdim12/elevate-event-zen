@@ -7,10 +7,14 @@ export default function About() {
   return (
     <Layout>
       <SEO 
-        title="About MaraNasi | Luxury Events Management"
-        description="MaraNasi is a luxury events management agency delivering corporate events and destination weddings across Jordan, Saudi Arabia, Dubai, Doha, Egypt, UAE, Thailand, India, Vietnam, China, United States, and Canada."
-        keywords="about MaraNasi, luxury event planner Jordan, event management company Dubai, wedding planner Saudi Arabia, corporate event agency Middle East, destination event planner India Thailand Vietnam China, event company serving US Canada"
+        title="About Maranasi — Jordan's Luxury Event Agency"
+        description="Maranasi is Jordan's leading luxury event planning and production company, based in Amman. Meet the team behind TEDxAmman, Petra activations, and MENA's most iconic events."
+        keywords="about Maranasi, luxury event planner Jordan, event management company Amman, event agency Jordan, luxury event production Jordan"
         canonicalPath="/about"
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "About", url: "https://maranasi.com/about" }
+        ]}
       />
 
       {/* Hero */}
@@ -18,7 +22,7 @@ export default function About() {
         <div className="container-wide">
           <AnimatedSection>
             <h1 className="heading-display max-w-4xl">
-              About MaraNasi
+              About Maranasi — Jordan's Luxury Event Agency
             </h1>
           </AnimatedSection>
         </div>

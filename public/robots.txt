@@ -1,23 +1,14 @@
-# Maranasi Events - Robots.txt
-# https://maranasi.com
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
 User-agent: *
 Allow: /
 
-# Sitemap
+Disallow: /cart
+Disallow: /shop
+Disallow: /checkout
+Disallow: /wp-admin
+Disallow: /wp-login.php
+Disallow: /api/
+Disallow: /?s=
+Disallow: /search
+
 Sitemap: https://maranasi.com/sitemap.xml
+Sitemap: https://maranasi.com/sitemap-images.xml

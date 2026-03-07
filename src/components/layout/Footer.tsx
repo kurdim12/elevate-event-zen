@@ -38,6 +38,7 @@ export function Footer() {
               {[
                 { name: "Corporate Events", href: "/corporate-events" },
                 { name: "Weddings", href: "/destination-luxury-weddings" },
+                { name: "Gala Dinners", href: "/gala-dinners" },
                 { name: "Blog", href: "/blog" },
                 { name: "FAQs", href: "/faqs" },
               ].map((link) => (

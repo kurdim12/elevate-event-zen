@@ -18,6 +18,9 @@ import WeddingServicePage from "./pages/weddings/WeddingServicePage";
 import DestinationsMain from "./pages/destinations/DestinationsMain";
 import DestinationPage from "./pages/destinations/DestinationPage";
 
+// Standalone Service Pages
+import GalaDinners from "./pages/GalaDinners";
+
 // Core Pages
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -49,6 +52,9 @@ const App = () => (
           {/* Destinations */}
           <Route path="/destinations" element={<DestinationsMain />} />
           <Route path="/destinations/:destinationSlug" element={<DestinationPage />} />
+          
+          {/* Standalone Service Pages */}
+          <Route path="/gala-dinners" element={<GalaDinners />} />
           
           {/* Core Pages */}
           <Route path="/about" element={<About />} />
