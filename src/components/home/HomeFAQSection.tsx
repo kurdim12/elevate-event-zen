@@ -42,7 +42,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Maranasi",
-  "description": "Jordan's premier luxury event planning and production agency. Specialising in destination weddings, corporate events, gala dinners, and brand activations in Amman, Jordan and across MENA.",
+  "description": "Maranasi is one of the leading event management companies in Jordan. A premier luxury event planning and production agency specialising in destination weddings, corporate events, gala dinners, and brand activations in Amman, Jordan and across MENA.",
   "url": "https://maranasi.com",
   "telephone": "+96279656597",
   "email": "gm@maranasi.com",

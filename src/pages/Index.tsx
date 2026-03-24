@@ -21,7 +21,7 @@ const Index = () => {
       <SEO 
         title="Luxury Event Planner in Jordan & Amman | Maranasi"
         description="Maranasi is Jordan's premier luxury event planning agency in Amman. Weddings, corporate events, gala dinners, and brand activations across Jordan and MENA. Producers of TEDxAmman. Request a consultation."
-        keywords="luxury event planner Jordan, luxury wedding planner Amman, corporate event management Jordan, gala dinner planner Amman, brand activation Jordan, destination wedding Jordan, conference organizer Jordan, luxury event production Amman, event planner Amman Jordan, TEDxAmman producers"
+        keywords="luxury event planner Jordan, event management companies in Jordan, luxury wedding planner Amman, corporate event management Jordan, gala dinner planner Amman, brand activation Jordan, destination wedding Jordan, conference organizer Jordan, luxury event production Amman, event planner Amman Jordan, TEDxAmman producers, event management company Jordan"
         canonicalPath="/"
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" }

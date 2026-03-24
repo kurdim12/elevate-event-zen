@@ -43,7 +43,7 @@ const CorporateEventsMain = () => {
       <SEO
         title="Corporate Event Management in Jordan | Amman | Maranasi"
         description="Maranasi delivers luxury corporate events in Jordan — conferences, product launches, team building, and award ceremonies in Amman. Producers of TEDxAmman for 4,000+ guests. Request a proposal."
-        keywords="corporate event management Jordan, corporate event planner Amman, MICE event management Jordan, conference management Jordan, exhibition management Jordan, gala dinner planner Amman, brand activation Jordan"
+        keywords="corporate event management Jordan, event management companies in Jordan, corporate event planner Amman, MICE event management Jordan, conference management Jordan, exhibition management Jordan, gala dinner planner Amman, brand activation Jordan"
         canonicalPath="/corporate-events"
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" },
@@ -88,7 +88,7 @@ const CorporateEventsMain = () => {
               Luxury Corporate Event Management in Jordan
             </h1>
             <p className="body-lg text-background/80 mt-6 max-w-2xl">
-              Maranasi delivers world-class corporate events in Jordan, combining luxury event production with strategic brand communication. Based in Amman, in the Hashemite Kingdom of Jordan, our team has produced some of the most high-profile corporate events in the Arab world — most notably TEDxAmman, Jordan's flagship TEDx event, produced for over 4,000 guests.
+              As one of the leading event management companies in Jordan, Maranasi delivers world-class corporate events combining luxury event production with strategic brand communication. Based in Amman, in the Hashemite Kingdom of Jordan, our team has produced some of the most high-profile corporate events in the Arab world — most notably TEDxAmman, Jordan's flagship TEDx event, produced for over 4,000 guests.
             </p>
           </AnimatedSection>
         </div>

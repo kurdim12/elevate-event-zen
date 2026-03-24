@@ -25,7 +25,7 @@ export default function About() {
       <SEO 
         title="About Maranasi — Luxury Event Agency in Jordan | Amman"
         description="Maranasi is Jordan's premier luxury event agency, based in Amman. Producers of TEDxAmman for 4,000+ guests. Cinematic activations at Petra and the Amman Citadel. Meet the team behind MENA's most extraordinary events."
-        keywords="about Maranasi, luxury event planner Jordan, event management company Amman, event agency Jordan, luxury event production Jordan, TEDxAmman producers"
+        keywords="about Maranasi, luxury event planner Jordan, event management companies in Jordan, event management company Amman, event agency Jordan, luxury event production Jordan, TEDxAmman producers"
         canonicalPath="/about"
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" },
@@ -52,7 +52,7 @@ export default function About() {
             <AnimatedSection>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="body-lg text-foreground">
-                  Headquartered in Amman, Jordan, Maranasi has established itself as the Hashemite Kingdom's leading luxury event planning and production company. Our work spans destination weddings, corporate conferences, gala dinners, and cinematic brand activations — delivered across Jordan and throughout the MENA region.
+                  Headquartered in Amman, Jordan, Maranasi has established itself as one of the top event management companies in Jordan and the Hashemite Kingdom's leading luxury event planning and production company. Our work spans destination weddings, corporate conferences, gala dinners, and cinematic brand activations — delivered across Jordan and throughout the MENA region.
                 </p>
                 <p>
                   Our most notable production is TEDxAmman, which we delivered for over 4,000 guests — one of the largest independent TEDx events in the Arab world. We have also produced cinematic brand activations at Petra and the Amman Citadel.
