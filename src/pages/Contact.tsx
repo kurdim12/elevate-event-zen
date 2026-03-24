@@ -86,14 +86,33 @@ export default function Contact() {
   return (
     <Layout>
       <SEO 
-        title="Contact Maranasi — Plan Your Event in Jordan"
-        description="Get in touch with Maranasi to plan your luxury event in Jordan. Weddings, corporate events, gala dinners, and brand activations. Based in Amman, serving all of MENA."
+        title="Contact Maranasi — Plan Your Event in Jordan | Amman"
+        description="Get in touch with Maranasi to plan your luxury event in Jordan. Weddings, gala dinners, corporate events, and brand activations. Based in Amman, Jordan. Call +962 79 656 5971 or email gm@maranasi.com."
         keywords="contact event planner Jordan, contact Maranasi Amman, request proposal Jordan, wedding planner contact Amman, corporate event inquiry Jordan"
         canonicalPath="/contact"
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" },
           { name: "Contact", url: "https://maranasi.com/contact" }
         ]}
+        jsonLd={[{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Maranasi",
+          "url": "https://maranasi.com/contact",
+          "description": "Contact Maranasi to plan your luxury event in Jordan. Based in Amman.",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Maranasi",
+            "telephone": "+96279656597",
+            "email": "gm@maranasi.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Abu Hudayb Street",
+              "addressLocality": "Amman",
+              "addressCountry": "JO"
+            }
+          }
+        }]}
       />
 
       {/* Hero */}
@@ -101,7 +120,7 @@ export default function Contact() {
         <div className="container-wide">
           <AnimatedSection>
             <h1 className="heading-display max-w-4xl">
-              Plan Your Event with Maranasi
+              Plan Your Event with Maranasi in Jordan
             </h1>
           </AnimatedSection>
         </div>

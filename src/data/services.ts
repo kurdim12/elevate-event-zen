@@ -18,7 +18,7 @@ export interface ServiceData {
 export const corporateServices: ServiceData[] = [
   {
     slug: "mice-event-management",
-    metaTitle: "MICE Event Management in Jordan | MaraNasi",
+    metaTitle: "MICE Event Management in Jordan | Maranasi",
     metaDescription: "MICE event management in Jordan and Amman with program control, supplier coordination, production readiness, and onsite execution. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "MICE event planner Amman, MICE event management Jordan, incentive travel Jordan, meetings incentives conferences exhibitions Amman, MICE planner Middle East, MICE event organizer Jordan",
     h1: "MICE Event Management",
@@ -38,7 +38,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "destination-corporate-events",
-    metaTitle: "Destination Corporate Events in Jordan | MaraNasi",
+    metaTitle: "Destination Corporate Events in Jordan | Maranasi",
     metaDescription: "Destination corporate events in Jordan and Amman with venue shortlists, logistics planning, production coordination, and onsite control. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "destination corporate events Jordan, corporate event planner Amman, corporate event organizer Jordan, destination event management Amman, corporate events Middle East",
     h1: "Destination Corporate Events",
@@ -58,7 +58,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "destination-corporate-retreats",
-    metaTitle: "Destination Corporate Retreats in Jordan | MaraNasi",
+    metaTitle: "Destination Corporate Retreats in Jordan | Maranasi",
     metaDescription: "Corporate retreats in Jordan with itinerary design, resort coordination, sessions setup, hospitality flow, and onsite execution. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "corporate retreat Jordan, team retreat Amman, leadership retreat Jordan, corporate retreat Dead Sea, destination retreat planner Jordan, corporate offsite Amman",
     h1: "Destination Corporate Retreats",
@@ -78,7 +78,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "exhibition-booth-design-production",
-    metaTitle: "Exhibition Booth Design and Production in Jordan | MaraNasi",
+    metaTitle: "Exhibition Booth Design and Production in Jordan | Maranasi",
     metaDescription: "Premium exhibition booth design and production in Jordan and Amman with visitor flow logic, build coordination, branding finishes, and onsite supervision.",
     metaKeywords: "exhibition booth design Jordan, booth production Amman, exhibition stand Jordan, booth builder Amman, trade show booth design Jordan, exhibition booth contractor Amman",
     h1: "Exhibition Booth Design and Production",
@@ -97,7 +97,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "360-campaign-management-activations",
-    metaTitle: "360 Campaign Management and Brand Activations in Jordan | MaraNasi",
+    metaTitle: "360 Campaign Management and Brand Activations in Jordan | Maranasi",
     metaDescription: "Event-led brand activations in Jordan and Amman with concept planning, production coordination, onsite execution, and controlled brand touchpoints. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "brand activation Jordan, campaign management Amman, event activation Jordan, brand experience planner Amman, 360 campaign Jordan, experiential marketing Jordan",
     h1: "360 Campaign Management and Brand Activations",
@@ -116,7 +116,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "exhibition-management",
-    metaTitle: "Exhibition Management in Jordan | MaraNasi",
+    metaTitle: "Exhibition Management in Jordan | Maranasi",
     metaDescription: "Exhibition management in Jordan and Amman with operational planning, venue coordination, exhibitor flow, production readiness, onsite teams, and opening ceremony control.",
     metaKeywords: "exhibition management Jordan, exhibition organizer Amman, trade show management Jordan, exhibition planner Amman, expo management Jordan, exhibition operations Amman",
     h1: "Exhibition Management",
@@ -136,7 +136,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "entertainment-programming-production",
-    metaTitle: "Entertainment Programming and Production in Jordan | MaraNasi",
+    metaTitle: "Entertainment Programming and Production in Jordan | Maranasi",
     metaDescription: "Entertainment programming and production in Jordan for corporate events and gala dinners including coordination, technical planning, rehearsals, and show flow control.",
     metaKeywords: "entertainment production Jordan, event entertainment Amman, live entertainment planner Jordan, show production Amman, corporate entertainment Jordan, event show producer Amman",
     h1: "Entertainment Programming and Production",
@@ -155,7 +155,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "conference-management",
-    metaTitle: "Conference Management in Jordan | MaraNasi",
+    metaTitle: "Conference Management in Jordan | Maranasi",
     metaDescription: "Conference management in Jordan and Amman with agenda control, stage operations, speaker flow support, production readiness, and onsite execution. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "conference management Jordan, conference organizer Amman, conference planner Jordan, summit management Amman, conference production Jordan, event conference planner Amman",
     h1: "Conference Management",
@@ -174,7 +174,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "vip-greet-and-meet-facilitation",
-    metaTitle: "VIP Greet and Meet Facilitation in Jordan | MaraNasi",
+    metaTitle: "VIP Greet and Meet Facilitation in Jordan | Maranasi",
     metaDescription: "VIP greet and meet facilitation in Jordan for delegations and high-value guests including routing, hosting, movement control, and privacy-focused operations.",
     metaKeywords: "VIP facilitation Jordan, VIP hosting Amman, delegation management Jordan, VIP greet meet Amman, executive hosting Jordan, VIP event services Amman",
     h1: "VIP Greet and Meet Facilitation",
@@ -193,7 +193,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "lighting-and-sound-production",
-    metaTitle: "Lighting and Sound Production in Jordan | MaraNasi",
+    metaTitle: "Lighting and Sound Production in Jordan | Maranasi",
     metaDescription: "Lighting and sound production in Jordan and Amman with technical planning, setup schedules, rehearsals, show readiness, and live operation support.",
     metaKeywords: "lighting production Jordan, sound production Amman, AV production Jordan, event lighting Amman, sound engineer Jordan, stage lighting production Amman",
     h1: "Lighting and Sound Production",
@@ -212,7 +212,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "gala-dinner-banquet-production",
-    metaTitle: "Gala Dinner and Banquet Production in Jordan | MaraNasi",
+    metaTitle: "Gala Dinner and Banquet Production in Jordan | Maranasi",
     metaDescription: "Gala dinner and banquet production in Jordan and Amman with guest journey planning, seating flow, stage moments, entertainment timing, and show control. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "gala dinner Jordan, banquet production Amman, gala dinner organizer Jordan, banquet planner Amman, corporate dinner production Jordan, formal dinner event Amman",
     h1: "Gala Dinner and Banquet Production",
@@ -232,7 +232,7 @@ export const corporateServices: ServiceData[] = [
   },
   {
     slug: "show-calling-stage-management",
-    metaTitle: "Show Calling and Stage Management in Jordan | MaraNasi",
+    metaTitle: "Show Calling and Stage Management in Jordan | Maranasi",
     metaDescription: "Show calling and stage management in Jordan with run of show build, cue sheets, rehearsal control, backstage flow, and live timing control. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "show calling Jordan, stage management Amman, stage manager Jordan, show caller Amman, event stage management Jordan, cue management Amman",
     h1: "Show Calling and Stage Management",
@@ -255,7 +255,7 @@ export const corporateServices: ServiceData[] = [
 export const weddingServices: ServiceData[] = [
   {
     slug: "luxury-wedding-design-and-planning",
-    metaTitle: "Luxury Wedding Design and Planning in Jordan | MaraNasi",
+    metaTitle: "Luxury Wedding Design and Planning in Jordan | Maranasi",
     metaDescription: "Luxury wedding design and planning in Jordan with concept direction, supplier management, production planning, timelines, and onsite control. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "luxury wedding planner Jordan, wedding designer Amman, wedding planning Jordan, luxury wedding organizer Amman, premium wedding planner Jordan, bespoke wedding Amman",
     h1: "Luxury Wedding Design and Planning",
@@ -274,7 +274,7 @@ export const weddingServices: ServiceData[] = [
   },
   {
     slug: "destination-luxury-weddings-service",
-    metaTitle: "Destination Luxury Weddings in Jordan | MaraNasi",
+    metaTitle: "Destination Luxury Weddings in Jordan | Maranasi",
     metaDescription: "Destination luxury weddings in Jordan including Petra, Dead Sea, and Amman Citadel with venue sourcing, logistics planning, production coordination, and onsite execution. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "destination wedding Jordan, luxury wedding Petra, wedding planner Dead Sea, destination wedding Amman Citadel, luxury wedding planner Jordan, destination wedding Wadi Rum",
     h1: "Destination Luxury Weddings",
@@ -298,7 +298,7 @@ export const weddingServices: ServiceData[] = [
   },
   {
     slug: "destination-marriage-proposals",
-    metaTitle: "Destination Marriage Proposals in Jordan | MaraNasi",
+    metaTitle: "Destination Marriage Proposals in Jordan | Maranasi",
     metaDescription: "Destination marriage proposals in Jordan with concept planning, discreet setup, privacy control, timing discipline, and onsite execution. Also serving Egypt, UAE, and Thailand.",
     metaKeywords: "marriage proposal Jordan, proposal planner Amman, destination proposal Petra, proposal planning Jordan, romantic proposal Dead Sea, surprise proposal Wadi Rum Jordan",
     h1: "Destination Marriage Proposals",
@@ -333,7 +333,7 @@ export const destinations: DestinationData[] = [
   {
     slug: "destinations-jordan",
     name: "Jordan",
-    metaTitle: "Events and Weddings in Jordan | MaraNasi",
+    metaTitle: "Events and Weddings in Jordan | Maranasi",
     metaDescription: "Corporate events and destination weddings in Jordan across Amman, Aqaba, Petra, and Wadi Rum with premium planning and controlled execution.",
     h1: "Jordan",
     content: "Our home ground. Historic backdrops, premium hospitality, rare experiences—within a controlled production environment. Amman, Aqaba, Petra, Wadi Rum. Corporate programs, weddings, and proposals delivered with strong logistics and premium execution.",
@@ -343,7 +343,7 @@ export const destinations: DestinationData[] = [
   {
     slug: "destinations-egypt",
     name: "Egypt",
-    metaTitle: "Events and Weddings in Egypt | MaraNasi",
+    metaTitle: "Events and Weddings in Egypt | Maranasi",
     metaDescription: "Destination weddings and corporate events in Egypt including the Pyramids of Giza, North Coast, and Alexandria with premium planning and execution.",
     h1: "Egypt",
     content: "Scale and iconic visuals. High-profile weddings, proposals, corporate hosting. Pyramids of Giza, North Coast, Alexandria—venue coordination, destination logistics, timing control, production readiness. Premium experiences delivered.",
@@ -353,7 +353,7 @@ export const destinations: DestinationData[] = [
   {
     slug: "destinations-uae",
     name: "United Arab Emirates",
-    metaTitle: "Events and Weddings in the UAE | MaraNasi",
+    metaTitle: "Events and Weddings in the UAE | Maranasi",
     metaDescription: "Corporate events and luxury weddings in Dubai, Abu Dhabi, and Sharjah with premium venues, production support, and controlled execution.",
     h1: "United Arab Emirates",
     content: "World-class venues and hospitality infrastructure. High-value corporate events and luxury weddings. Dubai, Abu Dhabi, Sharjah—venue coordination, production requirements, guest experience flow. Premium execution standard.",
@@ -363,7 +363,7 @@ export const destinations: DestinationData[] = [
   {
     slug: "destinations-thailand",
     name: "Thailand",
-    metaTitle: "Events and Weddings in Thailand | MaraNasi",
+    metaTitle: "Events and Weddings in Thailand | Maranasi",
     metaDescription: "Corporate events and destination weddings in Thailand across Bangkok, Pattaya, and Phi Phi Islands with premium venues and destination execution.",
     h1: "Thailand",
     content: "Luxury city venues, resort hospitality, iconic island experiences. Corporate hosting, destination weddings, proposals. Bangkok, Pattaya, Phi Phi Islands—venue coordination, on-ground execution, timing control, premium production readiness.",

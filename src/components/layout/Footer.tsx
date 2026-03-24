@@ -110,7 +110,7 @@ export function Footer() {
               <Instagram className="w-5 h-5" />
             </a>
             <a 
-              href="https://www.youtube.com/@MaraNasiForEvents" 
+              href="https://www.youtube.com/@MaranasiForEvents" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-background/40 hover:text-background/70 transition-colors duration-400"
@@ -128,7 +128,7 @@ export function Footer() {
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="https://www.facebook.com/people/MaraNasi/100095634037516/" 
+              href="https://www.facebook.com/people/Maranasi/100095634037516/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-background/40 hover:text-background/70 transition-colors duration-400"

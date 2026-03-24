@@ -18,30 +18,12 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   {
-    name: "Corporate Events",
-    href: "/corporate-events",
+    name: "Services",
     children: [
-      { name: "MICE Event Management", href: "/corporate-events/mice-event-management" },
-      { name: "Destination Corporate Events", href: "/corporate-events/destination-corporate-events" },
-      { name: "Destination Corporate Retreats", href: "/corporate-events/destination-corporate-retreats" },
-      { name: "Exhibition Booth Design", href: "/corporate-events/exhibition-booth-design-production" },
-      { name: "360 Campaign & Activations", href: "/corporate-events/360-campaign-management-activations" },
-      { name: "Exhibition Management", href: "/corporate-events/exhibition-management" },
-      { name: "Entertainment Programming", href: "/corporate-events/entertainment-programming-production" },
-      { name: "Conference Management", href: "/corporate-events/conference-management" },
-      { name: "VIP Facilitation", href: "/corporate-events/vip-greet-and-meet-facilitation" },
-      { name: "Lighting & Sound", href: "/corporate-events/lighting-and-sound-production" },
-      { name: "Gala Dinner Production", href: "/corporate-events/gala-dinner-banquet-production" },
-      { name: "Show Calling & Stage", href: "/corporate-events/show-calling-stage-management" },
-    ],
-  },
-  {
-    name: "Weddings",
-    href: "/destination-luxury-weddings",
-    children: [
-      { name: "Luxury Wedding Planning", href: "/destination-luxury-weddings/luxury-wedding-design-and-planning", description: "Full design and planning services" },
-      { name: "Destination Weddings", href: "/destination-luxury-weddings/destination-luxury-weddings-service", description: "Iconic locations, premium logistics" },
-      { name: "Marriage Proposals", href: "/destination-luxury-weddings/destination-marriage-proposals", description: "Private, cinematic moments" },
+      { name: "Weddings", href: "/destination-luxury-weddings", description: "Luxury destination weddings in Jordan" },
+      { name: "Corporate Events", href: "/corporate-events", description: "Conferences, launches, award ceremonies" },
+      { name: "Gala Dinners", href: "/gala-dinners", description: "Charity galas, award dinners, corporate galas" },
+      { name: "Brand Activation", href: "/exhibitions", description: "Experiential marketing & brand experiences" },
     ],
   },
   {
@@ -56,6 +38,7 @@ const navigation: NavItem[] = [
   },
   { name: "Work", href: "/work" },
   { name: "About", href: "/about" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export function Header() {
@@ -123,7 +106,7 @@ export function Header() {
         <Link to="/" className="relative z-10">
           <img 
             src={maransiLogo} 
-            alt="Maranasi - Serious Business Stunning Events" 
+            alt="Maranasi — Luxury Event Planner in Jordan" 
             className="h-10 md:h-12 w-auto"
           />
         </Link>
@@ -177,7 +160,6 @@ export function Header() {
                   )}
                 >
                   <div className="bg-background border border-border/50 shadow-lg rounded-sm min-w-[280px] py-3 max-h-[70vh] overflow-y-auto">
-                    {/* Main link for category */}
                     {item.href && (
                       <Link
                         to={item.href}

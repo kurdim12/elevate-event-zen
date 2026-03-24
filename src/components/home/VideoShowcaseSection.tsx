@@ -72,7 +72,7 @@ export function VideoShowcaseSection() {
                 </h2>
               </div>
               <a
-                href="https://www.youtube.com/@MaraNasiForEvents"
+                href="https://www.youtube.com/@MaranasiForEvents"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-[13px] tracking-[0.12em] text-muted-foreground/60 uppercase hover:text-foreground transition-colors duration-500 group"

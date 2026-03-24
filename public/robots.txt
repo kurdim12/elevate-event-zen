@@ -4,11 +4,12 @@ Allow: /
 Disallow: /cart
 Disallow: /shop
 Disallow: /checkout
-Disallow: /wp-admin
+Disallow: /wp-admin/
 Disallow: /wp-login.php
-Disallow: /api/
+Disallow: /?add-to-cart=
 Disallow: /?s=
 Disallow: /search
+Disallow: /tag/
+Disallow: /author/
 
 Sitemap: https://maranasi.com/sitemap.xml
-Sitemap: https://maranasi.com/sitemap-images.xml

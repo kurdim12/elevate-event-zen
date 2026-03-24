@@ -9,7 +9,7 @@ const heroItems = [
   { type: "youtube" as const, id: "HU0wV-E6mUw" },
 ];
 
-const VIDEO_DURATION = 12000; // 12 seconds for YouTube clips
+const VIDEO_DURATION = 12000;
 const PHOTO_DURATION = 6000;
 
 export function HeroSection() {
@@ -21,7 +21,6 @@ export function HeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Auto-advance based on content type
   useEffect(() => {
     const currentItem = heroItems[activeIndex];
     const duration = currentItem.type === "image" ? PHOTO_DURATION : VIDEO_DURATION;
@@ -48,7 +47,7 @@ export function HeroSection() {
               <div className="absolute inset-0 overflow-hidden">
                 <iframe
                   src={`https://www.youtube-nocookie.com/embed/${item.id}?autoplay=1&mute=1&loop=1&playlist=${item.id}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3`}
-                  title="Hero video"
+                  title="Luxury event production in Jordan — Maranasi"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full pointer-events-none"
                   style={{ border: 'none' }}
@@ -57,7 +56,7 @@ export function HeroSection() {
             ) : (
               <img
                 src={item.src}
-                alt="Luxury event planning in Jordan — Maranasi"
+                alt="Luxury event planning in Amman, Jordan — Maranasi"
                 className="w-full h-full object-cover"
               />
             )}
@@ -75,7 +74,7 @@ export function HeroSection() {
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
               }`}
             >
-              Luxury Events · Jordan & Beyond
+              Luxury Events · Amman, Jordan & Beyond
             </p>
 
             <h1
@@ -83,7 +82,7 @@ export function HeroSection() {
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Luxury Event Planning
+              Luxury Event Planner
               <br />
               <span className="italic text-background/85">in Jordan</span>
             </h1>

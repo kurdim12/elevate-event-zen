@@ -173,7 +173,7 @@ export function FeaturedFilmsSection() {
           <AnimatedSection delay={400}>
             <div className="mt-12 md:mt-16 text-center">
               <a
-                href="https://www.youtube.com/@MaraNasiForEvents"
+                href="https://www.youtube.com/@MaranasiForEvents"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 text-[11px] tracking-[0.2em] text-background/40 uppercase hover:text-background/70 transition-colors duration-500 group"

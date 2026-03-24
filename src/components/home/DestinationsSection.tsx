@@ -62,7 +62,7 @@ export function DestinationsSection() {
                 </div>
                 <div className="relative overflow-hidden mt-8">
                   <div className="aspect-[3/4]">
-                    <img loading="lazy" src={destinationAmmanImg2} alt="MaraNasi team member preparing drinks at an outdoor event in Amman, Jordan" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={destinationAmmanImg2} alt="Maranasi team member preparing drinks at an outdoor event in Amman, Jordan" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>

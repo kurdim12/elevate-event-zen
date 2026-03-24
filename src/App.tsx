@@ -13,6 +13,8 @@ import CorporateServicePage from "./pages/corporate/CorporateServicePage";
 // Weddings
 import WeddingsMain from "./pages/weddings/WeddingsMain";
 import WeddingServicePage from "./pages/weddings/WeddingServicePage";
+import PetraWedding from "./pages/weddings/PetraWedding";
+import WadiRumWedding from "./pages/weddings/WadiRumWedding";
 
 // Destinations
 import DestinationsMain from "./pages/destinations/DestinationsMain";
@@ -20,6 +22,7 @@ import DestinationPage from "./pages/destinations/DestinationPage";
 
 // Standalone Service Pages
 import GalaDinners from "./pages/GalaDinners";
+import Exhibitions from "./pages/Exhibitions";
 
 // Core Pages
 import About from "./pages/About";
@@ -48,6 +51,8 @@ const App = () => (
           {/* Weddings */}
           <Route path="/destination-luxury-weddings" element={<WeddingsMain />} />
           <Route path="/destination-luxury-weddings/:serviceSlug" element={<WeddingServicePage />} />
+          <Route path="/weddings/petra" element={<PetraWedding />} />
+          <Route path="/weddings/wadi-rum" element={<WadiRumWedding />} />
           
           {/* Destinations */}
           <Route path="/destinations" element={<DestinationsMain />} />
@@ -55,6 +60,7 @@ const App = () => (
           
           {/* Standalone Service Pages */}
           <Route path="/gala-dinners" element={<GalaDinners />} />
+          <Route path="/exhibitions" element={<Exhibitions />} />
           
           {/* Core Pages */}
           <Route path="/about" element={<About />} />
