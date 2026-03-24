@@ -17,7 +17,7 @@ export function AboutSection() {
             
             <div className="mt-8 space-y-6">
               <p className="text-[15px] text-muted-foreground leading-[1.7]">
-                Based in Amman, Jordan — the Hashemite Kingdom of Jordan — Maranasi is the country's leading luxury event planning and production company. From destination weddings at Petra and Wadi Rum to corporate events, gala dinners, and brand activations across the MENA region, we craft extraordinary experiences at every scale.
+                Based in Amman, Jordan — the Hashemite Kingdom of Jordan — Maranasi is one of the leading event management companies in Jordan and the country's premier luxury event planning and production company. From destination weddings at Petra and Wadi Rum to corporate events, gala dinners, and brand activations across the MENA region, we craft extraordinary experiences at every scale.
               </p>
               <p className="text-[15px] text-muted-foreground leading-[1.7]">
                 World-class conferences to intimate luxury weddings — film directors, architectural visionaries, and master craftsmen creating experiences that transcend expectations.
