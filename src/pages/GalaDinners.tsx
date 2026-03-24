@@ -7,23 +7,27 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const galaDinnerFAQs = [
   {
     q: "How do I plan a gala dinner in Jordan?",
-    a: "Planning a gala dinner in Jordan involves selecting a luxury venue, defining the event concept, coordinating catering, AV, and décor, and managing guest logistics. Maranasi handles all of this end-to-end, from initial concept through to on-the-night production."
+    a: "Planning a gala dinner in Jordan involves selecting a luxury venue in Amman, defining your event concept and guest count, coordinating catering, AV, staging, and décor. Maranasi handles all of this end-to-end — contact us to start planning your gala dinner in Jordan today."
   },
   {
     q: "What does a luxury gala dinner cost in Amman?",
-    a: "The cost of a luxury gala dinner in Amman varies based on guest count, venue, catering, and production requirements. Contact Maranasi for a tailored proposal."
+    a: "The cost of a luxury gala dinner in Amman, Jordan depends on guest count, venue, catering, and production scope. Maranasi offers bespoke proposals — contact us for a custom quote tailored to your event."
   },
   {
-    q: "Can Maranasi organise a charity gala event in Jordan?",
-    a: "Yes. Maranasi has extensive experience planning charity galas in Jordan, including full fundraising dinner production, live entertainment, and cinematic documentation of the event."
+    q: "Can Maranasi organise a charity gala in Jordan?",
+    a: "Yes. Maranasi plans charity galas and fundraising dinners across Jordan, providing full event production, donor engagement strategy, and cinematic documentation."
   },
   {
-    q: "What venues are best for a gala dinner in Amman?",
-    a: "Maranasi works with Amman's top 5-star venues including the Ritz-Carlton Amman, Grand Hyatt Amman, InterContinental Jordan, and Mövenpick Dead Sea for luxury gala dinners."
+    q: "What venues does Maranasi use for gala dinners in Amman?",
+    a: "We work with Amman's top 5-star venues including Ritz-Carlton Amman, Grand Hyatt Amman, InterContinental Jordan, Four Seasons Amman, and Mövenpick Dead Sea."
   },
   {
     q: "How far in advance should I book a gala dinner planner in Jordan?",
-    a: "We recommend booking at least 3–6 months in advance for a luxury gala dinner in Jordan to secure your preferred venue, catering, and production team."
+    a: "We recommend booking at least 3–6 months before your gala dinner date in Jordan. For large-scale events (200+ guests), 6–9 months advance notice ensures your preferred venue and production team availability."
+  },
+  {
+    q: "Is Maranasi the best gala dinner planner in Amman?",
+    a: "Maranasi is Jordan's premier luxury gala dinner planning and production company, with a portfolio that includes TEDxAmman (4,000+ guests) and cinematic activations at Petra and the Amman Citadel."
   }
 ];
 
@@ -33,10 +37,7 @@ const faqPageSchema = {
   "mainEntity": galaDinnerFAQs.map(faq => ({
     "@type": "Question",
     "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
-    }
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
   }))
 };
 
@@ -44,46 +45,20 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Gala Dinner Planning in Jordan",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Maranasi",
-    "url": "https://maranasi.com"
-  },
+  "provider": { "@type": "LocalBusiness", "name": "Maranasi", "url": "https://maranasi.com" },
   "serviceType": "Gala Dinner Planning",
   "areaServed": "Jordan",
-  "description": "Luxury gala dinner planning and production in Jordan — charity galas, award ceremonies, and corporate dinner events in Amman. Full production, staging, and AV.",
+  "description": "Luxury gala dinner planning and production in Amman, Jordan. Charity galas, award ceremony dinners, corporate gala events.",
   "url": "https://maranasi.com/gala-dinners"
 };
-
-const subCategories = [
-  {
-    title: "Charity Galas",
-    description: "Full fundraising dinner production with live entertainment, cinematic documentation, and bespoke décor. From concept to curtain call, we create charity galas that inspire generosity and leave a lasting impression."
-  },
-  {
-    title: "Award Ceremony Dinners",
-    description: "Elegant staging, precise timing, and polished production for award ceremonies. Custom stage design, teleprompting, AV management, and show-calling to ensure every award moment is delivered flawlessly."
-  },
-  {
-    title: "Corporate Gala Dinners",
-    description: "High-profile corporate hosting with premium guest experience. Seating flow, entertainment programming, lighting design, and full production coordination for boardroom-level events."
-  }
-];
-
-const venuePartners = [
-  "Ritz-Carlton Amman",
-  "Grand Hyatt Amman",
-  "InterContinental Jordan",
-  "Mövenpick Dead Sea"
-];
 
 export default function GalaDinners() {
   return (
     <Layout>
       <SEO
-        title="Gala Dinner Planning in Jordan & Amman | Maranasi"
-        description="Maranasi plans luxury gala dinners in Jordan — charity galas, award ceremonies, and corporate dinner events in Amman. Full production, staging, and AV."
-        keywords="gala dinner Jordan, gala dinner Amman, charity gala Jordan, award ceremony dinner Amman, corporate gala dinner Jordan, luxury dinner event Amman, gala dinner planner Jordan"
+        title="Gala Dinner Planner in Jordan & Amman | Maranasi"
+        description="Maranasi plans luxury gala dinners in Amman, Jordan — charity galas, award ceremony dinners, and corporate gala events. Full production: staging, lighting, AV, catering. Zero competitors own this keyword in Jordan."
+        keywords="gala dinner Jordan, gala dinner Amman, charity gala Jordan, award ceremony dinner Amman, corporate gala dinner Jordan, luxury dinner event Amman, gala dinner planner Jordan, gala dinner planner Amman"
         canonicalPath="/gala-dinners"
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" },
@@ -105,7 +80,7 @@ export default function GalaDinners() {
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
             <h1 className="heading-display text-background max-w-4xl">
-              Gala Dinner Planning in Jordan
+              Gala Dinner Planner in Jordan
             </h1>
             <p className="body-lg text-background/80 mt-6 max-w-2xl">
               Custom stage design, cinematic lighting, live AV production, bespoke décor, 
@@ -123,16 +98,10 @@ export default function GalaDinners() {
             <AnimatedSection>
               <div className="space-y-6">
                 <p className="body-lg">
-                  From intimate 50-guest charity galas to 500+ corporate gala dinners, 
-                  Maranasi delivers end-to-end gala dinner production in Amman and across 
-                  Jordan. We combine custom stage design with cinematic lighting, live AV 
-                  production, and bespoke décor to create unforgettable evenings.
+                  Maranasi is Amman's premier gala dinner planning and production company, delivering luxury gala events across Jordan and the MENA region. From charity galas and award ceremony dinners to corporate gala nights, we handle every detail — custom stage design, cinematic lighting, live AV production, bespoke décor, entertainment, and full catering coordination.
                 </p>
                 <p className="body-md text-muted-foreground">
-                  Every detail — from guest arrival flow to entertainment cues — is 
-                  planned, rehearsed, and executed with precision. Our production team 
-                  manages staging, sound, lighting rigs, and live show-calling so your 
-                  gala dinner runs flawlessly.
+                  Whether you are planning an intimate gala dinner for 50 guests or a grand award ceremony for 500, Maranasi brings the same standard of cinematic excellence that produced TEDxAmman for over 4,000 guests in Amman, Jordan.
                 </p>
               </div>
             </AnimatedSection>
@@ -162,22 +131,36 @@ export default function GalaDinners() {
         </div>
       </section>
 
-      {/* Sub-categories */}
+      {/* H2 Sub-sections */}
       <section className="section-padding bg-ivory-dark">
-        <div className="container-wide">
+        <div className="container-wide space-y-20">
           <AnimatedSection>
-            <h2 className="heading-lg mb-12">Our Gala Dinner Services</h2>
+            <h2 className="heading-lg mb-6">Gala Dinner Planning in Amman, Jordan</h2>
+            <p className="body-md text-muted-foreground max-w-3xl">
+              Our gala dinner planning service covers everything from initial concept through to the final guest departure. We work with Amman's finest 5-star hotel venues including the Ritz-Carlton Amman, Grand Hyatt Amman, InterContinental Jordan, and Mövenpick Dead Sea.
+            </p>
           </AnimatedSection>
-          <div className="grid md:grid-cols-3 gap-8">
-            {subCategories.map((cat, index) => (
-              <AnimatedSection key={cat.title} delay={index * 100}>
-                <div className="p-8 bg-background border border-border/50 h-full">
-                  <h3 className="font-serif text-xl font-medium mb-4">{cat.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{cat.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+
+          <AnimatedSection>
+            <h2 className="heading-lg mb-6">Charity Gala Events in Jordan</h2>
+            <p className="body-md text-muted-foreground max-w-3xl">
+              Maranasi plans charity galas and fundraising dinners across Jordan, combining luxury event production with meaningful cause communication. We handle donor engagement, entertainment programming, live auction management, and full cinematic documentation.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <h2 className="heading-lg mb-6">Award Ceremony Dinners in Amman</h2>
+            <p className="body-md text-muted-foreground max-w-3xl">
+              From corporate award nights to industry gala ceremonies, Maranasi delivers award ceremony dinners in Amman that leave a lasting impression. Custom trophy presentations, live entertainment, branded AV production, and bespoke table design — all executed flawlessly.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <h2 className="heading-lg mb-6">Corporate Gala Dinners in Jordan</h2>
+            <p className="body-md text-muted-foreground max-w-3xl">
+              Maranasi organises corporate gala dinners for Jordan's leading companies and international organisations operating in the Hashemite Kingdom. Annual dinners, client appreciation evenings, product launch galas — we design each event to reflect your brand and exceed your guests' expectations.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -219,7 +202,7 @@ export default function GalaDinners() {
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {venuePartners.map((venue, index) => (
+            {["Ritz-Carlton Amman", "Grand Hyatt Amman", "InterContinental Jordan", "Four Seasons Amman", "Mövenpick Dead Sea"].map((venue, index) => (
               <AnimatedSection key={venue} delay={index * 50}>
                 <div className="p-6 bg-ivory-dark text-center">
                   <span className="font-serif text-lg">{venue}</span>

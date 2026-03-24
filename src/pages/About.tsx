@@ -3,18 +3,35 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "react-router-dom";
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Maranasi",
+  "url": "https://maranasi.com",
+  "logo": "https://maranasi.com/wp-content/uploads/maranasi-logo.png",
+  "foundingLocation": "Amman, Jordan",
+  "description": "Jordan's premier luxury event planning and production agency.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+96279656597",
+    "contactType": "Customer Service",
+    "areaServed": "JO"
+  }
+};
+
 export default function About() {
   return (
     <Layout>
       <SEO 
-        title="About Maranasi — Jordan's Luxury Event Agency"
-        description="Maranasi is Jordan's leading luxury event planning and production company, based in Amman. Meet the team behind TEDxAmman, Petra activations, and MENA's most iconic events."
-        keywords="about Maranasi, luxury event planner Jordan, event management company Amman, event agency Jordan, luxury event production Jordan"
+        title="About Maranasi — Luxury Event Agency in Jordan | Amman"
+        description="Maranasi is Jordan's premier luxury event agency, based in Amman. Producers of TEDxAmman for 4,000+ guests. Cinematic activations at Petra and the Amman Citadel. Meet the team behind MENA's most extraordinary events."
+        keywords="about Maranasi, luxury event planner Jordan, event management company Amman, event agency Jordan, luxury event production Jordan, TEDxAmman producers"
         canonicalPath="/about"
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" },
           { name: "About", url: "https://maranasi.com/about" }
         ]}
+        jsonLd={[orgSchema]}
       />
 
       {/* Hero */}
@@ -35,11 +52,10 @@ export default function About() {
             <AnimatedSection>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="body-lg text-foreground">
-                  Built for clients who expect premium results without operational 
-                  noise. Corporate events and destination luxury weddings—disciplined 
-                  planning, supplier control, strong production backbone. Jordan, Egypt, 
-                  UAE, Thailand. Iconic venues. Rare locations. Timing control. Guest 
-                  experience standards.
+                  Headquartered in Amman, Jordan, Maranasi has established itself as the Hashemite Kingdom's leading luxury event planning and production company. Our work spans destination weddings, corporate conferences, gala dinners, and cinematic brand activations — delivered across Jordan and throughout the MENA region.
+                </p>
+                <p>
+                  Our most notable production is TEDxAmman, which we delivered for over 4,000 guests — one of the largest independent TEDx events in the Arab world. We have also produced cinematic brand activations at Petra and the Amman Citadel.
                 </p>
                 <p>
                   One principle guides our work: design must be supported by operations. 
@@ -55,7 +71,7 @@ export default function About() {
                   {[
                     "Operational control",
                     "Premium execution standards",
-                    "Destination capability",
+                    "Destination capability across Jordan and MENA",
                     "Discretion and VIP handling",
                     "Production readiness and show flow discipline"
                   ].map((item) => (
