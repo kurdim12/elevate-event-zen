@@ -143,7 +143,7 @@ const WeddingsMain = () => {
         videoId="VISSs12n7-w"
         title="Where Dreams Meet Reality"
         subtitle="Watch Our Story"
-        caption="Every detail orchestrated. Every moment captured. Experience the MaraNasi difference in destination luxury weddings."
+        caption="Every detail orchestrated. Every moment captured. Experience the Maranasi difference in destination luxury weddings."
       />
 
       {/* Services */}

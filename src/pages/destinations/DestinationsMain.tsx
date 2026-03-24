@@ -34,8 +34,8 @@ const DestinationsMain = () => {
   return (
     <Layout>
       <SEO
-        title="Event and Wedding Destinations in Jordan | MaraNasi"
-        description="Explore MaraNasi destinations starting with Jordan — Amman, Petra, Dead Sea, Wadi Rum — for corporate events, destination weddings, and proposals. Also serving Egypt, UAE, and Thailand."
+        title="Event and Wedding Destinations in Jordan | Maranasi"
+        description="Explore Maranasi destinations starting with Jordan — Amman, Petra, Dead Sea, Wadi Rum — for corporate events, destination weddings, and proposals. Also serving Egypt, UAE, and Thailand."
         keywords="event destinations Jordan, wedding venues Amman, corporate event venues Jordan, destination wedding Petra, event venue Dead Sea, wedding destination Wadi Rum, event planner Jordan destinations"
         canonicalPath="/destinations"
       />

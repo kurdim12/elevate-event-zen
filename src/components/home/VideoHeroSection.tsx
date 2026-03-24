@@ -157,7 +157,7 @@ export function VideoHeroSection({ videoId = "-8eRhlfX-XU" }: VideoHeroProps) {
             <div className="relative aspect-video">
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
-                title="MaraNasi Events Film"
+                title="Maranasi Events Film"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"

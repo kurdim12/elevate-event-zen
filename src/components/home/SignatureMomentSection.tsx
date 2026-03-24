@@ -8,7 +8,7 @@ export function SignatureMomentSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="MaraNasi event at Amman Citadel"
+          alt="Maranasi event at Amman Citadel"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/35" />
