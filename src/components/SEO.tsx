@@ -24,16 +24,41 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
       if (el) el.setAttribute(attr, value);
     };
 
-    updateMeta('meta[name="description"]', "content", description);
-    updateMeta('meta[property="og:title"]', "content", title);
-    updateMeta('meta[property="og:description"]', "content", description);
-    updateMeta('meta[name="twitter:title"]', "content", title);
-    updateMeta('meta[name="twitter:description"]', "content", description);
+    const ensureMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      const selector = `meta[${attr}="${name}"]`;
+      let el = document.querySelector(selector);
+      if (el) {
+        el.setAttribute("content", content);
+      } else {
+        el = document.createElement("meta");
+        el.setAttribute(attr, name);
+        el.setAttribute("content", content);
+        document.head.appendChild(el);
+      }
+    };
 
-    // OG URL
+    // Basic meta
+    ensureMeta("description", description);
+    ensureMeta("og:title", title, true);
+    ensureMeta("og:description", description, true);
+    ensureMeta("og:type", "website", true);
+    ensureMeta("og:site_name", "Maranasi — Luxury Event Planner Jordan", true);
+    ensureMeta("og:locale", "en_US", true);
+    ensureMeta("twitter:card", "summary_large_image");
+    ensureMeta("twitter:title", title);
+    ensureMeta("twitter:description", description);
+
+    // Geo meta tags — tell Google this is a Jordan business
+    ensureMeta("geo.region", "JO-AM");
+    ensureMeta("geo.placename", "Amman, Jordan");
+    ensureMeta("geo.position", "31.9522;35.9304");
+    ensureMeta("ICBM", "31.9522, 35.9304");
+
+    // OG URL + canonical
     if (canonicalPath) {
       const fullUrl = `https://maranasi.com${canonicalPath}`;
-      updateMeta('meta[property="og:url"]', "content", fullUrl);
+      ensureMeta("og:url", fullUrl, true);
 
       let canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
@@ -75,22 +100,13 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
     }
 
     // OG image
-    if (ogImage) {
-      updateMeta('meta[property="og:image"]', "content", ogImage);
-      updateMeta('meta[name="twitter:image"]', "content", ogImage);
-    }
+    const ogImg = ogImage || "https://maranasi.com/wp-content/uploads/maranasi-og-image.jpg";
+    ensureMeta("og:image", ogImg, true);
+    ensureMeta("twitter:image", ogImg);
 
     // Keywords
     if (keywords) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute("content", keywords);
-      } else {
-        metaKeywords = document.createElement("meta");
-        metaKeywords.setAttribute("name", "keywords");
-        metaKeywords.setAttribute("content", keywords);
-        document.head.appendChild(metaKeywords);
-      }
+      ensureMeta("keywords", keywords);
     }
 
     // Clean up old dynamic JSON-LD
