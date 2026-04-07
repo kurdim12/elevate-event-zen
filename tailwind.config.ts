@@ -14,8 +14,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['DM Sans', 'system-ui', 'sans-serif'],
+        accent: ['Cinzel', 'serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -65,15 +68,6 @@ export default {
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
         },
-        charcoal: {
-          DEFAULT: "hsl(var(--charcoal))",
-          light: "hsl(var(--charcoal-light))",
-        },
-        ivory: {
-          DEFAULT: "hsl(var(--ivory))",
-          dark: "hsl(var(--ivory-dark))",
-        },
-        taupe: "hsl(var(--taupe))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,6 +78,7 @@ export default {
         subtle: "var(--shadow-subtle)",
         card: "var(--shadow-card)",
         elevated: "var(--shadow-elevated)",
+        "gold-glow": "var(--shadow-gold-glow)",
       },
       keyframes: {
         "accordion-down": {
@@ -94,28 +89,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
-        "fade-in-up": {
-          from: { opacity: "0", transform: "translateY(16px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-        "slide-in-right": {
-          from: { opacity: "0", transform: "translateX(16px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
         "accordion-up": "accordion-up 0.3s ease-out",
-        "fade-in": "fade-in 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards",
-        "fade-in-up": "fade-in-up 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards",
-        "slide-in-right": "slide-in-right 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards",
-      },
-      transitionTimingFunction: {
-        'smooth': 'cubic-bezier(0.25, 0.1, 0.25, 1)',
       },
     },
   },

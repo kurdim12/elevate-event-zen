@@ -1,110 +1,41 @@
-import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Link } from "react-router-dom";
 
-// Placeholder blog structure - CMS-ready
 const blogPosts = [
-  {
-    slug: "choosing-the-right-destination-for-your-corporate-event",
-    title: "Choosing the Right Destination for Your Corporate Event",
-    excerpt: "Evaluating destinations based on objectives, logistics, and guest experience requirements.",
-    category: "Corporate Events",
-    date: "Coming Soon"
-  },
-  {
-    slug: "destination-wedding-planning-timeline",
-    title: "Destination Wedding Planning Timeline",
-    excerpt: "A structured approach to planning your destination wedding from 18 months out.",
-    category: "Weddings",
-    date: "Coming Soon"
-  },
-  {
-    slug: "production-readiness-checklist-for-conferences",
-    title: "Production Readiness Checklist for Conferences",
-    excerpt: "Key technical and operational checks to ensure smooth conference execution.",
-    category: "Production",
-    date: "Coming Soon"
-  },
-  {
-    slug: "jordan-as-a-corporate-destination",
-    title: "Jordan as a Corporate Destination",
-    excerpt: "Why Jordan offers unique advantages for conferences, retreats, and executive events.",
-    category: "Destinations",
-    date: "Coming Soon"
-  }
+  { slug: "how-to-plan-gala-dinner-jordan", title: "How to Plan a Luxury Gala Dinner in Amman, Jordan", excerpt: "A complete guide to planning an unforgettable gala dinner in Jordan's capital.", category: "Gala Dinners" },
+  { slug: "destination-wedding-petra-guide", title: "The Ultimate Guide to a Destination Wedding at Petra", excerpt: "Everything you need to know about saying your vows at one of the world's most iconic sites.", category: "Weddings" },
+  { slug: "corporate-events-trends-2025", title: "Corporate Event Trends in Jordan for 2025", excerpt: "The latest trends shaping corporate events in the Hashemite Kingdom.", category: "Corporate" },
 ];
 
 export default function Blog() {
   return (
     <Layout>
-      <SEO 
-        title="Maranasi Blog | Events & Weddings in Jordan"
-        description="Insights on corporate events, MICE, exhibitions, production, destination weddings, proposals, and venues in Jordan and Amman."
-        keywords="event planning blog Jordan, wedding planning tips Amman, corporate events insights Jordan, destination wedding guide Jordan"
-        canonicalPath="/blog"
-        breadcrumbs={[
-          { name: "Home", url: "https://maranasi.com" },
-          { name: "Blog", url: "https://maranasi.com/blog" }
-        ]}
-      />
-
-      {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-ivory-dark">
+      <SEO title="Blog | Luxury Event Planning Insights | Maranasi Jordan" description="Insights on luxury event planning in Jordan." canonicalPath="/blog" breadcrumbs={[{ name: "Home", url: "https://maranasi.com" }, { name: "Blog", url: "https://maranasi.com/blog" }]} />
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-wide">
           <AnimatedSection>
-            <h1 className="heading-display max-w-4xl">Blog</h1>
+            <p className="section-label mb-4">Insights</p>
+            <h1 className="heading-display max-w-3xl">Blog</h1>
           </AnimatedSection>
         </div>
       </section>
-
-      {/* Intro */}
-      <section className="section-padding-sm bg-background">
-        <div className="container-narrow text-center">
-          <AnimatedSection>
-            <p className="body-lg">
-              Corporate events, destination execution, production discipline, 
-              and planning insights. Destinations, venues, and operational clarity 
-              for premium results.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Blog Posts Grid */}
-      <section className="section-padding bg-ivory-dark">
+      <section className="section-padding pt-0">
         <div className="container-wide">
-          <div className="grid md:grid-cols-2 gap-8">
-            {blogPosts.map((post, index) => (
-              <AnimatedSection key={post.slug} delay={index * 100}>
-                <article className="p-8 bg-background border border-border/50">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-xs font-medium uppercase tracking-wider text-primary">
-                      {post.category}
-                    </span>
-                    <span className="text-xs text-muted-foreground">{post.date}</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post, i) => (
+              <AnimatedSection key={post.slug} delay={i * 100}>
+                <Link to={`/blog/${post.slug}`} className="group block">
+                  <div className="bg-card p-8 border-t-2 border-t-primary hover:shadow-gold-glow transition-all duration-700 h-full">
+                    <p className="section-label text-[10px] mb-3">{post.category}</p>
+                    <h2 className="font-display text-xl mb-3 group-hover:text-primary transition-colors">{post.title}</h2>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{post.excerpt}</p>
                   </div>
-                  <h2 className="font-serif text-xl font-medium mb-3">
-                    {post.title}
-                  </h2>
-                  <p className="text-muted-foreground text-sm">
-                    {post.excerpt}
-                  </p>
-                </article>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding bg-foreground">
-        <div className="container-narrow text-center">
-          <AnimatedSection>
-            <Link to="/contact" className="btn-gold">
-              Request a Proposal
-            </Link>
-          </AnimatedSection>
         </div>
       </section>
     </Layout>

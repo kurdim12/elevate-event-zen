@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
-
+Disallow: /wp-admin/
+Disallow: /cart/
+Disallow: /shop/
+Disallow: /checkout/
+Sitemap: https://maranasi.com/sitemap.xml
 Disallow: /cart
 Disallow: /shop
 Disallow: /checkout

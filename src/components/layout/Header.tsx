@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import maransiLogo from "@/assets/maranasi-logo.webp";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface SubNavItem {
   name: string;
@@ -18,41 +18,32 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   {
-    name: "Services",
+    name: "Weddings",
+    href: "/weddings",
     children: [
-      { name: "Weddings", href: "/destination-luxury-weddings", description: "Luxury destination weddings in Jordan" },
-      { name: "Corporate Events", href: "/corporate-events", description: "Conferences, launches, award ceremonies" },
-      { name: "Gala Dinners", href: "/gala-dinners", description: "Charity galas, award dinners, corporate galas" },
-      { name: "Brand Activation", href: "/exhibitions", description: "Experiential marketing & brand experiences" },
+      { name: "All Wedding Services", href: "/weddings" },
+      { name: "Weddings at Petra", href: "/weddings/petra" },
+      { name: "Weddings at Wadi Rum", href: "/weddings/wadi-rum" },
+      { name: "Weddings at the Dead Sea", href: "/weddings/dead-sea" },
+      { name: "Weddings in Amman", href: "/weddings/amman" },
     ],
   },
-  {
-    name: "Destinations",
-    href: "/destinations",
-    children: [
-      { name: "Jordan", href: "/destinations/jordan", description: "Amman, Petra, Wadi Rum, Aqaba" },
-      { name: "Egypt", href: "/destinations/egypt", description: "Pyramids of Giza, North Coast" },
-      { name: "United Arab Emirates", href: "/destinations/uae", description: "Dubai, Abu Dhabi, Sharjah" },
-      { name: "Thailand", href: "/destinations/thailand", description: "Bangkok, Pattaya, Phi Phi" },
-    ],
-  },
-  { name: "Work", href: "/work" },
-  { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
+  { name: "Gala Dinners", href: "/gala-dinners" },
+  { name: "Corporate", href: "/corporate-events" },
+  { name: "Exhibitions", href: "/exhibitions" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [mobileExpandedItems, setMobileExpandedItems] = useState<string[]>([]);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -60,7 +51,6 @@ export function Header() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
-    setMobileExpandedItems([]);
   }, [location]);
 
   useEffect(() => {
@@ -73,23 +63,18 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const toggleMobileExpanded = (name: string) => {
-    setMobileExpandedItems((prev) =>
-      prev.includes(name) ? prev.filter((item) => item !== name) : [...prev, name]
-    );
-  };
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobileMenuOpen]);
 
   const isActiveRoute = (href?: string) => {
     if (!href) return false;
-    if (href.includes("?")) {
-      return location.pathname === href.split("?")[0];
-    }
     return location.pathname === href || location.pathname.startsWith(href + "/");
-  };
-
-  const hasActiveChild = (children?: SubNavItem[]) => {
-    if (!children) return false;
-    return children.some((child) => isActiveRoute(child.href));
   };
 
   return (
@@ -97,18 +82,16 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-background/98 backdrop-blur-md shadow-subtle py-4"
+          ? "bg-background/95 backdrop-blur-md py-4"
           : "bg-transparent py-6"
       )}
     >
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="relative z-10">
-          <img 
-            src={maransiLogo} 
-            alt="Maranasi — Luxury Event Planner in Jordan" 
-            className="h-10 md:h-12 w-auto"
-          />
+          <span className="font-accent text-xl md:text-2xl text-primary tracking-[0.3em] uppercase">
+            Maranasi
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -120,16 +103,16 @@ export function Header() {
                   onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   className={cn(
-                    "flex items-center gap-1.5 px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300",
-                    activeDropdown === item.name || hasActiveChild(item.children) || isActiveRoute(item.href)
+                    "flex items-center gap-1 px-4 py-2 text-sm tracking-wide transition-colors duration-300",
+                    activeDropdown === item.name || isActiveRoute(item.href)
                       ? "text-primary"
-                      : "text-foreground/80 hover:text-foreground"
+                      : "text-foreground/70 hover:text-foreground"
                   )}
                 >
                   {item.name}
                   <ChevronDown
                     className={cn(
-                      "w-4 h-4 transition-transform duration-300",
+                      "w-3.5 h-3.5 transition-transform duration-300",
                       activeDropdown === item.name && "rotate-180"
                     )}
                   />
@@ -138,64 +121,35 @@ export function Header() {
                 <Link
                   to={item.href!}
                   className={cn(
-                    "px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300",
+                    "px-4 py-2 text-sm tracking-wide transition-colors duration-300",
                     isActiveRoute(item.href)
                       ? "text-primary"
-                      : "text-foreground/80 hover:text-foreground"
+                      : "text-foreground/70 hover:text-foreground"
                   )}
                 >
                   {item.name}
                 </Link>
               )}
 
-              {/* Dropdown Menu */}
-              {item.children && (
+              {/* Dropdown */}
+              {item.children && activeDropdown === item.name && (
                 <div
                   onMouseLeave={() => setActiveDropdown(null)}
-                  className={cn(
-                    "absolute top-full left-0 pt-2 transition-all duration-300",
-                    activeDropdown === item.name
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible -translate-y-2"
-                  )}
+                  className="absolute top-full left-0 pt-2"
                 >
-                  <div className="bg-background border border-border/50 shadow-lg rounded-sm min-w-[280px] py-3 max-h-[70vh] overflow-y-auto">
-                    {item.href && (
-                      <Link
-                        to={item.href}
-                        className="block px-5 py-3 border-b border-border/30 mb-2 hover:bg-secondary/30 transition-colors"
-                      >
-                        <span className="text-sm font-medium text-primary">
-                          View All {item.name}
-                        </span>
-                      </Link>
-                    )}
+                  <div className="bg-card border border-border/50 min-w-[260px] py-2">
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
                         to={child.href}
                         className={cn(
-                          "block px-5 py-2.5 transition-colors duration-200 group",
+                          "block px-5 py-2.5 text-sm transition-colors duration-200",
                           isActiveRoute(child.href)
-                            ? "bg-secondary/50"
-                            : "hover:bg-secondary/30"
+                            ? "text-primary bg-secondary/30"
+                            : "text-foreground/70 hover:text-primary hover:bg-secondary/20"
                         )}
                       >
-                        <span
-                          className={cn(
-                            "block text-sm font-medium transition-colors duration-200",
-                            isActiveRoute(child.href)
-                              ? "text-primary"
-                              : "text-foreground group-hover:text-primary"
-                          )}
-                        >
-                          {child.name}
-                        </span>
-                        {child.description && (
-                          <span className="block text-xs text-muted-foreground mt-0.5">
-                            {child.description}
-                          </span>
-                        )}
+                        {child.name}
                       </Link>
                     ))}
                   </div>
@@ -206,8 +160,11 @@ export function Header() {
         </nav>
 
         {/* CTA Button - Desktop */}
-        <Link to="/contact" className="hidden lg:inline-flex btn-primary">
-          Request Proposal
+        <Link
+          to="/contact"
+          className="hidden lg:inline-flex btn-outline text-xs"
+        >
+          Request a Proposal
         </Link>
 
         {/* Mobile Menu Button */}
@@ -224,113 +181,70 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={cn(
-          "lg:hidden fixed inset-0 bg-background transition-all duration-500 overflow-y-auto",
-          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
-        )}
-      >
-        <div className="pt-24 pb-8 px-6">
-          <nav className="space-y-1">
-            {navigation.map((item, index) => (
-              <div
-                key={item.name}
-                className={cn(
-                  "border-b border-border/30 transition-all duration-300",
-                  isMobileMenuOpen
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-4"
-                )}
-                style={{ transitionDelay: `${index * 50}ms` }}
-              >
-                {item.children ? (
-                  <>
-                    <button
-                      onClick={() => toggleMobileExpanded(item.name)}
-                      className="flex items-center justify-between w-full py-4 text-left"
-                    >
-                      <span
-                        className={cn(
-                          "font-serif text-xl font-medium",
-                          (hasActiveChild(item.children) || isActiveRoute(item.href)) && "text-primary"
-                        )}
+      {/* Mobile Menu - Full screen overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden fixed inset-0 bg-background z-40"
+          >
+            <div className="pt-24 pb-8 px-8 h-full flex flex-col">
+              <nav className="space-y-2 flex-1">
+                {navigation.map((item, index) => (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05, duration: 0.3 }}
+                    className="border-b border-border/30"
+                  >
+                    {item.children ? (
+                      <div>
+                        <Link
+                          to={item.href || "#"}
+                          className="block py-4 font-display text-2xl font-medium text-foreground"
+                        >
+                          {item.name}
+                        </Link>
+                        <div className="pl-4 pb-3 space-y-1">
+                          {item.children.slice(1).map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.href}
+                              className="block py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.href!}
+                        className="block py-4 font-display text-2xl font-medium text-foreground hover:text-primary transition-colors"
                       >
                         {item.name}
-                      </span>
-                      <ChevronDown
-                        className={cn(
-                          "w-5 h-5 text-muted-foreground transition-transform duration-300",
-                          mobileExpandedItems.includes(item.name) && "rotate-180"
-                        )}
-                      />
-                    </button>
-                    <div
-                      className={cn(
-                        "overflow-hidden transition-all duration-300",
-                        mobileExpandedItems.includes(item.name)
-                          ? "max-h-[500px] opacity-100 pb-4"
-                          : "max-h-0 opacity-0"
-                      )}
-                    >
-                      <div className="pl-4 space-y-1">
-                        {item.href && (
-                          <Link
-                            to={item.href}
-                            className="block py-2 text-primary font-medium border-b border-border/20 mb-2"
-                          >
-                            View All
-                          </Link>
-                        )}
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            to={child.href}
-                            className={cn(
-                              "block py-2 transition-colors duration-200",
-                              isActiveRoute(child.href)
-                                ? "text-primary"
-                                : "text-muted-foreground hover:text-foreground"
-                            )}
-                          >
-                            <span className="text-base">{child.name}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    to={item.href!}
-                    className={cn(
-                      "block py-4 font-serif text-xl font-medium transition-colors duration-200",
-                      isActiveRoute(item.href)
-                        ? "text-primary"
-                        : "text-foreground hover:text-primary"
+                      </Link>
                     )}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          <div
-            className={cn(
-              "mt-8 transition-all duration-300",
-              isMobileMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
-            )}
-            style={{ transitionDelay: "250ms" }}
-          >
-            <Link to="/contact" className="btn-primary w-full justify-center">
-              Request Proposal
-            </Link>
-          </div>
-        </div>
-      </div>
+                  </motion.div>
+                ))}
+              </nav>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <Link to="/contact" className="btn-primary w-full justify-center">
+                  Request a Proposal
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
