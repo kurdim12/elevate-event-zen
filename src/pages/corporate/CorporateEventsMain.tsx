@@ -1,169 +1,102 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-const heroImages = [
-  { src: "/images/corporate/mice-1.jpg", alt: "Private MICE gala dinner at Amman Citadel" },
-  { src: "/images/corporate/conference-1.jpg", alt: "Conference management at BluePeace Conference" },
-  { src: "/images/corporate/entertainment-1.jpg", alt: "Live entertainment at Fas Meknas 2026" },
-  { src: "/images/corporate/show-1.jpg", alt: "Stage management at TEDxAmman" },
-  { src: "/images/corporate/gala-1.jpg", alt: "Gala dinner production" },
-  { src: "/images/corporate/exhibition-1.jpg", alt: "Exhibition management and production" },
+const corporateFAQs = [
+  { q: "What corporate events does Maranasi manage in Jordan?", a: "We manage conferences, product launches, award ceremonies, team retreats, exhibitions, and MICE events across Jordan and MENA." },
+  { q: "Can Maranasi handle events for 4,000+ guests?", a: "Yes. We produced TEDxAmman for over 4,000 guests — one of the largest independent TEDx events in the Arab world." },
+  { q: "Does Maranasi work with international companies?", a: "Yes. We've produced events for international brands and organisations operating in Jordan, UAE, Saudi Arabia, and beyond." },
+  { q: "What is the Maranasi approach to corporate events?", a: "Every project is a managed system — planning, suppliers, production, guest flow, and stage timing aligned before show day." },
+  { q: "How do I request a corporate event proposal?", a: "Contact us via our website form, call +962 77 524 0000, or email gm@maranasi.com. We respond within 24 hours." },
 ];
 
-const corporateServices = [
-  { name: "MICE Event Management", href: "/corporate-events/mice-event-management" },
-  { name: "Destination Corporate Events", href: "/corporate-events/destination-corporate-events" },
-  { name: "Destination Corporate Retreats", href: "/corporate-events/destination-corporate-retreats" },
-  { name: "Exhibition Booth Design and Production", href: "/corporate-events/exhibition-booth-design-production" },
-  { name: "360 Campaign Management and Brand Activations", href: "/corporate-events/360-campaign-management-activations" },
-  { name: "Exhibition Management", href: "/corporate-events/exhibition-management" },
-  { name: "Entertainment Programming and Production", href: "/corporate-events/entertainment-programming-production" },
-  { name: "Conference Management", href: "/corporate-events/conference-management" },
-  { name: "VIP Greet and Meet Facilitation", href: "/corporate-events/vip-greet-and-meet-facilitation" },
-  { name: "Lighting and Sound Production", href: "/corporate-events/lighting-and-sound-production" },
-  { name: "Gala Dinner and Banquet Production", href: "/corporate-events/gala-dinner-banquet-production" },
-  { name: "Show Calling and Stage Management", href: "/corporate-events/show-calling-stage-management" },
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": corporateFAQs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org", "@type": "Service",
+  "name": "Corporate Event Management in Jordan",
+  "provider": { "@type": "LocalBusiness", "name": "Maranasi", "url": "https://maranasi.com" },
+  "serviceType": "Corporate Event Management", "areaServed": "Jordan",
+  "url": "https://maranasi.com/corporate-events"
+};
+
+const subServices = [
+  { name: "Conferences", href: "/corporate-events/conferences", desc: "Multi-day conferences with stage management and speaker coordination." },
+  { name: "Product Launches", href: "/corporate-events/product-launches", desc: "Cinematic product reveals with live AV and immersive staging." },
+  { name: "Award Ceremonies", href: "/corporate-events/award-ceremonies", desc: "Premium award nights with show-calling and entertainment programming." },
 ];
 
-const CorporateEventsMain = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImage(prev => (prev + 1) % heroImages.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
+export default function CorporateEventsMain() {
   return (
     <Layout>
       <SEO
-        title="Corporate Event Management in Jordan | Amman | Maranasi"
-        description="Maranasi delivers luxury corporate events in Jordan — conferences, product launches, team building, and award ceremonies in Amman. Producers of TEDxAmman for 4,000+ guests. Request a proposal."
-        keywords="corporate event management Jordan, event management companies in Jordan, corporate event planner Amman, MICE event management Jordan, conference management Jordan, exhibition management Jordan, gala dinner planner Amman, brand activation Jordan"
+        title="Corporate Event Management Jordan & Amman | Conferences, Product Launches | Maranasi"
+        description="Maranasi delivers luxury corporate events in Jordan — conferences, product launches, team building & award ceremonies in Amman. Producers of TEDxAmman for 4,000+ guests."
+        keywords="corporate event management Jordan, event management companies in Jordan, corporate event planner Amman, conference planning Jordan, product launch Jordan, TEDxAmman"
         canonicalPath="/corporate-events"
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" },
-          { name: "Corporate Events", url: "https://maranasi.com/corporate-events" }
+          { name: "Corporate Events", url: "https://maranasi.com/corporate-events" },
         ]}
+        jsonLd={[faqSchema, serviceSchema]}
       />
 
-      {/* Hero with image carousel */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
-        {heroImages.map((img, index) => (
-          <div
-            key={img.src}
-            className="absolute inset-0 transition-opacity duration-1000"
-            style={{ opacity: index === currentImage ? 1 : 0 }}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/20" />
-
-        {/* Carousel dots */}
-        <div className="absolute bottom-6 right-6 flex gap-2 z-10">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImage(index)}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                index === currentImage ? "bg-background w-4" : "bg-background/40"
-              }`}
-              aria-label={`Go to image ${index + 1}`}
-            />
-          ))}
+      {/* Hero */}
+      <section className="relative min-h-[70vh] flex items-end">
+        <div className="absolute inset-0 bg-gradient-to-br from-card via-background to-card">
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
         </div>
-
         <div className="relative z-10 container-wide pb-16">
           <AnimatedSection>
-            <h1 className="heading-display text-background max-w-4xl">
-              Luxury Corporate Event Management in Jordan
-            </h1>
-            <p className="body-lg text-background/80 mt-6 max-w-2xl">
-              As one of the leading event management companies in Jordan, Maranasi delivers world-class corporate events combining luxury event production with strategic brand communication. Based in Amman, in the Hashemite Kingdom of Jordan, our team has produced some of the most high-profile corporate events in the Arab world — most notably TEDxAmman, Jordan's flagship TEDx event, produced for over 4,000 guests.
+            <p className="section-label mb-4">Corporate</p>
+            <h1 className="heading-display max-w-4xl">Corporate Event Management in Jordan</h1>
+            <p className="body-lg mt-6 max-w-2xl">
+              As one of the leading event management companies in Jordan, Maranasi delivers world-class corporate events. Producers of TEDxAmman for 4,000+ guests.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Our Approach */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <AnimatedSection>
-              <div className="space-y-6">
-                <h2 className="heading-lg mb-4">Our Approach</h2>
-                <p className="body-md text-muted-foreground">
-                  Simple. Every corporate project is a managed system. Planning, 
-                  suppliers, production, guest flow, stage timing—aligned before 
-                  show day. The outcome: a premium experience that runs cleanly 
-                  and protects the brand.
-                </p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={100}>
-              <div className="space-y-4">
-                <h2 className="heading-sm mb-6">What We Deliver</h2>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Program planning and structure
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Venue and destination coordination
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Supplier management and timelines
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Production readiness coordination for lighting and sound
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    VIP greet and meet facilitation when required
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Show calling and stage management for timing control
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    On ground execution and escalation control
-                  </li>
-                </ul>
-              </div>
-            </AnimatedSection>
-          </div>
+      {/* Intro */}
+      <section className="section-padding">
+        <div className="container-wide max-w-3xl">
+          <AnimatedSection>
+            <p className="body-lg">
+              Maranasi is one of the top event management companies in Jordan, delivering luxury corporate events that combine premium production with strategic brand communication. Based in Amman, in the Hashemite Kingdom of Jordan, our team has produced some of the most high-profile corporate events in the Arab world.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="section-padding bg-ivory-dark">
+      {/* TEDxAmman Callout */}
+      <section className="py-16 bg-card">
+        <div className="container-wide text-center">
+          <AnimatedSection>
+            <p className="section-label mb-4">Case Study</p>
+            <h2 className="heading-xl text-primary mb-4">Producers of TEDxAmman</h2>
+            <p className="text-lg text-muted-foreground">4,000+ Guests · Jordan's Flagship TEDx Event</p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Sub-services */}
+      <section className="section-padding">
         <div className="container-wide">
           <AnimatedSection>
-            <h2 className="heading-lg mb-12">Corporate Services</h2>
+            <p className="section-label mb-4">Services</p>
+            <h2 className="heading-lg mb-12">What We Deliver</h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {corporateServices.map((service, index) => (
-              <AnimatedSection key={service.href} delay={index * 50}>
-                <Link
-                  to={service.href}
-                  className="block p-6 bg-background border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-500 group"
-                >
-                  <h3 className="font-serif text-lg font-medium group-hover:text-primary transition-colors">
-                    {service.name}
-                  </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {subServices.map((s, i) => (
+              <AnimatedSection key={s.href} delay={i * 100}>
+                <Link to={s.href} className="group block bg-card p-8 border-t-2 border-t-primary hover:shadow-gold-glow transition-all duration-700">
+                  <h3 className="font-accent text-lg text-primary tracking-wide mb-3">{s.name}</h3>
+                  <p className="text-sm text-muted-foreground">{s.desc}</p>
                 </Link>
               </AnimatedSection>
             ))}
@@ -171,18 +104,53 @@ const CorporateEventsMain = () => {
         </div>
       </section>
 
+      {/* Process */}
+      <section className="section-padding bg-card">
+        <div className="container-wide">
+          <AnimatedSection>
+            <h2 className="heading-lg mb-12">Our Process</h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {["Brief", "Concept", "Production", "Execution", "Post-Event Report"].map((step, i) => (
+              <AnimatedSection key={step} delay={i * 80}>
+                <div className="text-center">
+                  <span className="font-display text-4xl text-primary">{String(i + 1).padStart(2, '0')}</span>
+                  <p className="text-sm text-foreground mt-2">{step}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding">
+        <div className="container-wide max-w-3xl mx-auto">
+          <AnimatedSection>
+            <h2 className="heading-lg mb-10">Frequently Asked Questions</h2>
+          </AnimatedSection>
+          <Accordion type="single" collapsible className="space-y-3">
+            {corporateFAQs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="border border-border/50 px-6 data-[state=open]:bg-card">
+                <AccordionTrigger className="text-left font-display text-lg py-5 hover:no-underline">{faq.q}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-5">{faq.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="section-padding bg-foreground">
+      <section className="py-20 bg-gradient-to-r from-primary/90 via-primary to-primary/80">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <Link to="/contact" className="btn-gold">
-              Request a Corporate Proposal
+            <h2 className="heading-lg text-primary-foreground mb-8">Request a Corporate Event Proposal</h2>
+            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-background text-foreground text-[13px] font-medium uppercase tracking-[0.15em] hover:bg-background/90 transition-all">
+              Get Started
             </Link>
           </AnimatedSection>
         </div>
       </section>
     </Layout>
   );
-};
-
-export default CorporateEventsMain;
+}
