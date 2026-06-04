@@ -15,6 +15,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Portfolio from "./pages/Portfolio";
 import Destinations from "./pages/Destinations";
+import Brochure from "./pages/Brochure";
 import NotFound from "./pages/NotFound";
 
 // Weddings
