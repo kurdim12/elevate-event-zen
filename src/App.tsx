@@ -31,6 +31,7 @@ import Blog from "./pages/Blog";
 import FAQs from "./pages/FAQs";
 import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
+import Brochure from "./pages/Brochure";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +69,9 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/work" element={<Work />} />
+
+          {/* Hidden — shared with customers */}
+          <Route path="/brochure" element={<Brochure />} />
           
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
