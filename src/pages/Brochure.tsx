@@ -12,7 +12,6 @@ export default function Brochure() {
       <SEO
         title="Maranasi Brochure"
         description="Private Maranasi brochure."
-        noIndex
       />
       <div className="min-h-screen bg-background flex flex-col">
         <div className="container-wide py-6 flex items-center justify-between">
