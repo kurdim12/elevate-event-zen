@@ -15,6 +15,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Portfolio from "./pages/Portfolio";
 import Destinations from "./pages/Destinations";
+import Brochure from "./pages/Brochure";
 import NotFound from "./pages/NotFound";
 
 // Weddings
@@ -62,6 +63,8 @@ const App = () => (
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/brochure" element={<Brochure />} />
+          
           
           <Route path="*" element={<NotFound />} />
         </Routes>
