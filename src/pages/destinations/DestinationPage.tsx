@@ -40,7 +40,26 @@ const DestinationPage = () => {
         title={destination.metaTitle}
         description={destination.metaDescription}
         canonicalPath={`/destinations/${destinationSlug}`}
+        breadcrumbs={[
+          { name: "Home", url: "https://maranasi.com" },
+          { name: "Destinations", url: "https://maranasi.com/destinations" },
+          { name: destination.name, url: `https://maranasi.com/destinations/${destinationSlug}` },
+        ]}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: `Luxury Event & Wedding Planning in ${destination.name}`,
+            serviceType: "Luxury event planning",
+            description: destination.metaDescription,
+            url: `https://maranasi.com/destinations/${destinationSlug}`,
+            provider: { "@type": "LocalBusiness", name: "Maranasi", url: "https://maranasi.com" },
+            areaServed: { "@type": "Place", name: destination.name },
+          },
+        ]}
       />
+
+
 
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[450px] flex items-end">

@@ -45,6 +45,52 @@ export function SubServicePageLayout({
   heroImage,
   heroImageAlt,
 }: SubServicePageLayoutProps) {
+  const baseUrl = "https://maranasi.com";
+  const breadcrumbs = [
+    { name: "Home", url: baseUrl },
+    { name: parentLink.label, url: `${baseUrl}${parentLink.href}` },
+    { name: h1, url: `${baseUrl}${canonicalPath}` },
+  ];
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: h1,
+    serviceType: h1,
+    description: content[0] ?? metaDescription,
+    url: `${baseUrl}${canonicalPath}`,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Maranasi",
+      url: baseUrl,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Abu Hudayb Street",
+        addressLocality: "Amman",
+        addressCountry: "JO",
+      },
+      telephone: "+962796565971",
+      email: "gm@maranasi.com",
+    },
+    areaServed: [
+      { "@type": "Country", name: "Jordan" },
+      { "@type": "Country", name: "Saudi Arabia" },
+      { "@type": "Country", name: "United Arab Emirates" },
+      { "@type": "Country", name: "Qatar" },
+      { "@type": "Country", name: "Kuwait" },
+      { "@type": "Country", name: "Bahrain" },
+      { "@type": "Country", name: "Oman" },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `${h1} — What is included`,
+      itemListElement: features.map((feature, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        itemOffered: { "@type": "Service", name: feature },
+      })),
+    },
+  };
+
   return (
     <Layout>
       <SEO
@@ -52,6 +98,8 @@ export function SubServicePageLayout({
         description={metaDescription}
         keywords={metaKeywords}
         canonicalPath={canonicalPath}
+        breadcrumbs={breadcrumbs}
+        jsonLd={[serviceSchema]}
       />
 
       {/* Hero */}
