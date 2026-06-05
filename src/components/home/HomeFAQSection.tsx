@@ -44,7 +44,7 @@ export const localBusinessSchema = {
   "name": "Maranasi",
   "description": "Maranasi is one of the leading event management companies in Jordan. A premier luxury event planning and production agency specialising in destination weddings, corporate events, gala dinners, and brand activations in Amman, Jordan and across MENA.",
   "url": "https://maranasi.com",
-  "telephone": "+96279656597",
+  "telephone": "+962796565971",
   "email": "gm@maranasi.com",
   "address": {
     "@type": "PostalAddress",
@@ -59,11 +59,13 @@ export const localBusinessSchema = {
   },
   "openingHours": "Mo-Sa 09:00-18:30",
   "priceRange": "$$$",
-  "areaServed": ["Jordan", "UAE", "Saudi Arabia", "Qatar", "Lebanon", "MENA"],
+  "areaServed": ["Jordan", "UAE", "Saudi Arabia", "Qatar", "MENA"],
   "hasMap": "https://maps.google.com/?q=Maranasi+Abu+Hudayb+Street+Amman+Jordan",
   "sameAs": [
-    "https://www.instagram.com/maranasi",
-    "https://www.facebook.com/maranasi",
+    "https://www.instagram.com/maranasi.mena",
+    "https://www.facebook.com/people/MaraNasi/100095634037516/",
+    "https://www.youtube.com/@MaranasiForEvents",
+    "https://jo.linkedin.com/company/maranasi",
     "https://www.sortlist.com/agency/maranasi"
   ]
 };
