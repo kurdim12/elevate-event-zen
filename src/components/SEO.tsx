@@ -70,7 +70,7 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
         document.head.appendChild(canonical);
       }
 
-      // Hreflang tags
+      // Hreflang tags (en + x-default only; /ar/ not live yet)
       const hreflangIds = ["hreflang-en", "hreflang-ar", "hreflang-default"];
       hreflangIds.forEach(id => {
         const existing = document.getElementById(id);
@@ -84,13 +84,6 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
       enLink.href = fullUrl;
       document.head.appendChild(enLink);
 
-      const arLink = document.createElement("link");
-      arLink.id = "hreflang-ar";
-      arLink.rel = "alternate";
-      arLink.hreflang = "ar";
-      arLink.href = `https://maranasi.com/ar${canonicalPath}`;
-      document.head.appendChild(arLink);
-
       const defaultLink = document.createElement("link");
       defaultLink.id = "hreflang-default";
       defaultLink.rel = "alternate";
@@ -100,7 +93,7 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
     }
 
     // OG image
-    const ogImg = ogImage || "https://maranasi.com/wp-content/uploads/maranasi-og-image.jpg";
+    const ogImg = ogImage || "https://maranasi.com/images/hero-event-opt.jpg";
     ensureMeta("og:image", ogImg, true);
     ensureMeta("twitter:image", ogImg);
 
