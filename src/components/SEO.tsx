@@ -93,7 +93,7 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
     }
 
     // OG image
-    const ogImg = ogImage || "https://maranasi.com/wp-content/uploads/maranasi-og-image.jpg";
+    const ogImg = ogImage || "https://maranasi.com/images/hero-event-opt.jpg";
     ensureMeta("og:image", ogImg, true);
     ensureMeta("twitter:image", ogImg);
 
