@@ -82,9 +82,9 @@ export function HeroSection() {
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Luxury Event Planner
+              Luxury Event Planning
               <br />
-              <span className="italic text-background/85">in Jordan</span>
+              <span className="italic text-background/85">in Amman, Jordan</span>
             </h1>
 
             <div

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export function AboutSection() {
@@ -17,10 +18,16 @@ export function AboutSection() {
             
             <div className="mt-8 space-y-6">
               <p className="text-[15px] text-muted-foreground leading-[1.7]">
-                Based in Amman, Jordan — the Hashemite Kingdom of Jordan — Maranasi is one of the leading event management companies in Jordan and the country's premier luxury event planning and production company. From destination weddings at Petra and Wadi Rum to corporate events, gala dinners, and brand activations across the MENA region, we craft extraordinary experiences at every scale.
+                Based in Amman, Jordan — the Hashemite Kingdom of Jordan — Maranasi is one of the leading event management companies in Jordan and the country&apos;s premier luxury event planning and production company. From <Link to="/destination-luxury-weddings" className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors">destination weddings at Petra</Link> and Wadi Rum to <Link to="/corporate-events" className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors">corporate events, gala dinners, and brand activations</Link> across the MENA region, we craft extraordinary experiences at every scale.
               </p>
               <p className="text-[15px] text-muted-foreground leading-[1.7]">
-                World-class conferences to intimate luxury weddings — film directors, architectural visionaries, and master craftsmen creating experiences that transcend expectations.
+                Our work spans world-class conferences and intimate luxury weddings — produced by film directors, architectural visionaries, and master craftsmen creating experiences that transcend expectations. Every project begins with the story you want guests to remember, then moves through design, logistics, and production with the discipline of a film set.
+              </p>
+              <p className="text-[15px] text-muted-foreground leading-[1.7]">
+                We plan and produce events across Jordan&apos;s most iconic settings — the rose-red city of <a href="https://www.visitjordan.com/Wheretogo/Petra.aspx" target="_blank" rel="noopener" className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors">Petra</a>, the cinematic dunes of <a href="https://www.visitjordan.com/Wheretogo/WadiRum.aspx" target="_blank" rel="noopener" className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors">Wadi Rum</a>, the mineral shores of the Dead Sea, and the historic terraces of the Amman Citadel. Beyond Jordan, we deliver luxury experiences across the UAE, Saudi Arabia, Qatar, and the wider MENA region.
+              </p>
+              <p className="text-[15px] text-muted-foreground leading-[1.7]">
+                Clients come to Maranasi for restraint, craft, and a calm production team that handles complexity quietly. <Link to="/work" className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors">See our past events</Link> or <Link to="/contact" className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors">request a consultation</Link> — every brief receives a considered, bespoke response within twenty-four hours.
               </p>
               
               {/* Refined stats */}

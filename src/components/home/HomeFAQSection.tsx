@@ -4,24 +4,24 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export const homepageFAQs = [
   {
-    q: "What types of events does Maranasi plan in Jordan?",
-    a: "Maranasi plans luxury weddings, corporate events, gala dinners, conferences, brand activations, and destination events across Jordan — including at Petra, Wadi Rum, the Dead Sea, and the Amman Citadel."
+    q: "What services does Maranasi offer?",
+    a: "Maranasi offers luxury event planning and production across four pillars: destination weddings, corporate events and conferences, gala dinners, and brand activations. Each engagement covers concept, design, logistics, and on-the-night production — delivered end-to-end by our in-house team in Amman, Jordan."
   },
   {
-    q: "Does Maranasi plan destination weddings in Jordan?",
-    a: "Yes. Maranasi is Jordan's leading destination wedding planner, organising luxury weddings at Petra, Wadi Rum, the Dead Sea, and iconic venues across Amman, Jordan."
+    q: "Do you plan destination weddings in Petra or the Dead Sea?",
+    a: "Yes. Destination weddings are a core part of our work. We produce ceremonies and celebrations at Petra, Wadi Rum, the Dead Sea, and other iconic settings across Jordan, handling venue access, guest logistics, and full production for couples travelling from across the region and beyond."
   },
   {
-    q: "Can Maranasi plan a gala dinner in Amman, Jordan?",
-    a: "Yes. Maranasi specialises in luxury gala dinner planning in Amman, Jordan, including charity galas, award ceremony dinners, and corporate gala events at top venues including the Ritz-Carlton Amman and Grand Hyatt Amman."
+    q: "How far in advance should I book an event planner in Jordan?",
+    a: "The earlier the better — especially for peak wedding season and large corporate programmes. Securing iconic venues, hotel allotments, and key suppliers takes time, and an earlier start gives us room for considered design rather than rushed execution. We are happy to discuss timelines on a first call."
   },
   {
-    q: "Where is Maranasi based?",
-    a: "Maranasi is based at Abu Hudayb Street, Amman, Jordan. We serve clients across Jordan and the wider MENA region including UAE, Saudi Arabia, and Qatar."
+    q: "Do you organize corporate events and brand activations?",
+    a: "Yes. We design and produce conferences, gala dinners, MICE programmes, exhibitions, 360 campaign activations, and immersive brand experiences for regional and international clients. Our team has produced TEDxAmman alongside work for global brands across the MENA region."
   },
   {
-    q: "How do I book Maranasi for an event in Jordan?",
-    a: "Contact us via our website inquiry form, WhatsApp at +962 79 656 5971, or email gm@maranasi.com. We respond within 24 hours to all event inquiries in Jordan and MENA."
+    q: "Which regions do you serve?",
+    a: "Maranasi is based in Amman, Jordan, and serves clients across Jordan and the wider MENA region, including the UAE, Saudi Arabia, and Qatar. Destination work outside the region is considered on a case-by-case basis."
   }
 ];
 
