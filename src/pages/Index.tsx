@@ -26,7 +26,7 @@ const Index = () => {
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" }
         ]}
-        jsonLd={[homepageFAQSchema]}
+        
       />
       <HeroSection />
       <AboutSection />
