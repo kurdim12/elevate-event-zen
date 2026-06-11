@@ -13,7 +13,7 @@ import { VideoShowcaseSection } from "@/components/home/VideoShowcaseSection";
 import { PhotoMosaicSection } from "@/components/home/PhotoMosaicSection";
 import { CTASection } from "@/components/home/CTASection";
 import { RhythmBreak } from "@/components/home/RhythmBreak";
-import { HomeFAQSection, homepageFAQSchema, localBusinessSchema } from "@/components/home/HomeFAQSection";
+import { HomeFAQSection, homepageFAQSchema } from "@/components/home/HomeFAQSection";
 
 const Index = () => {
   return (
@@ -26,7 +26,7 @@ const Index = () => {
         breadcrumbs={[
           { name: "Home", url: "https://maranasi.com" }
         ]}
-        jsonLd={[localBusinessSchema, homepageFAQSchema]}
+        jsonLd={[homepageFAQSchema]}
       />
       <HeroSection />
       <AboutSection />
