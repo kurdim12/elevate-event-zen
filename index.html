@@ -52,6 +52,56 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=5" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Static JSON-LD (crawler-visible without JS) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://maranasi.com/#organization",
+          "name": "Maranasi",
+          "url": "https://maranasi.com/",
+          "image": "https://maranasi.com/images/hero-event-opt.jpg",
+          "logo": "https://maranasi.com/icons-512.png",
+          "description": "Luxury event planning agency in Amman, Jordan — weddings, corporate events, gala dinners, and brand activations across Jordan and MENA.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Abu Hudayb Street",
+            "addressLocality": "Amman",
+            "addressCountry": "JO"
+          },
+          "telephone": "+962796565971",
+          "email": "info@maranasi.com",
+          "sameAs": [
+            "https://www.instagram.com/maranasi.mena",
+            "https://www.facebook.com/people/Maranasi/100095634037516/",
+            "https://www.youtube.com/@MaranasiForEvents",
+            "https://jo.linkedin.com/company/maranasi",
+            "https://www.sortlist.com/agency/maranasi"
+          ],
+          "areaServed": ["Jordan", "MENA"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://maranasi.com/#website",
+          "url": "https://maranasi.com/",
+          "name": "Maranasi",
+          "publisher": { "@id": "https://maranasi.com/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://maranasi.com/#webpage",
+          "url": "https://maranasi.com/",
+          "name": "Luxury Event Planner in Jordan | Maranasi",
+          "isPartOf": { "@id": "https://maranasi.com/#website" },
+          "about": { "@id": "https://maranasi.com/#organization" },
+          "dateModified": "2026-06-12"
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
