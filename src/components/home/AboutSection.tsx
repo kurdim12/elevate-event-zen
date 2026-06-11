@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export function AboutSection() {
