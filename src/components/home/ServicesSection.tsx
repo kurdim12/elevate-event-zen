@@ -34,9 +34,12 @@ export function ServicesSection() {
       <div className="container-wide">
         {/* Minimal section intro */}
         <AnimatedSection className="mb-16 md:mb-20">
-          <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase">
+          <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase mb-4">
             What we do
           </p>
+          <h2 className="font-serif text-[1.75rem] md:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-[-0.01em] max-w-2xl">
+            Luxury event services across Jordan and MENA
+          </h2>
         </AnimatedSection>
 
         {/* Services list */}
