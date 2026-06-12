@@ -76,7 +76,7 @@ export function HomeFAQSection() {
       <div className="container-wide">
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
-            <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase mb-6">
+            <p className="text-[11px] tracking-[0.22em] text-muted-foreground/80 uppercase mb-6">
               Common Questions
             </p>
             <h2 className="heading-lg mb-8">

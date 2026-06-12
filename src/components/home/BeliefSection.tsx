@@ -6,7 +6,7 @@ export function BeliefSection() {
       <div className="container-narrow">
         <AnimatedSection>
           <div className="text-center">
-            <p className="text-[11px] tracking-[0.22em] text-muted-foreground/40 uppercase mb-10">
+            <p className="text-[11px] tracking-[0.22em] text-muted-foreground/70 uppercase mb-10">
               Our Philosophy
             </p>
             

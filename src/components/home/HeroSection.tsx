@@ -58,6 +58,11 @@ export function HeroSection() {
                 src={item.src}
                 alt="Luxury event planning in Amman, Jordan — Maranasi"
                 className="w-full h-full object-cover"
+                width={1920}
+                height={1080}
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                decoding={i === 0 ? "sync" : "async"}
               />
             )}
           </div>

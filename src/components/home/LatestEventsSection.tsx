@@ -173,7 +173,7 @@ export function LatestEventsSection() {
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-700" />
               </div>
               <div className="space-y-2">
-                <div className="flex items-center gap-3 text-[11px] tracking-[0.15em] text-muted-foreground/60 uppercase">
+                <div className="flex items-center gap-3 text-[11px] tracking-[0.15em] text-muted-foreground/80 uppercase">
                   <span>{event.category}</span>
                   <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
                   <span>{event.location}</span>
@@ -190,7 +190,7 @@ export function LatestEventsSection() {
       </div>
 
       <div className="md:hidden mt-8 text-center">
-        <p className="text-[11px] tracking-[0.15em] text-muted-foreground/40 uppercase">
+        <p className="text-[11px] tracking-[0.15em] text-muted-foreground/70 uppercase">
           Swipe to explore
         </p>
       </div>
