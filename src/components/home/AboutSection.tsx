@@ -8,7 +8,7 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Left - Statement */}
           <AnimatedSection className="lg:col-span-6 lg:pr-8">
-            <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase mb-6">
+            <p className="text-[11px] tracking-[0.22em] text-muted-foreground/80 uppercase mb-6">
               Serious Business & Stunning Events
             </p>
             <h2 className="font-serif text-[1.75rem] md:text-3xl lg:text-4xl font-medium leading-[1.25] tracking-[-0.01em]">

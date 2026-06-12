@@ -34,7 +34,7 @@ export function ServicesSection() {
       <div className="container-wide">
         {/* Minimal section intro */}
         <AnimatedSection className="mb-16 md:mb-20">
-          <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase mb-4">
+          <p className="text-[11px] tracking-[0.22em] text-muted-foreground/80 uppercase mb-4">
             What we do
           </p>
           <h2 className="font-serif text-[1.75rem] md:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-[-0.01em] max-w-2xl">
@@ -53,7 +53,7 @@ export function ServicesSection() {
                 <div className="grid grid-cols-12 items-center gap-4 md:gap-6">
                   {/* Number */}
                   <div className="col-span-2 md:col-span-1">
-                    <span className="text-[11px] text-muted-foreground/40">
+                    <span className="text-[11px] text-muted-foreground/70">
                       0{index + 1}
                     </span>
                   </div>
@@ -94,7 +94,7 @@ export function ServicesSection() {
         <AnimatedSection delay={350} className="mt-12 md:mt-14">
           <Link
             to="/work"
-            className="inline-flex items-center text-[13px] tracking-[0.18em] text-muted-foreground/60 uppercase hover:text-foreground transition-colors duration-500 group"
+            className="inline-flex items-center text-[13px] tracking-[0.18em] text-muted-foreground/80 uppercase hover:text-foreground transition-colors duration-500 group"
           >
             <span className="mr-3">View portfolio</span>
             <span className="w-6 h-px bg-muted-foreground/25 group-hover:w-12 group-hover:bg-foreground transition-all duration-600" />

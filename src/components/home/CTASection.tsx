@@ -6,7 +6,7 @@ export function CTASection() {
     <section className="py-24 md:py-28 lg:py-32 bg-ivory-dark">
       <div className="container-narrow text-center">
         <AnimatedSection>
-          <p className="text-[11px] tracking-[0.22em] text-muted-foreground/60 uppercase mb-6">
+          <p className="text-[11px] tracking-[0.22em] text-muted-foreground/80 uppercase mb-6">
             Ready to Begin?
           </p>
           <h2 className="font-serif text-[1.75rem] md:text-3xl lg:text-4xl font-medium leading-[1.15] tracking-[-0.01em] mb-4">

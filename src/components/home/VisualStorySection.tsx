@@ -40,7 +40,7 @@ export function VisualStorySection() {
         <AnimatedSection>
           <div className="grid grid-cols-12 gap-6 items-end">
             <div className="col-span-12 md:col-span-2">
-              <p className="text-[11px] tracking-[0.18em] text-muted-foreground/40 uppercase">
+              <p className="text-[11px] tracking-[0.18em] text-muted-foreground/70 uppercase">
                 {stories[0].category} · {stories[0].year}
               </p>
             </div>
@@ -79,13 +79,13 @@ export function VisualStorySection() {
               </div>
               <div className="flex justify-between items-start gap-4">
                 <div>
-                  <p className="text-[11px] tracking-[0.18em] text-muted-foreground/40 uppercase mb-1.5">
+                  <p className="text-[11px] tracking-[0.18em] text-muted-foreground/70 uppercase mb-1.5">
                     {stories[1].category} · {stories[1].year}
                   </p>
                   <h3 className="font-serif text-base md:text-lg text-foreground tracking-[-0.01em]">
                     {stories[1].title}
                   </h3>
-                  <p className="text-[13px] text-muted-foreground/60 mt-1">
+                  <p className="text-[13px] text-muted-foreground/80 mt-1">
                     {stories[1].caption}
                   </p>
                 </div>
