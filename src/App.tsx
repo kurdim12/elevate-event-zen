@@ -33,6 +33,9 @@ import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 import Brochure from "./pages/Brochure";
 
+// GCC landing pages (SEO)
+import GccCountryPage from "./pages/gcc/GccCountryPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -72,7 +75,12 @@ const App = () => (
 
           {/* Hidden — shared with customers */}
           <Route path="/brochure" element={<Brochure />} />
-          
+
+          {/* GCC SEO landing pages — English */}
+          <Route path="/gcc/:countrySlug" element={<GccCountryPage lang="en" />} />
+          {/* GCC SEO landing pages — Arabic */}
+          <Route path="/ar/gcc/:countrySlug" element={<GccCountryPage lang="ar" />} />
+
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>

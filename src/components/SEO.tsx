@@ -5,6 +5,11 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface HreflangAlternate {
+  hreflang: string;
+  path: string;
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -13,19 +18,26 @@ interface SEOProps {
   breadcrumbs?: BreadcrumbItem[];
   jsonLd?: object[];
   ogImage?: string;
+  hreflangAlternates?: HreflangAlternate[];
+  locale?: string;
 }
 
-export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, jsonLd, ogImage }: SEOProps) {
+export function SEO({
+  title,
+  description,
+  keywords,
+  canonicalPath,
+  breadcrumbs,
+  jsonLd,
+  ogImage,
+  hreflangAlternates,
+  locale,
+}: SEOProps) {
   useEffect(() => {
     document.title = title;
-    
-    const updateMeta = (selector: string, attr: string, value: string) => {
-      const el = document.querySelector(selector);
-      if (el) el.setAttribute(attr, value);
-    };
 
     const ensureMeta = (name: string, content: string, isProperty = false) => {
-      const attr = isProperty ? 'property' : 'name';
+      const attr = isProperty ? "property" : "name";
       const selector = `meta[${attr}="${name}"]`;
       let el = document.querySelector(selector);
       if (el) {
@@ -38,24 +50,21 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
       }
     };
 
-    // Basic meta
     ensureMeta("description", description);
     ensureMeta("og:title", title, true);
     ensureMeta("og:description", description, true);
     ensureMeta("og:type", "website", true);
     ensureMeta("og:site_name", "Maranasi — Luxury Event Planner Jordan", true);
-    ensureMeta("og:locale", "en_US", true);
+    ensureMeta("og:locale", locale || "en_US", true);
     ensureMeta("twitter:card", "summary_large_image");
     ensureMeta("twitter:title", title);
     ensureMeta("twitter:description", description);
 
-    // Geo meta tags — tell Google this is a Jordan business
     ensureMeta("geo.region", "JO-AM");
     ensureMeta("geo.placename", "Amman, Jordan");
     ensureMeta("geo.position", "31.9522;35.9304");
     ensureMeta("ICBM", "31.9522, 35.9304");
 
-    // OG URL + canonical
     if (canonicalPath) {
       const fullUrl = `https://maranasi.com${canonicalPath}`;
       ensureMeta("og:url", fullUrl, true);
@@ -70,52 +79,49 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
         document.head.appendChild(canonical);
       }
 
-      // Hreflang tags (en + x-default only; /ar/ not live yet)
-      const hreflangIds = ["hreflang-en", "hreflang-ar", "hreflang-default"];
-      hreflangIds.forEach(id => {
-        const existing = document.getElementById(id);
-        if (existing) existing.remove();
+      // Remove any prior hreflang tags we injected
+      document
+        .querySelectorAll('link[data-seo-hreflang]')
+        .forEach((el) => el.remove());
+
+      const alternates: HreflangAlternate[] =
+        hreflangAlternates && hreflangAlternates.length > 0
+          ? hreflangAlternates
+          : [
+              { hreflang: "en", path: canonicalPath },
+              { hreflang: "x-default", path: canonicalPath },
+            ];
+
+      alternates.forEach((alt) => {
+        const link = document.createElement("link");
+        link.setAttribute("data-seo-hreflang", "true");
+        link.rel = "alternate";
+        link.hreflang = alt.hreflang;
+        link.href = `https://maranasi.com${alt.path}`;
+        document.head.appendChild(link);
       });
-
-      const enLink = document.createElement("link");
-      enLink.id = "hreflang-en";
-      enLink.rel = "alternate";
-      enLink.hreflang = "en";
-      enLink.href = fullUrl;
-      document.head.appendChild(enLink);
-
-      const defaultLink = document.createElement("link");
-      defaultLink.id = "hreflang-default";
-      defaultLink.rel = "alternate";
-      defaultLink.hreflang = "x-default";
-      defaultLink.href = fullUrl;
-      document.head.appendChild(defaultLink);
     }
 
-    // OG image
     const ogImg = ogImage || "https://maranasi.com/images/hero-event-opt.jpg";
     ensureMeta("og:image", ogImg, true);
     ensureMeta("twitter:image", ogImg);
 
-    // Keywords
     if (keywords) {
       ensureMeta("keywords", keywords);
     }
 
-    // Clean up old dynamic JSON-LD
-    document.querySelectorAll('script[data-seo-jsonld]').forEach(el => el.remove());
+    document.querySelectorAll('script[data-seo-jsonld]').forEach((el) => el.remove());
 
-    // Breadcrumb JSON-LD
     if (breadcrumbs && breadcrumbs.length > 0) {
       const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbs.map((item, i) => ({
+        itemListElement: breadcrumbs.map((item, i) => ({
           "@type": "ListItem",
-          "position": i + 1,
-          "name": item.name,
-          "item": item.url
-        }))
+          position: i + 1,
+          name: item.name,
+          item: item.url,
+        })),
       };
       const script = document.createElement("script");
       script.type = "application/ld+json";
@@ -124,9 +130,8 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
       document.head.appendChild(script);
     }
 
-    // Additional JSON-LD schemas
     if (jsonLd) {
-      jsonLd.forEach(schema => {
+      jsonLd.forEach((schema) => {
         const script = document.createElement("script");
         script.type = "application/ld+json";
         script.setAttribute("data-seo-jsonld", "true");
@@ -135,14 +140,20 @@ export function SEO({ title, description, keywords, canonicalPath, breadcrumbs, 
       });
     }
 
+    // Set html lang/dir for Arabic routes
+    if (locale && locale.startsWith("ar")) {
+      document.documentElement.lang = "ar";
+      document.documentElement.dir = "rtl";
+    } else {
+      document.documentElement.lang = "en";
+      document.documentElement.dir = "ltr";
+    }
+
     return () => {
-      document.querySelectorAll('script[data-seo-jsonld]').forEach(el => el.remove());
-      ["hreflang-en", "hreflang-ar", "hreflang-default"].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.remove();
-      });
+      document.querySelectorAll('script[data-seo-jsonld]').forEach((el) => el.remove());
+      document.querySelectorAll('link[data-seo-hreflang]').forEach((el) => el.remove());
     };
-  }, [title, description, keywords, canonicalPath, breadcrumbs, jsonLd, ogImage]);
+  }, [title, description, keywords, canonicalPath, breadcrumbs, jsonLd, ogImage, hreflangAlternates, locale]);
 
   return null;
 }

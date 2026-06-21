@@ -78,16 +78,30 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Location */}
+          {/* Regions */}
           <div className="lg:col-span-2">
             <p className="text-[11px] tracking-[0.18em] text-background/25 uppercase mb-5">
-              Based in
+              Regions
             </p>
-            <p className="text-[14px] text-background/45">
-              Amman, Jordan
-            </p>
-            <p className="text-[12px] text-background/25 mt-1">
-              Operating globally
+            <ul className="space-y-2.5">
+              {[
+                { name: "Saudi Arabia", href: "/gcc/saudi-arabia" },
+                { name: "UAE", href: "/gcc/uae" },
+                { name: "Qatar", href: "/gcc/qatar" },
+                { name: "Jordan", href: "/destinations/jordan" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-[14px] text-background/40 hover:text-background/75 transition-colors duration-400"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="text-[12px] text-background/25 mt-4">
+              Based in Amman, Jordan
             </p>
           </div>
         </div>

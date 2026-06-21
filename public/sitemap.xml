@@ -214,4 +214,60 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- GCC SEO landing pages (EN + AR) -->
+  <url>
+    <loc>https://maranasi.com/gcc/saudi-arabia</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maranasi.com/gcc/saudi-arabia"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maranasi.com/ar/gcc/saudi-arabia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maranasi.com/gcc/saudi-arabia"/>
+  </url>
+  <url>
+    <loc>https://maranasi.com/ar/gcc/saudi-arabia</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maranasi.com/gcc/saudi-arabia"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maranasi.com/ar/gcc/saudi-arabia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maranasi.com/gcc/saudi-arabia"/>
+  </url>
+  <url>
+    <loc>https://maranasi.com/gcc/uae</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maranasi.com/gcc/uae"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maranasi.com/ar/gcc/uae"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maranasi.com/gcc/uae"/>
+  </url>
+  <url>
+    <loc>https://maranasi.com/ar/gcc/uae</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maranasi.com/gcc/uae"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maranasi.com/ar/gcc/uae"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maranasi.com/gcc/uae"/>
+  </url>
+  <url>
+    <loc>https://maranasi.com/gcc/qatar</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maranasi.com/gcc/qatar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maranasi.com/ar/gcc/qatar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maranasi.com/gcc/qatar"/>
+  </url>
+  <url>
+    <loc>https://maranasi.com/ar/gcc/qatar</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maranasi.com/gcc/qatar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maranasi.com/ar/gcc/qatar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maranasi.com/gcc/qatar"/>
+  </url>
+
 </urlset>
