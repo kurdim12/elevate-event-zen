@@ -75,7 +75,12 @@ const App = () => (
 
           {/* Hidden — shared with customers */}
           <Route path="/brochure" element={<Brochure />} />
-          
+
+          {/* GCC SEO landing pages — English */}
+          <Route path="/gcc/:countrySlug" element={<GccCountryPage lang="en" />} />
+          {/* GCC SEO landing pages — Arabic */}
+          <Route path="/ar/gcc/:countrySlug" element={<GccCountryPage lang="ar" />} />
+
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
