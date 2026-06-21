@@ -33,6 +33,9 @@ import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 import Brochure from "./pages/Brochure";
 
+// GCC landing pages (SEO)
+import GccCountryPage from "./pages/gcc/GccCountryPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
