@@ -35,6 +35,9 @@ import Brochure from "./pages/Brochure";
 
 // GCC landing pages (SEO)
 import GccCountryPage from "./pages/gcc/GccCountryPage";
+import GccCityPage from "./pages/gcc/GccCityPage";
+import GccHub from "./pages/gcc/GccHub";
+
 
 const queryClient = new QueryClient();
 
