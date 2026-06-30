@@ -79,10 +79,17 @@ const App = () => (
           {/* Hidden — shared with customers */}
           <Route path="/brochure" element={<Brochure />} />
 
-          {/* GCC SEO landing pages — English */}
+          {/* GCC SEO — hub */}
+          <Route path="/gcc" element={<GccHub lang="en" />} />
+          <Route path="/ar/gcc" element={<GccHub lang="ar" />} />
+          {/* GCC SEO landing pages — countries */}
           <Route path="/gcc/:countrySlug" element={<GccCountryPage lang="en" />} />
-          {/* GCC SEO landing pages — Arabic */}
           <Route path="/ar/gcc/:countrySlug" element={<GccCountryPage lang="ar" />} />
+          {/* GCC SEO landing pages — cities */}
+          <Route path="/gcc/cities/:citySlug" element={<GccCityPage lang="en" />} />
+          <Route path="/ar/gcc/cities/:citySlug" element={<GccCityPage lang="ar" />} />
+
+
 
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
